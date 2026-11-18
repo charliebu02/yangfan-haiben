@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="扬帆海本" />
+  <title>扬帆海本 — 海外本科申请条件查询与选校日历</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="brandHomeTrigger" class="brand-group" title="返回首页">
+        <div class="brand-sticker">
+          <span class="brand-title">扬帆海本</span>
+          <span class="brand-count-pill" id="totalUniBadge">100校</span>
+        </div>
+      </div>
+
+      <nav class="nav-segmented" aria-label="主导航">
+        <button id="navBtnDirectory" class="nav-seg-btn active" type="button">
+          <span>院校条件库</span>
+          <span id="visibleCountNav" class="nav-count">100</span>
+        </button>
+        <button id="navBtnCalendar" class="nav-seg-btn" type="button">
+          <span>我的选校日历</span>
+          <span id="shortlistCountBadge" class="badge-count">0</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button id="btnShareImageTop" class="btn btn-poster" type="button">分享图片</button>
+        <button id="btnShareLinkTop" class="btn btn-share-link" type="button">分享链接</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- 柔和多巴胺筛选面板 -->
+    <section id="globalFilterConsole" class="control-console" aria-label="筛选条件">
+      <div class="console-header-row">
+        <div class="console-title-group">
+          <span class="console-section-title">申请条件筛选</span>
+          <span class="console-update-badge">覆盖港 / 新 / 英 / 美 / 加 / 澳 100 所大学官方本科要求</span>
+        </div>
+        <button id="btnClearFilters" class="btn-clear-filters" type="button">重置筛选</button>
+      </div>
+
+      <!-- 第 1 栏：课程体系 -->
+      <div class="console-row">
+        <div class="console-label">课程体系</div>
+        <div id="trackPillsContainer" class="pills-wrap">
+          <button class="pill-btn active" data-track="gaokao" type="button">🇨🇳 高考普高</button>
+          <button class="pill-btn" data-track="alevel" type="button">🇬🇧 A-Level</button>
+          <button class="pill-btn" data-track="ib" type="button">IB 体系</button>
+          <button class="pill-btn" data-track="ap" type="button">🇺🇸 AP 体系</button>
+          <button class="pill-btn" data-track="ossd" type="button">🇨🇦 OSSD</button>
+        </div>
+      </div>
+
+      <!-- 第 2 栏：分数筛选（随课程体系自动切换） -->
+      <div class="console-row score-filter-row">
+        <div class="console-label score-label-badge">分数筛选</div>
+        <div id="scorePillsContainer" class="pills-wrap"></div>
+      </div>
+
+      <!-- 第 3 栏：目标地区 -->
+      <div class="console-row">
+        <div class="console-label">目标地区</div>
+        <div id="regionPillsContainer" class="pills-wrap">
+          <button class="pill-btn active" data-region="ALL" type="button">全部地区</button>
+          <button class="pill-btn" data-region="HK" type="button">🇭🇰 中国香港</button>
+          <button class="pill-btn" data-region="SG" type="button">🇸🇬 新加坡</button>
+          <button class="pill-btn" data-region="UK" type="button">🇬🇧 英国</button>
+          <button class="pill-btn" data-region="US" type="button">🇺🇸 美国</button>
+          <button class="pill-btn" data-region="CA" type="button">🇨🇦 加拿大</button>
+          <button class="pill-btn" data-region="AU" type="button">🇦🇺 澳大利亚</button>
+        </div>
+      </div>
+
+      <!-- 第 4 栏：英语成绩 -->
+      <div class="console-row">
+        <div class="console-label">英语成绩</div>
+        <div id="langPillsContainer" class="pills-wrap">
+          <button class="pill-btn active" data-lang="ALL" type="button">不限</button>
+          <button class="pill-btn" data-lang="GAOKAO_ENG" type="button">免雅思托福（看高考英语）</button>
+          <button class="pill-btn" data-lang="IELTS_60" type="button">雅思 6.0 / 托福 80 可申</button>
+          <button class="pill-btn" data-lang="IELTS_65" type="button">雅思 6.5 / 托福 90 可申</button>
+          <button class="pill-btn" data-lang="IELTS_70" type="button">雅思 7.0 / 托福 100 可申</button>
+          <button class="pill-btn" data-lang="DET" type="button">接受多邻国</button>
+        </div>
+      </div>
+
+      <!-- 搜索与直录开关 -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <input
+            id="searchInput"
+            class="search-input"
+            type="search"
+            placeholder="搜索大学 / 缩写 / 城市（如 香港大学、新国立、帝国理工、康奈尔、多伦多、悉尼）..."
+          />
+        </div>
+
+        <div class="filter-toggles">
+          <label class="checkbox-label">
+            <input id="chkAcceptedOnly" type="checkbox" />
+            <span>仅看接受当前体系直申大一</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 视图 1：院校条件库 -->
+    <section id="directoryViewSection">
+      <div class="status-summary-bar">
+        <div>
+          共 <strong id="visibleUniCount">100</strong> 所大学 · 当前：
+          <span id="activeTrackLabel" class="active-track-indicator">🇨🇳 高考普高</span>
+          <span id="activeScoreLabel" class="active-score-indicator">不限分数</span>
+        </div>
+        <div class="summary-hint">点击学校卡片查看完整详情 · 点击「+ 日历」加入选校日历</div>
+      </div>
+
+      <div id="uniCardsGrid" class="uni-grid"></div>
+    </section>
+
+    <!-- 视图 2：单校详情页 -->
+    <section id="detailViewSection" class="detail-view-workspace hidden">
+      <div id="detailPageContent"></div>
+    </section>
+
+    <!-- 视图 3：12个月完整选校日历 -->
+    <section id="timelineViewSection" class="timeline-workspace hidden">
+      <div class="calendar-sheet-container">
+        <div class="calendar-header-banner">
+          <div class="calendar-banner-top">
+            <div>
+              <div class="calendar-title-row">
+                <h2 class="calendar-main-title">2026–2027 申请季选校日历</h2>
+                <span id="calendarTrackPill" class="calendar-track-tag">🇨🇳 高考普高</span>
+              </div>
+              <p class="calendar-sub-desc">
+                涵盖当年 8 月至次年 7 月完整申请周期，点击学校标签可查看详情，点击右上角可导出日历图片。
+              </p>
+            </div>
+
+            <div class="calendar-actions-group no-print">
+              <button id="btnShareImageMain" class="btn btn-poster" type="button">分享图片</button>
+              <button id="btnLoadSamplePreset" class="btn btn-subtle-light" type="button">载入示范组合</button>
+              <button id="btnClearShortlist" class="btn btn-subtle-danger" type="button">清空日历</button>
+            </div>
+          </div>
+
+          <div id="shortlistChipsContainer" class="shortlist-pills-row"></div>
+        </div>
+
+        <div id="calendarMonthsGrid" class="calendar-months-grid"></div>
+
+        <div id="conflictAlertsContainer" class="conflict-alerts-box">
+          <div class="conflict-title">跨国联申时间与策略提示</div>
+          <ul id="conflictAlertsList" class="conflict-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>扬帆海本 · 覆盖中国香港、新加坡、英国、美国、加拿大、澳大利亚 100 所大学官方本科申请条件</span>
+      <span>最终录取政策请以各大学官方网站实时公布为准</span>
+    </div>
+  </footer>
+
+  <!-- 通用弹窗（用于「分享图片」或「分享链接」） -->
+  <div id="detailModalBackdrop" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title-text">分享图片</h2>
+        <button id="btnCloseModal" class="modal-close" type="button">关闭 ✕</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toastNotification" class="toast-notification hidden"></div>
+
+  <script src="./universities-data.js"></script>
+  <script src="./qr-mini.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
