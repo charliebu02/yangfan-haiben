@@ -72,17 +72,12 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "melb-1",
-        "round_name": "7月年中入学截止",
-        "applicable_tracks": [
-          "alevel",
-          "ib",
-          "ap",
-          "ossd"
-        ],
-        "month": 5,
-        "exact_date_desc": "5月31日",
-        "node_type": "deadline"
+        "id": "unimelb-s1-open",
+        "round_name": "次年2月入学通道开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
       },
       {
         "id": "melb-2",
@@ -98,6 +93,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "unimelb-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "melb-trinity",
         "round_name": "圣三一预科申请",
         "applicable_tracks": [
@@ -107,6 +115,32 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "全年滚动 (建议提前4-6个月)",
         "node_type": "rolling",
         "conflict_warning": "墨大唯一认可本校直属预科通道"
+      },
+      {
+        "id": "melb-1",
+        "round_name": "7月年中入学截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 5,
+        "exact_date_desc": "5月31日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "unimelb-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
       }
     ],
     "deep_links": {
@@ -191,11 +225,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "usyd-1",
-        "round_name": "8月秋季学期截止",
+        "id": "usyd-s1-open",
+        "round_name": "次年2月入学通道开放",
         "applicable_tracks": "all",
-        "month": 6,
-        "exact_date_desc": "6月底-7月中旬",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "usyd-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
         "node_type": "deadline"
       },
       {
@@ -205,6 +247,33 @@ window.UNI_COMPASS_DATA = [
         "month": 12,
         "exact_date_desc": "12月-1月",
         "node_type": "deadline"
+      },
+      {
+        "id": "usyd-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "usyd-1",
+        "round_name": "8月秋季学期截止",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "usyd-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -288,12 +357,12 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "unsw-1",
-        "round_name": "9月第三学期 (Term 3) 截止",
+        "id": "unsw-s1-open",
+        "round_name": "次年2月入学通道开放",
         "applicable_tracks": "all",
-        "month": 7,
-        "exact_date_desc": "7月中旬（无缝衔接6月高考/大考出分！）",
-        "node_type": "deadline"
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
       },
       {
         "id": "unsw-2",
@@ -301,6 +370,41 @@ window.UNI_COMPASS_DATA = [
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月30日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "unsw-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "unsw-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "unsw-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
+      },
+      {
+        "id": "unsw-1",
+        "round_name": "9月第三学期 (Term 3) 截止",
+        "applicable_tracks": "all",
+        "month": 7,
+        "exact_date_desc": "7月中旬（无缝衔接6月高考/大考出分！）",
         "node_type": "deadline"
       }
     ],
@@ -385,11 +489,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "anu-1",
-        "round_name": "7月第二学期截止",
+        "id": "anu-s1-open",
+        "round_name": "次年2月入学通道开放",
         "applicable_tracks": "all",
-        "month": 5,
-        "exact_date_desc": "5月中旬",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "anu-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
         "node_type": "deadline"
       },
       {
@@ -399,6 +511,33 @@ window.UNI_COMPASS_DATA = [
         "month": 12,
         "exact_date_desc": "12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "anu-1",
+        "round_name": "7月第二学期截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "anu-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "anu-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -482,11 +621,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "mon-1",
-        "round_name": "7月秋季学期截止",
+        "id": "monash-s1-open",
+        "round_name": "次年2月入学通道开放",
         "applicable_tracks": "all",
-        "month": 6,
-        "exact_date_desc": "6月中旬",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "monash-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
         "node_type": "deadline"
       },
       {
@@ -496,6 +643,33 @@ window.UNI_COMPASS_DATA = [
         "month": 12,
         "exact_date_desc": "12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "monash-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "mon-1",
+        "round_name": "7月秋季学期截止",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "monash-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -579,12 +753,12 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "uq-1",
-        "round_name": "7月第二学期截止",
+        "id": "uq-s1-open",
+        "round_name": "次年2月入学通道开放",
         "applicable_tracks": "all",
-        "month": 5,
-        "exact_date_desc": "5月31日",
-        "node_type": "deadline"
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
       },
       {
         "id": "uq-2",
@@ -593,6 +767,41 @@ window.UNI_COMPASS_DATA = [
         "month": 11,
         "exact_date_desc": "11月30日",
         "node_type": "deadline"
+      },
+      {
+        "id": "uq-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uq-1",
+        "round_name": "7月第二学期截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月31日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uq-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uq-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -676,12 +885,47 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uwa-s1-open",
+        "round_name": "次年2月入学通道开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "uwa-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uwa-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "uwa-1",
         "round_name": "7月与2月双学期滚动截止",
         "applicable_tracks": "all",
         "month": 6,
         "exact_date_desc": "6月中旬 / 12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "uwa-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -765,12 +1009,47 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "adelaide-s1-open",
+        "round_name": "次年2月入学通道开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "adelaide-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "adelaide-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "ade-1",
         "round_name": "7月与2月双学期滚动截止",
         "applicable_tracks": "all",
         "month": 6,
         "exact_date_desc": "6月中旬 / 12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "adelaide-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -854,12 +1133,47 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uts-s1-open",
+        "round_name": "次年2月入学通道开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "uts-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uts-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "uts-1",
         "round_name": "7月秋季与2月春季双学期截止",
         "applicable_tracks": "all",
         "month": 6,
         "exact_date_desc": "6月中旬 / 12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "uts-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -943,12 +1257,47 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "rmit-s1-open",
+        "round_name": "次年2月入学通道开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "全年滚动 (建议9月前递交)",
+        "node_type": "open"
+      },
+      {
+        "id": "rmit-s1-dl",
+        "round_name": "次年2月第一学期入学截止",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月30日-12月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "rmit-s2-dl",
+        "round_name": "当年7/8月入学主轮截止",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月中旬-6月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "rmit-1",
         "round_name": "7月与2月双学期滚动截止",
         "applicable_tracks": "all",
         "month": 6,
         "exact_date_desc": "6月中旬 / 12月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "rmit-gk-express",
+        "round_name": "高考出分极速直录通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月底-7月中旬 (凭高考分直申7/8月入学)",
+        "node_type": "early_deadline",
+        "conflict_warning": "澳洲八大审理极快，6月出分后可直接衔接当年7/8月或9月学期"
       }
     ],
     "deep_links": {
@@ -1033,6 +1382,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uoft-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "uoft-1",
         "round_name": "早申推荐截止",
         "applicable_tracks": "all",
@@ -1047,6 +1404,30 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "uoft-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "uoft-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "uoft-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1132,11 +1513,27 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "mcgill-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "mcgill-1",
         "round_name": "国际生网申截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月15日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "mcgill-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
         "node_type": "deadline"
       },
       {
@@ -1146,6 +1543,22 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "2月-4月",
         "node_type": "offer_release"
+      },
+      {
+        "id": "mcgill-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "mcgill-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1230,6 +1643,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ubc-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "ubc-1",
         "round_name": "早申轮截止",
         "applicable_tracks": "all",
@@ -1244,6 +1665,30 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "ubc-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "ubc-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "ubc-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1329,6 +1774,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "waterloo-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "uwat-1",
         "round_name": "工程与数学/CS网申截止",
         "applicable_tracks": "all",
@@ -1345,6 +1798,14 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "waterloo-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "uw-euclid",
         "round_name": "欧几里得数学竞赛",
         "applicable_tracks": "all",
@@ -1352,6 +1813,22 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "4月上旬",
         "node_type": "exam",
         "conflict_warning": "申请滑铁卢数学/CS/工程强烈建议参加 Euclid 竞赛"
+      },
+      {
+        "id": "waterloo-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "waterloo-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1437,12 +1914,44 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "mcmaster-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "mcm-1",
         "round_name": "OUAC 常规网申截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "mcmaster-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "mcmaster-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "mcmaster-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1535,12 +2044,44 @@ window.UNI_COMPASS_DATA = [
         "node_type": "application_open"
       },
       {
+        "id": "ualberta-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
+        "id": "ualberta-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "ualb-2",
         "round_name": "国际生网申截止",
         "applicable_tracks": "all",
         "month": 3,
         "exact_date_desc": "3月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "ualberta-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "ualberta-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1625,12 +2166,44 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "queens-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "qu-1",
         "round_name": "商学院及常规网申截止",
         "applicable_tracks": "all",
         "month": 2,
         "exact_date_desc": "2月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "queens-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "queens-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "queens-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1715,11 +2288,27 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "western-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "west-1",
         "round_name": "Ivey AEO 商学院预录取截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月15日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "western-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
         "node_type": "deadline"
       },
       {
@@ -1729,6 +2318,22 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "western-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "western-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1813,12 +2418,44 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "sfu-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "sfu-1",
         "round_name": "秋季入学网申截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月31日",
         "node_type": "deadline"
+      },
+      {
+        "id": "sfu-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
+        "id": "sfu-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "sfu-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1903,12 +2540,44 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uottawa-open",
+        "round_name": "网申通道开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
+        "id": "uottawa-docs",
+        "round_name": "成绩单/会考/补充文书截止",
+        "applicable_tracks": "all",
+        "month": 2,
+        "exact_date_desc": "2月上旬-2月中旬",
+        "node_type": "deadline"
+      },
+      {
         "id": "uott-1",
         "round_name": "国际生网申截止",
         "applicable_tracks": "all",
         "month": 3,
         "exact_date_desc": "3月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "uottawa-offer",
+        "round_name": "滚动放榜与奖学金评定",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "2月-5月 (分批发放)",
+        "node_type": "decision"
+      },
+      {
+        "id": "uottawa-final",
+        "round_name": "确认入读与补交毕业/高考成绩",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月1日确认 / 6月底补交实考",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -1993,15 +2662,31 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "hku-1",
-        "round_name": "网申开放",
-        "applicable_tracks": "all",
+        "id": "hku-intl-open",
+        "round_name": "国际生网申开放",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
         "month": 9,
         "exact_date_desc": "9月25日",
-        "node_type": "application_open"
+        "node_type": "open"
       },
       {
-        "id": "hku-2",
+        "id": "hku-gk-open",
+        "round_name": "内地本科生及多元卓越计划网申开放",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月6日",
+        "node_type": "open",
+        "conflict_warning": "多元卓越入学计划与内地本科生入学计划同步开放网申"
+      },
+      {
+        "id": "hku-intl-r1",
         "round_name": "国际生首轮截止",
         "applicable_tracks": [
           "alevel",
@@ -2011,43 +2696,97 @@ window.UNI_COMPASS_DATA = [
         ],
         "month": 11,
         "exact_date_desc": "11月15日",
-        "node_type": "deadline",
-        "conflict_warning": "首轮名额最充裕，建议美本ED1后立即完成。"
+        "node_type": "early_deadline",
+        "conflict_warning": "强烈建议国际生赶首轮，名额最充足"
       },
       {
-        "id": "hku-3",
-        "round_name": "首轮放榜与留位费",
+        "id": "hku-intl-offer",
+        "round_name": "国际生首轮放榜与留位费",
         "applicable_tracks": [
           "alevel",
           "ib",
           "ap",
           "ossd"
         ],
-        "month": 1,
+        "month": 12,
         "exact_date_desc": "12月-1月 (3周内交费)",
-        "node_type": "deposit_due",
-        "conflict_warning": "留位费数万港币不可退，早于美本RD放榜！"
+        "node_type": "decision",
+        "conflict_warning": "需缴纳约2-3万港币留位费，早于英美常规轮放榜"
       },
       {
-        "id": "hku-4",
-        "round_name": "高考生报名截止",
+        "id": "hku-multi-r1",
+        "round_name": "多元卓越计划首轮截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 12,
+        "exact_date_desc": "12月31日",
+        "node_type": "early_deadline",
+        "conflict_warning": "首轮递交可最早安排 1-2 月分批面试"
+      },
+      {
+        "id": "hku-multi-iv",
+        "round_name": "多元卓越计划面试启动",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月-2月起 (分批次)",
+        "node_type": "interview"
+      },
+      {
+        "id": "hku-multi-end",
+        "round_name": "多元卓越计划最终截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 3,
+        "exact_date_desc": "3月22日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "hku-intl-main",
+        "round_name": "国际生主轮放榜/补申",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "3月-5月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
+        "id": "hku-multi-res",
+        "round_name": "多元卓越计划结果公布",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 5,
+        "exact_date_desc": "5月 (公布加分/优惠资格)",
+        "node_type": "decision"
+      },
+      {
+        "id": "hku-gk-end",
+        "round_name": "高考生常规网申截止 & 补交分数",
         "applicable_tracks": [
           "gaokao"
         ],
         "month": 6,
         "exact_date_desc": "6月28日",
-        "node_type": "deadline"
+        "node_type": "deadline",
+        "conflict_warning": "独立报名，不影响内地统招志愿填报"
       },
       {
-        "id": "hku-multi",
-        "round_name": "多元卓越入学计划",
+        "id": "hku-gk-offer",
+        "round_name": "内地高考生录取放榜",
         "applicable_tracks": [
           "gaokao"
         ],
-        "month": 12,
-        "exact_date_desc": "12月-次年3月 (提前面试)",
-        "node_type": "early_deadline",
-        "conflict_warning": "高考生提前报名面试可获降分优惠，不影响后续6月常规报名及内地统招"
+        "month": 7,
+        "exact_date_desc": "7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2132,6 +2871,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "cuhk-open",
+        "round_name": "国际生网申系统开放",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月下旬",
+        "node_type": "open"
+      },
+      {
         "id": "cuhk-1",
         "round_name": "国际生早轮截止",
         "applicable_tracks": [
@@ -2158,6 +2910,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "cuhk-intl-offer",
+        "round_name": "国际生分批面试与放榜",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "12月-次年4月 (滚动)",
+        "node_type": "decision"
+      },
+      {
         "id": "cuhk-3",
         "round_name": "高考提前批志愿填报",
         "applicable_tracks": [
@@ -2167,6 +2932,16 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "6月下旬 (随各省提前批)",
         "node_type": "deadline",
         "conflict_warning": "一旦提前批投档录取，将不再参加后续内地本科一批投档。"
+      },
+      {
+        "id": "cuhk-gk-offer",
+        "round_name": "提前批统一录取放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月上旬 (省招办投档)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2252,6 +3027,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "hkust-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "hkust-1",
         "round_name": "国际生早轮截止",
         "applicable_tracks": [
@@ -2278,6 +3061,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "hkust-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "hkust-3",
         "round_name": "高考生报名截止 & 面试",
         "applicable_tracks": [
@@ -2286,6 +3082,16 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月10日截止 / 6月底面试",
         "node_type": "interview"
+      },
+      {
+        "id": "hkust-gk-iv",
+        "round_name": "高考生全英文面试与放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2370,6 +3176,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "polyu-open",
+        "round_name": "网申与德艺计划(STARS)开放",
+        "applicable_tracks": "all",
+        "month": 9,
+        "exact_date_desc": "9月下旬",
+        "node_type": "open"
+      },
+      {
         "id": "polyu-1",
         "round_name": "国际生早轮截止",
         "applicable_tracks": [
@@ -2381,6 +3195,17 @@ window.UNI_COMPASS_DATA = [
         "month": 11,
         "exact_date_desc": "11月21日",
         "node_type": "deadline"
+      },
+      {
+        "id": "polyu-stars",
+        "round_name": "德艺计划 (STARS)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "11月-次年3月",
+        "node_type": "early_deadline",
+        "conflict_warning": "有科创/艺体特长的高考生可提前申请面试加分"
       },
       {
         "id": "polyu-2",
@@ -2396,6 +3221,16 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "polyu-stars-iv",
+        "round_name": "德艺计划(STARS)截止与面试",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 3,
+        "exact_date_desc": "3月 (综合评估面试)",
+        "node_type": "interview"
+      },
+      {
         "id": "polyu-3",
         "round_name": "高考生独立网申截止",
         "applicable_tracks": [
@@ -2406,15 +3241,14 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
-        "id": "polyu-stars",
-        "round_name": "德艺计划 (STARS)",
+        "id": "polyu-gk-offer",
+        "round_name": "高考生面试与集中放榜",
         "applicable_tracks": [
           "gaokao"
         ],
-        "month": 1,
-        "exact_date_desc": "11月-次年3月",
-        "node_type": "early_deadline",
-        "conflict_warning": "有科创/艺体特长的高考生可提前申请面试加分"
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2499,6 +3333,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "cityu-open",
+        "round_name": "国际生网申系统开放",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月下旬",
+        "node_type": "open"
+      },
+      {
         "id": "cityu-1",
         "round_name": "国际生早轮截止",
         "applicable_tracks": [
@@ -2525,6 +3372,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "cityu-intl-offer",
+        "round_name": "国际生分批面试与放榜",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "12月-次年4月 (滚动)",
+        "node_type": "decision"
+      },
+      {
         "id": "cityu-3",
         "round_name": "高考提前批志愿填报",
         "applicable_tracks": [
@@ -2533,6 +3393,16 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月下旬 (随各省提前批)",
         "node_type": "deadline"
+      },
+      {
+        "id": "cityu-gk-offer",
+        "round_name": "提前批统一录取放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月上旬 (省招办投档)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2617,6 +3487,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "hkbu-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "hkbu-1",
         "round_name": "国际生首轮截止",
         "applicable_tracks": [
@@ -2630,6 +3508,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "hkbu-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "hkbu-2",
         "round_name": "高考生独立网申截止",
         "applicable_tracks": [
@@ -2638,6 +3529,16 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月11日",
         "node_type": "deadline"
+      },
+      {
+        "id": "hkbu-gk-iv",
+        "round_name": "高考生全英文面试与放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2722,6 +3623,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "lingnan-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "ln-1",
         "round_name": "国际生早轮截止",
         "applicable_tracks": [
@@ -2735,6 +3644,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "lingnan-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "ln-2",
         "round_name": "高考生独立网申截止",
         "applicable_tracks": [
@@ -2743,6 +3665,16 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月10日",
         "node_type": "deadline"
+      },
+      {
+        "id": "lingnan-gk-iv",
+        "round_name": "高考生全英文面试与放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2826,6 +3758,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "eduhk-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "eduhk-1",
         "round_name": "国际生首轮截止",
         "applicable_tracks": [
@@ -2839,6 +3779,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "eduhk-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "eduhk-2",
         "round_name": "高考生独立网申截止",
         "applicable_tracks": [
@@ -2847,6 +3800,16 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月12日",
         "node_type": "deadline"
+      },
+      {
+        "id": "eduhk-gk-iv",
+        "round_name": "高考生全英文面试与放榜",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -2930,6 +3893,27 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "hkmu-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
+        "id": "hkmu-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "hkmu-1",
         "round_name": "内地高考生与国际生报名截止",
         "applicable_tracks": "all",
@@ -2937,6 +3921,16 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "5月31日",
         "node_type": "deadline",
         "conflict_warning": "都会大学截止较港八大更早（5月底截止），务必在高考前完成网申！"
+      },
+      {
+        "id": "hkmu-gk-iv",
+        "round_name": "高考生补交分数与面试",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3020,12 +4014,43 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "hsuhk-open",
+        "round_name": "网申通道全面开放",
+        "applicable_tracks": "all",
+        "month": 10,
+        "exact_date_desc": "9月下旬-10月中旬",
+        "node_type": "open"
+      },
+      {
+        "id": "hsuhk-intl-main",
+        "round_name": "国际生主轮截止与面试",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 2,
+        "exact_date_desc": "1月-3月 (滚动审核)",
+        "node_type": "rolling"
+      },
+      {
         "id": "hsu-1",
         "round_name": "高考生与国际生网申截止",
         "applicable_tracks": "all",
         "month": 6,
         "exact_date_desc": "6月10日",
         "node_type": "deadline"
+      },
+      {
+        "id": "hsuhk-gk-iv",
+        "round_name": "高考生补交分数与面试",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 7,
+        "exact_date_desc": "6月底-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3117,6 +4142,16 @@ window.UNI_COMPASS_DATA = [
         "node_type": "application_open"
       },
       {
+        "id": "nus-olympiad",
+        "round_name": "奥赛/顶尖人才通道评审",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "11月-次年2月",
+        "node_type": "early_deadline"
+      },
+      {
         "id": "nus-2",
         "round_name": "高考生及国际生网申截止",
         "applicable_tracks": "all",
@@ -3126,12 +4161,31 @@ window.UNI_COMPASS_DATA = [
         "conflict_warning": "高考生必须在2月底前报名并交雅思/托福！"
       },
       {
+        "id": "nus-gk-upload",
+        "round_name": "高考出分3天内补交成绩单",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后72小时内)",
+        "node_type": "deadline",
+        "conflict_warning": "必须在高考出分后极速上传，逾期视作放弃"
+      },
+      {
         "id": "nus-3",
         "round_name": "实考补交与集中放榜",
         "applicable_tracks": "all",
         "month": 7,
         "exact_date_desc": "5月-7月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "nus-offer",
+        "round_name": "集中放榜与接受Offer",
+        "applicable_tracks": "all",
+        "month": 7,
+        "exact_date_desc": "7月上中旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3216,6 +4270,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ntu-open",
+        "round_name": "高考生与国际生网申开放",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "ntu-1",
         "round_name": "高考生及国际生网申截止",
         "applicable_tracks": "all",
@@ -3223,6 +4285,17 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "1月15日 - 2月下旬",
         "node_type": "deadline",
         "conflict_warning": "南洋理工部分通道1月中旬即截止，务必寒假前提交！"
+      },
+      {
+        "id": "ntu-ast",
+        "round_name": "AST 考试提前通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月-2月下旬 (高二/高三可考)",
+        "node_type": "early_deadline",
+        "conflict_warning": "可用 AST 成绩提前申请南洋理工，无需等待6月高考放榜"
       },
       {
         "id": "ntu-2",
@@ -3241,15 +4314,14 @@ window.UNI_COMPASS_DATA = [
         "node_type": "offer_release"
       },
       {
-        "id": "ntu-ast",
-        "round_name": "AST 考试提前通道",
+        "id": "ntu-gk-upload",
+        "round_name": "高考出分补交与6月底面试",
         "applicable_tracks": [
           "gaokao"
         ],
-        "month": 1,
-        "exact_date_desc": "1月-2月下旬 (高二/高三可考)",
-        "node_type": "early_deadline",
-        "conflict_warning": "可用 AST 成绩提前申请南洋理工，无需等待6月高考放榜"
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后3天内)",
+        "node_type": "interview"
       }
     ],
     "deep_links": {
@@ -3334,6 +4406,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "smu-open",
+        "round_name": "网申开放",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "smu-1",
         "round_name": "网申统一截止日",
         "applicable_tracks": "all",
@@ -3348,6 +4428,14 @@ window.UNI_COMPASS_DATA = [
         "month": 4,
         "exact_date_desc": "2月-5月滚动面试",
         "node_type": "interview"
+      },
+      {
+        "id": "smu-gk-upload",
+        "round_name": "高考/大考实考成绩补交",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月下旬-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3431,6 +4519,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "sutd-open",
+        "round_name": "网申开放",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "11月中旬",
+        "node_type": "open"
+      },
+      {
         "id": "sutd-1",
         "round_name": "国际生与高考生网申截止",
         "applicable_tracks": "all",
@@ -3445,6 +4541,14 @@ window.UNI_COMPASS_DATA = [
         "month": 4,
         "exact_date_desc": "3月-5月",
         "node_type": "interview"
+      },
+      {
+        "id": "sutd-gk-upload",
+        "round_name": "高考/大考实考成绩补交",
+        "applicable_tracks": "all",
+        "month": 6,
+        "exact_date_desc": "6月下旬-7月上旬",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3529,6 +4633,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "oxford-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "ox-1",
         "round_name": "UCAS 牛剑申请 & 笔试报名截止",
         "applicable_tracks": [
@@ -3540,6 +4657,19 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "10月15日 18:00 (英国时间)",
         "node_type": "deadline",
         "conflict_warning": "全球最早截止！务必在9月-10月初注册 MAT/PAT/TSA 笔试考位！"
+      },
+      {
+        "id": "oxford-test-nov",
+        "round_name": "入学笔试窗口 (ESAT/TMUA/LNAT)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 11,
+        "exact_date_desc": "10月中旬-11月上旬",
+        "node_type": "exam"
       },
       {
         "id": "ox-2",
@@ -3564,6 +4694,32 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "oxford-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "oxford-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3648,6 +4804,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "cambridge-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "cam-1",
         "round_name": "UCAS 牛剑截止 & 笔试注册",
         "applicable_tracks": "all",
@@ -3655,6 +4824,14 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "10月15日 18:00",
         "node_type": "deadline",
         "conflict_warning": "9月中旬截止首轮 ESAT/TMUA 笔试注册，切勿错过！"
+      },
+      {
+        "id": "cambridge-test-nov",
+        "round_name": "入学笔试窗口 (ESAT/TMUA/LNAT)",
+        "applicable_tracks": "all",
+        "month": 11,
+        "exact_date_desc": "10月中旬-11月上旬",
+        "node_type": "exam"
       },
       {
         "id": "cam-2",
@@ -3671,6 +4848,42 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月下旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "cambridge-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "cambridge-gk-aug",
+        "round_name": "高考生实考成绩与签证确认",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后达省前0.1%换录)",
+        "node_type": "decision"
+      },
+      {
+        "id": "cambridge-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3756,6 +4969,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "imperial-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "ic-1",
         "round_name": "首轮 ESAT/TMUA 笔试",
         "applicable_tracks": [
@@ -3782,6 +5008,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "imperial-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
         "id": "ic-3",
         "round_name": "面试与放榜截止",
         "applicable_tracks": [
@@ -3793,6 +5032,45 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "11月-3月底",
         "node_type": "offer_release"
+      },
+      {
+        "id": "imperial-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "imperial-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "imperial-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3877,6 +5155,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "lse-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "lse-1",
         "round_name": "TMUA / LNAT 笔试",
         "applicable_tracks": [
@@ -3901,6 +5192,32 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "lse-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "lse-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
         "id": "lse-3",
         "round_name": "LSE 集中放榜季",
         "applicable_tracks": [
@@ -3911,6 +5228,32 @@ window.UNI_COMPASS_DATA = [
         "month": 4,
         "exact_date_desc": "2月-5月上旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "lse-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "lse-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -3995,6 +5338,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ucl-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "ucl-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "ucl-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -4007,6 +5373,30 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "1月29日",
         "node_type": "deadline",
         "conflict_warning": "UCAS 5个志愿共享同一篇文书，专业方向需一致！"
+      },
+      {
+        "id": "ucl-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "ucl-upc",
+        "round_name": "UCL 官方预科 (UPC)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 2,
+        "exact_date_desc": "10月-次年2月 (滚动截止)",
+        "node_type": "deadline",
+        "conflict_warning": "普高生无法直申 UCL 大一，须通过 UPC 预科或国内大一转申"
       },
       {
         "id": "ucl-2",
@@ -4022,15 +5412,53 @@ window.UNI_COMPASS_DATA = [
         "node_type": "offer_release"
       },
       {
-        "id": "ucl-upc",
-        "round_name": "UCL 官方预科 (UPC)",
+        "id": "ucl-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucl-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucl-found-confirm",
+        "round_name": "预科换录与语言班截止",
         "applicable_tracks": [
           "gaokao"
         ],
-        "month": 2,
-        "exact_date_desc": "10月-次年2月 (滚动截止)",
-        "node_type": "deadline",
-        "conflict_warning": "普高生无法直申 UCL 大一，须通过 UPC 预科或国内大一转申"
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucl-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4115,6 +5543,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "kcl-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "kcl-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "kcl-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -4125,6 +5576,19 @@ window.UNI_COMPASS_DATA = [
         ],
         "month": 1,
         "exact_date_desc": "1月29日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "kcl-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
         "node_type": "deadline"
       },
       {
@@ -4149,6 +5613,55 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月下旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "kcl-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "kcl-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "kcl-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "kcl-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4233,6 +5746,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "edinburgh-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "edi-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
@@ -4241,12 +5767,85 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "edinburgh-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "edinburgh-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
         "id": "edi-2",
         "round_name": "爱丁堡集中放榜",
         "applicable_tracks": "all",
         "month": 3,
         "exact_date_desc": "12月-4月",
         "node_type": "offer_release"
+      },
+      {
+        "id": "edinburgh-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "edinburgh-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "edinburgh-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "edinburgh-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4330,17 +5929,27 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
-        "id": "man-1",
-        "round_name": "UCAS 常规截止日",
+        "id": "manchester-ucas-open",
+        "round_name": "UCAS 网申开放递交",
         "applicable_tracks": [
           "alevel",
           "ib",
           "ap",
           "ossd"
         ],
-        "month": 1,
-        "exact_date_desc": "1月29日",
-        "node_type": "deadline"
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "manchester-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
       },
       {
         "id": "man-2",
@@ -4356,6 +5965,32 @@ window.UNI_COMPASS_DATA = [
         "node_type": "offer_release"
       },
       {
+        "id": "man-1",
+        "round_name": "UCAS 常规截止日",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "manchester-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
         "id": "manc-found",
         "round_name": "曼大官方预科申请",
         "applicable_tracks": [
@@ -4365,6 +6000,55 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "10月-次年5月 (滚动)",
         "node_type": "rolling",
         "conflict_warning": "普高生可凭高二/高三均分申请曼大直属预科"
+      },
+      {
+        "id": "manchester-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "manchester-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "manchester-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "manchester-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4449,6 +6133,19 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "warwick-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "war-1",
         "round_name": "TMUA 笔试季",
         "applicable_tracks": [
@@ -4459,6 +6156,16 @@ window.UNI_COMPASS_DATA = [
         "month": 10,
         "exact_date_desc": "10月中旬或1月",
         "node_type": "deadline"
+      },
+      {
+        "id": "warwick-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
       },
       {
         "id": "war-2",
@@ -4474,6 +6181,19 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "warwick-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
         "id": "warw-ifp",
         "round_name": "华威官方预科 (WIFP)",
         "applicable_tracks": [
@@ -4482,6 +6202,55 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "10月-次年5月 (滚动)",
         "node_type": "rolling"
+      },
+      {
+        "id": "warwick-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "warwick-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "warwick-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "warwick-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4566,6 +6335,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "bristol-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "bristol-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "bri-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -4579,6 +6371,32 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "bristol-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "bristol-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
         "id": "bris-ifp",
         "round_name": "布大官方预科 (IFP)",
         "applicable_tracks": [
@@ -4587,6 +6405,42 @@ window.UNI_COMPASS_DATA = [
         "month": 4,
         "exact_date_desc": "10月-次年6月 (滚动)",
         "node_type": "rolling"
+      },
+      {
+        "id": "bristol-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "bristol-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "bristol-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4671,12 +6525,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "glasgow-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "gla-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日 (高考生亦可在春季补申)",
         "node_type": "deadline"
+      },
+      {
+        "id": "glasgow-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "glasgow-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "glasgow-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "glasgow-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "glasgow-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "glasgow-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4760,12 +6700,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "durham-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "dur-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "durham-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "durham-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "durham-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "durham-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "durham-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "durham-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4849,12 +6875,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "birmingham-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "birm-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "birmingham-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "birmingham-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "birmingham-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "birmingham-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "birmingham-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "birmingham-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -4939,12 +7051,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "southampton-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "soton-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "southampton-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "southampton-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "southampton-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "southampton-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "southampton-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "southampton-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5028,12 +7226,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "leeds-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "leeds-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "leeds-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "leeds-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "leeds-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "leeds-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "leeds-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "leeds-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5117,6 +7401,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "standrews-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "standrews-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "sta-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -5128,6 +7435,68 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "standrews-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "standrews-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "standrews-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "standrews-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "standrews-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5211,6 +7580,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "bath-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "bath-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "bath-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -5222,6 +7614,68 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "bath-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "bath-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "bath-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "bath-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "bath-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5305,6 +7759,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "sheffield-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "sheffield-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "shef-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -5316,6 +7793,68 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "sheffield-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "sheffield-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "sheffield-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "sheffield-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "sheffield-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5399,12 +7938,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "nottingham-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "nott-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "nottingham-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "nottingham-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "nottingham-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "nottingham-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "nottingham-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "nottingham-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5488,12 +8113,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "qmul-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "qmul-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "qmul-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "qmul-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "qmul-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "qmul-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "qmul-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "qmul-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5578,12 +8289,98 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "york-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
         "id": "york-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "york-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "york-gk-ucas",
+        "round_name": "高考生 UCAS 递交截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 (凭预估/高中成绩先申)",
+        "node_type": "deadline",
+        "conflict_warning": "高考生可先凭高中成绩拿 Conditional Offer，6月出分后换录"
+      },
+      {
+        "id": "york-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "york-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "york-gk-june",
+        "round_name": "补交高考实考成绩换无条件录",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月下旬 (出分后立即上传)",
+        "node_type": "decision"
+      },
+      {
+        "id": "york-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5667,6 +8464,29 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "lancaster-ucas-open",
+        "round_name": "UCAS 网申开放递交",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 9,
+        "exact_date_desc": "9月上旬",
+        "node_type": "open"
+      },
+      {
+        "id": "lancaster-found-open",
+        "round_name": "官方本科预科开放申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 10,
+        "exact_date_desc": "10月上旬 (凭高二/高三均分)",
+        "node_type": "open"
+      },
+      {
         "id": "lanc-1",
         "round_name": "UCAS 常规截止日",
         "applicable_tracks": [
@@ -5678,6 +8498,68 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "lancaster-ucas-jan",
+        "round_name": "UCAS 常规平等审核截止",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月29日 18:00 (英国时间)",
+        "node_type": "deadline"
+      },
+      {
+        "id": "lancaster-offers",
+        "round_name": "有条件录取 (Conditional Offer) 放榜季",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 3,
+        "exact_date_desc": "2月-5月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "lancaster-firm-reply",
+        "round_name": "UCAS 志愿确认回复 (Firm/Insurance)",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "lancaster-found-confirm",
+        "round_name": "预科换录与语言班截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 6,
+        "exact_date_desc": "6月-7月上旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "lancaster-results-day",
+        "round_name": "A-Level/IB 放榜换无条件录",
+        "applicable_tracks": [
+          "alevel",
+          "ib",
+          "ap",
+          "ossd"
+        ],
+        "month": 7,
+        "exact_date_desc": "7月(IB) / 8月中旬(A-Level)",
+        "node_type": "decision"
       }
     ],
     "deep_links": {
@@ -5763,12 +8645,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "princeton-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "princeton-early",
         "round_name": "SCEA 单选早行动截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "princeton-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "princeton-rd",
@@ -5779,12 +8677,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "princeton-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "princeton-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "princeton-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -5870,12 +8785,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "mit-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "mit-early",
         "round_name": "EA 早行动截止 (不绑定)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "mit-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "mit-rd",
@@ -5886,12 +8817,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "mit-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "mit-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "mit-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -5977,12 +8925,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "harvard-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "harvard-early",
         "round_name": "REA 限制性早行动截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "harvard-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "harvard-rd",
@@ -5993,12 +8957,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "harvard-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "harvard-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "harvard-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6084,12 +9065,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "stanford-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "stanford-early",
         "round_name": "REA 限制性早行动截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "stanford-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "stanford-rd",
@@ -6100,12 +9097,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "stanford-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "stanford-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "stanford-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6191,12 +9205,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "yale-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "yale-early",
         "round_name": "SCEA 单选早行动截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "yale-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "yale-rd",
@@ -6207,12 +9237,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "yale-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "yale-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "yale-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6298,12 +9345,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "upenn-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "upenn-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "upenn-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "upenn-rd",
@@ -6314,12 +9377,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "upenn-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "upenn-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "upenn-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6405,12 +9485,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "caltech-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "caltech-early",
         "round_name": "REA 限制性早行动截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "caltech-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "caltech-rd",
@@ -6421,12 +9517,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "caltech-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "caltech-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "caltech-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6512,12 +9625,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "duke-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "duke-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月4日",
         "node_type": "deadline"
+      },
+      {
+        "id": "duke-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "duke-rd",
@@ -6528,12 +9657,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "duke-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "duke-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "duke-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6619,12 +9765,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "brown-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "brown-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "brown-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "brown-rd",
@@ -6635,12 +9797,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "brown-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "brown-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "brown-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6726,12 +9905,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "jhu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "jhu-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月2日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "jhu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "jhu-rd",
@@ -6742,12 +9937,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "jhu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "jhu-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "jhu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6833,12 +10045,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "northwestern-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "northwestern-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "northwestern-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "northwestern-rd",
@@ -6849,12 +10077,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "northwestern-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "northwestern-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "northwestern-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -6940,12 +10185,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "columbia-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "columbia-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "columbia-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "columbia-rd",
@@ -6956,12 +10217,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "columbia-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "columbia-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "columbia-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7047,6 +10325,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "cornell-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "cornell-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
@@ -7054,6 +10340,14 @@ window.UNI_COMPASS_DATA = [
         "exact_date_desc": "11月1日",
         "node_type": "deadline",
         "conflict_warning": "ED 绑定：一旦录取必须撤回全球所有其他申请！"
+      },
+      {
+        "id": "cornell-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "cornell-rd",
@@ -7064,12 +10358,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "cornell-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "cornell-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "cornell-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7155,12 +10466,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uchicago-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uchicago-early",
         "round_name": "ED1 / EA 早申截止 (另设ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月6日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "uchicago-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "uchicago-rd",
@@ -7171,12 +10498,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "uchicago-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "uchicago-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "uchicago-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7270,6 +10614,14 @@ window.UNI_COMPASS_DATA = [
         "node_type": "application_open"
       },
       {
+        "id": "ucb-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "ucb-dl",
         "round_name": "UC 加州大学全球唯一截止日",
         "applicable_tracks": "all",
@@ -7285,6 +10637,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月下旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucb-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucb-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7370,6 +10739,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ucla-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "ucla-dl",
         "round_name": "UC 加州大学全球唯一截止日",
         "applicable_tracks": "all",
@@ -7385,6 +10762,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucla-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucla-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7470,12 +10864,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "rice-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "rice-early",
         "round_name": "ED1 绑定早申 (另设ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月4日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "rice-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "rice-rd",
@@ -7486,12 +10896,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "rice-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "rice-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "rice-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7577,12 +11004,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "dartmouth-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "dartmouth-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "dartmouth-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "dartmouth-rd",
@@ -7593,12 +11036,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "dartmouth-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "dartmouth-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "dartmouth-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7684,12 +11144,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "vanderbilt-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "vanderbilt-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月1日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "vanderbilt-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "vanderbilt-rd",
@@ -7700,12 +11176,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "vanderbilt-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "vanderbilt-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "vanderbilt-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7791,12 +11284,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "notredame-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "notredame-early",
         "round_name": "REA 限制性早行动 (不绑定)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "notredame-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "notredame-rd",
@@ -7807,12 +11316,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "notredame-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "notredame-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "notredame-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -7898,11 +11424,35 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "umich-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "umich-early",
         "round_name": "EA 早行动截止 (不绑定！)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日截止，1月底放榜",
+        "node_type": "deadline"
+      },
+      {
+        "id": "umich-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "umich-rd-jan",
+        "round_name": "RD 常规轮截止",
+        "applicable_tracks": "all",
+        "month": 1,
+        "exact_date_desc": "1月1日-1月15日",
         "node_type": "deadline"
       },
       {
@@ -7914,12 +11464,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "umich-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "umich-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "umich-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8005,12 +11572,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "georgetown-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "georgetown-early",
         "round_name": "EA 早行动截止 (不可申其他私立ED)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "georgetown-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "georgetown-rd",
@@ -8021,12 +11604,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "georgetown-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "georgetown-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "georgetown-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8112,6 +11712,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "unc-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "unc-ea",
         "round_name": "EA 超早行动截止 (不绑定)",
         "applicable_tracks": "all",
@@ -8121,12 +11729,37 @@ window.UNI_COMPASS_DATA = [
         "conflict_warning": "与牛剑同在10月15日截止，注意提前备好文书！"
       },
       {
+        "id": "unc-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "unc-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "unc-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "unc-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8212,12 +11845,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "cmu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "cmu-early",
         "round_name": "ED 绑定早申截止",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "cmu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "cmu-rd",
@@ -8228,12 +11877,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "cmu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "cmu-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "cmu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8319,12 +11985,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "emory-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "emory-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月1日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "emory-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "emory-rd",
@@ -8335,12 +12017,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "emory-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "emory-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "emory-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8426,12 +12125,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "washu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "washu-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月2日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "washu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "washu-rd",
@@ -8442,12 +12157,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "washu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "washu-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "washu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8533,6 +12265,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ucsd-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "ucsd-dl",
         "round_name": "UC 加州大学统一截止日",
         "applicable_tracks": "all",
@@ -8547,6 +12287,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucsd-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucsd-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8632,6 +12389,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ucd-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "ucd-dl",
         "round_name": "UC 加州大学统一截止日",
         "applicable_tracks": "all",
@@ -8646,6 +12411,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月上旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucd-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucd-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8731,12 +12513,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uf-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uf-early",
         "round_name": "EA 早行动截止 (不绑定)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日截止，1月下旬放榜",
         "node_type": "deadline"
+      },
+      {
+        "id": "uf-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "uf-rd",
@@ -8747,12 +12545,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "uf-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "uf-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "uf-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8838,12 +12653,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "usc-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "usc-early",
         "round_name": "EA 早行动截止 (不绑定)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (艺术作品集专业12.1)",
         "node_type": "deadline"
+      },
+      {
+        "id": "usc-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "usc-rd",
@@ -8854,12 +12685,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "usc-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "usc-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "usc-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -8945,12 +12793,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "nyu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "nyu-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日 (ED2为1月1日)",
         "node_type": "deadline"
+      },
+      {
+        "id": "nyu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "nyu-rd",
@@ -8961,12 +12825,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "nyu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "nyu-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "nyu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9052,12 +12933,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uiuc-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uiuc-early",
         "round_name": "EA 早行动截止 (不绑定！)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日截止，1月下旬放榜",
         "node_type": "deadline"
+      },
+      {
+        "id": "uiuc-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "uiuc-rd",
@@ -9068,12 +12965,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "uiuc-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "uiuc-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "uiuc-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9159,12 +13073,28 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "purdue-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "purdue-early",
         "round_name": "EA 早行动截止 (工程/CS必走EA，不绑定)",
         "applicable_tracks": "all",
         "month": 11,
         "exact_date_desc": "11月1日截止，1月15日放榜",
         "node_type": "deadline"
+      },
+      {
+        "id": "purdue-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
       },
       {
         "id": "purdue-rd",
@@ -9175,12 +13105,29 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "purdue-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
         "id": "purdue-may",
         "round_name": "美本统一确认入读日",
         "applicable_tracks": "all",
         "month": 5,
         "exact_date_desc": "5月1日",
         "node_type": "deposit_due"
+      },
+      {
+        "id": "purdue-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9266,6 +13213,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uw-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uw-dl",
         "round_name": "UW 西雅图全球唯一截止日",
         "applicable_tracks": "all",
@@ -9275,12 +13230,37 @@ window.UNI_COMPASS_DATA = [
         "conflict_warning": "无1月轮次，必须在11月15日前完成网申！"
       },
       {
+        "id": "uw-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "uw-rd-jan",
+        "round_name": "RD 常规轮截止",
+        "applicable_tracks": "all",
+        "month": 1,
+        "exact_date_desc": "1月1日-1月15日",
+        "node_type": "deadline"
+      },
+      {
         "id": "uw-offer",
         "round_name": "UW 放榜期",
         "applicable_tracks": "all",
         "month": 3,
         "exact_date_desc": "3月1日-15日",
         "node_type": "offer_release"
+      },
+      {
+        "id": "uw-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9366,6 +13346,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "gatech-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "gatech-early",
         "round_name": "EA2 国际生早行动截止 (不绑定)",
         "applicable_tracks": "all",
@@ -9374,12 +13362,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "gatech-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "gatech-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "gatech-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "gatech-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9465,6 +13478,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "utaustin-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uta-ea",
         "round_name": "EA 早行动截止",
         "applicable_tracks": "all",
@@ -9479,6 +13500,39 @@ window.UNI_COMPASS_DATA = [
         "month": 12,
         "exact_date_desc": "12月1日",
         "node_type": "deadline"
+      },
+      {
+        "id": "utaustin-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
+        "id": "utaustin-rd-jan",
+        "round_name": "RD 常规轮截止",
+        "applicable_tracks": "all",
+        "month": 1,
+        "exact_date_desc": "1月1日-1月15日",
+        "node_type": "deadline"
+      },
+      {
+        "id": "utaustin-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "utaustin-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9564,6 +13618,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uva-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uva-early",
         "round_name": "EA (不绑定) / ED (绑定) 早申截止",
         "applicable_tracks": "all",
@@ -9572,12 +13634,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "uva-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "uva-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "uva-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "uva-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9663,6 +13750,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uwmadison-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uwmadison-early",
         "round_name": "EA 早行动截止 (不绑定)",
         "applicable_tracks": "all",
@@ -9671,12 +13766,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "uwmadison-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "uwmadison-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "uwmadison-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "uwmadison-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9762,6 +13882,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "bu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "bu-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
@@ -9770,12 +13898,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "bu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "bu-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "bu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "bu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9861,6 +14014,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "bc-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "bc-early",
         "round_name": "ED1 绑定早申 (另设1月ED2)",
         "applicable_tracks": "all",
@@ -9869,12 +14030,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "bc-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "bc-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "bc-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "bc-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -9960,6 +14146,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "neu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "neu-early",
         "round_name": "EA (不绑定) / ED1 截止",
         "applicable_tracks": "all",
@@ -9968,12 +14162,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "neu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "neu-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "neu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "neu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -10059,6 +14278,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "ucsb-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "ucsb-dl",
         "round_name": "UC 加州大学统一截止日",
         "applicable_tracks": "all",
@@ -10073,6 +14300,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucsb-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "ucsb-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -10158,6 +14402,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "uci-app-open",
+        "round_name": "UC 系统网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "uci-dl",
         "round_name": "UC 加州大学统一截止日",
         "applicable_tracks": "all",
@@ -10172,6 +14424,23 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "3月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "uci-uc-offer",
+        "round_name": "UC 集中放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月中旬-3月底",
+        "node_type": "decision"
+      },
+      {
+        "id": "uci-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
@@ -10257,6 +14526,14 @@ window.UNI_COMPASS_DATA = [
     },
     "timeline": [
       {
+        "id": "osu-app-open",
+        "round_name": "Common App 网申开放",
+        "applicable_tracks": "all",
+        "month": 8,
+        "exact_date_desc": "8月1日",
+        "node_type": "open"
+      },
+      {
         "id": "osu-early",
         "round_name": "EA 早行动截止 (不绑定)",
         "applicable_tracks": "all",
@@ -10265,12 +14542,37 @@ window.UNI_COMPASS_DATA = [
         "node_type": "deadline"
       },
       {
+        "id": "osu-early-offer",
+        "round_name": "ED / EA 早申放榜",
+        "applicable_tracks": "all",
+        "month": 12,
+        "exact_date_desc": "12月中旬",
+        "node_type": "decision"
+      },
+      {
         "id": "osu-rd",
         "round_name": "RD 常规申请截止",
         "applicable_tracks": "all",
         "month": 1,
         "exact_date_desc": "1月1日-15日",
         "node_type": "deadline"
+      },
+      {
+        "id": "osu-rd-offer",
+        "round_name": "RD 常规轮放榜",
+        "applicable_tracks": "all",
+        "month": 3,
+        "exact_date_desc": "3月下旬-4月初",
+        "node_type": "decision"
+      },
+      {
+        "id": "osu-decision-day",
+        "round_name": "全美统一确认入读 (Decision Day)",
+        "applicable_tracks": "all",
+        "month": 5,
+        "exact_date_desc": "5月1日",
+        "node_type": "decision",
+        "conflict_warning": "需在5月1日前选定1所美国大学缴纳入读押金"
       }
     ],
     "deep_links": {
