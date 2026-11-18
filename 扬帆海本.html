@@ -2,43 +2,31 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="扬帆海本" />
   <title>扬帆海本 — 海外本科申请条件查询与选校日历</title>
   <style>
-/* ============================================================================
-   扬帆海本 — 远洋蔚蓝浅色系 · Bento 圆角卡片风 · 无 Logo · 稍大卡片版
-   ============================================================================ */
 :root {
-  --bg-page: #f2f6fa;
-  --bg-surface: #ffffff;
-  --bg-subtle: #f5f9fc;
-  --bg-dock: #eaf1f7;
-
-  --text-main: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-
-  --primary: #0284c7;
-  --primary-hover: #0369a1;
-  --primary-light: #e0f2fe;
-  --primary-border: #bae6fd;
-
-  --danger-bg: #fef2f2;
-  --danger-text: #dc2626;
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 18px;
-  --grid-gap: 1.05rem;
-
-  --shadow-float: 0 4px 20px -2px rgba(2, 132, 199, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.035);
-  --shadow-float-hover: 0 14px 30px -4px rgba(2, 132, 199, 0.14), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-  --shadow-modal: 0 24px 48px -12px rgba(15, 23, 42, 0.16);
-
-  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
-  --font-serif: "Songti SC", "STSong", "Noto Serif SC", "Newsreader", Georgia, serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --bg-canvas: #FAF8F5;
+  --ink: #1E293B;
+  --ink-secondary: #475569;
+  --soft-yellow: #FEF08A;
+  --soft-yellow-warm: #FDE68A;
+  --soft-yellow-tint: #FEF9C3;
+  --indigo-clash: #1E3A8A;
+  --soft-pink: #FECDD3;
+  --pink-ink: #9F1239;
+  --soft-mint: #A7F3D0;
+  --mint-ink: #065F46;
+  --soft-sky: #BAE6FD;
+  --sky-ink: #075985;
+  --soft-lavender: #E9D5FF;
+  --lavender-ink: #5B21B6;
+  --card-bg: #FFFFFF;
+  --shadow-color: rgba(30, 41, 59, 0.16);
+  --shadow-hover: rgba(30, 41, 59, 0.25);
 }
 
 * {
@@ -48,337 +36,362 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--bg-page);
-  background-image:
-    radial-gradient(950px 380px at 15% 0%, rgba(186, 230, 253, 0.45), transparent 70%),
-    radial-gradient(950px 380px at 85% 0%, rgba(224, 242, 254, 0.55), transparent 70%);
-  background-repeat: no-repeat;
-  color: var(--text-main);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  font-variant-numeric: tabular-nums;
+  background-color: var(--bg-canvas);
+  background-image: radial-gradient(rgba(30, 41, 59, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
-@keyframes bentoFloatIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hidden {
+  display: none !important;
 }
 
-/* ============================================================================
-   1. STICKY FROSTED HEADER (No Logo)
-   ============================================================================ */
+/* ==========================================
+   顶部柔和多巴胺导航栏（舒适耐看）
+========================================== */
 .site-header {
+  background: rgba(255, 253, 247, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--ink);
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 2px 16px rgba(2, 132, 199, 0.06);
-  padding: 0.72rem 1.5rem;
+  z-index: 120;
 }
 
 .header-inner {
-  max-width: 1320px;
+  max-width: 1360px;
   margin: 0 auto;
+  padding: 11px 22px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .brand-group {
-  display: flex;
-  align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
-.brand-text-col {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+.brand-sticker {
+  position: relative;
+  background: var(--soft-yellow);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  padding: 5px 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+/* 顶部品牌船票左右半圆打孔缺口 */
+.brand-sticker::before,
+.brand-sticker::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: #FFFDF7;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.brand-sticker::before {
+  left: -6px;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.brand-sticker::after {
+  right: -6px;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.brand-sticker:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4.5px 4.5px 0 var(--shadow-hover);
 }
 
 .brand-title {
-  font-family: var(--font-serif);
-  font-size: 1.28rem;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--indigo-clash);
   letter-spacing: 0.02em;
-  color: var(--text-main);
-  line-height: 1.15;
+  padding-right: 10px;
+  border-right: 1.5px dashed var(--ink);
 }
 
-.last-updated-tag {
-  font-size: 0.7rem;
-  color: var(--primary);
-  font-weight: 600;
+.brand-count-pill {
+  background: var(--soft-pink);
+  color: var(--pink-ink);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 7px;
+  border: 1.5px solid var(--ink);
 }
 
+/* 主视图切换器 */
 .nav-segmented {
   display: inline-flex;
-  background: var(--bg-dock);
-  padding: 0.24rem;
-  border-radius: 10px;
-  gap: 0.22rem;
+  gap: 8px;
 }
 
 .nav-seg-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  font-size: 0.84rem;
-  font-weight: 700;
-  padding: 0.4rem 1.1rem;
-  border-radius: 8px;
   cursor: pointer;
+  border: 2px solid var(--ink);
+  background: #FFFFFF;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 14px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--shadow-color);
   display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
-  transition: all 0.2s var(--ease-spring);
+  gap: 6px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .nav-seg-btn:hover {
-  color: var(--primary);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4.5px 4.5px 0 var(--shadow-hover);
 }
 
 .nav-seg-btn.active {
-  background: #ffffff;
-  color: var(--primary);
-  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.12);
+  background: var(--soft-mint);
+  color: var(--mint-ink);
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 1.5px 0 var(--shadow-color);
 }
 
-.nav-count {
-  font-size: 0.72rem;
-  opacity: 0.75;
-}
-
+.nav-count,
 .badge-count {
-  background: var(--primary);
-  color: #ffffff;
+  font-size: 11px;
   font-weight: 800;
-  font-size: 0.71rem;
-  padding: 0.04rem 0.46rem;
-  border-radius: 999px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1.5px solid var(--ink);
+  background: #FFFFFF;
+  color: var(--ink);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .btn {
+  cursor: pointer;
+  border: 2px solid var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 15px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.81rem;
-  font-weight: 600;
-  padding: 0.44rem 0.92rem;
-  border-radius: var(--radius-sm);
-  border: none;
-  cursor: pointer;
-  transition: all 0.18s var(--ease-spring);
-  text-decoration: none;
-  white-space: nowrap;
+  gap: 5px;
 }
 
-.btn-header {
-  background: var(--bg-dock);
-  color: var(--text-secondary);
+.btn:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4.5px 4.5px 0 var(--shadow-hover);
 }
 
-.btn-header:hover {
-  background: var(--primary-light);
-  color: var(--primary);
+.btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 1.5px 0 var(--shadow-color);
 }
 
 .btn-poster {
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  background: var(--soft-pink);
+  color: var(--pink-ink);
 }
 
-.btn-poster:hover {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  transform: translateY(-1px);
+.btn-share-link {
+  background: var(--soft-sky);
+  color: var(--sky-ink);
 }
 
 .btn-subtle-light {
-  background: var(--bg-dock);
-  color: var(--text-secondary);
-}
-
-.btn-subtle-light:hover {
-  background: var(--primary-light);
-  color: var(--primary);
+  background: #FFFFFF;
+  color: var(--ink);
 }
 
 .btn-subtle-danger {
-  background: var(--danger-bg);
-  color: var(--danger-text);
+  background: #FFE4E6;
+  color: #BE123C;
 }
 
-.btn-subtle-danger:hover {
-  background: #fee2e2;
-}
-
-/* ============================================================================
-   2. TOP ALL-IN-ONE BENTO FILTER PANEL
-   ============================================================================ */
+/* ==========================================
+   主容器与柔和多巴胺筛选面板
+========================================== */
 .main-container {
-  max-width: 1320px;
+  max-width: 1360px;
   width: 100%;
-  margin: 1.1rem auto 2.5rem;
-  padding: 0 1.25rem;
+  margin: 0 auto;
+  padding: 18px 22px 48px;
   flex: 1;
 }
 
 .control-console {
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 1.2rem 1.45rem;
-  box-shadow: var(--shadow-float);
-  margin-bottom: var(--grid-gap);
+  background: #FFFFFF;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  padding: 16px 18px;
+  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
-  gap: 0.78rem;
+  gap: 11px;
 }
 
 .console-header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.55rem;
-  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+  border-bottom: 1.5px dashed rgba(30, 41, 59, 0.16);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .console-title-group {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .console-section-title {
-  font-family: var(--font-serif);
-  font-size: 0.94rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: 0.02em;
+  font-size: 14px;
+  font-weight: 900;
+  background: var(--soft-yellow);
+  color: var(--indigo-clash);
+  border: 1.5px solid var(--ink);
+  padding: 2px 10px;
+  border-radius: 8px;
 }
 
 .console-update-badge {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 0.12rem 0.6rem;
-  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-secondary);
 }
 
 .btn-clear-filters {
-  background: var(--bg-subtle);
-  border: none;
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all 0.15s;
-}
-
-.btn-clear-filters:hover {
-  background: var(--primary-light);
-  color: var(--primary);
+  border: 1.5px solid var(--ink);
+  background: #F8FAFC;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .console-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.65rem;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (max-width: 720px) {
+  .console-row {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 
 .console-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink-secondary);
   min-width: 68px;
+  padding-top: 6px;
 }
 
-#trackPillsContainer {
-  display: inline-flex;
-  flex-wrap: wrap;
-  background: var(--bg-dock);
-  padding: 0.24rem;
-  border-radius: 10px;
-  gap: 0.24rem;
-  flex: 0 1 auto;
+/* 分数筛选行（柔和淡奶油底色） */
+.score-filter-row {
+  background: var(--soft-yellow-tint);
+  border: 1.5px solid rgba(30, 41, 59, 0.25);
+  border-radius: 12px;
+  padding: 8px 10px;
 }
 
-#trackPillsContainer .pill-btn {
-  background: transparent;
-  border-radius: 7px;
-  padding: 0.34rem 0.9rem;
-}
-
-#trackPillsContainer .pill-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.28);
+.score-label-badge {
+  background: var(--soft-lavender);
+  color: var(--lavender-ink);
+  border: 1.5px solid var(--ink);
+  padding: 3px 8px !important;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 68px;
+  align-self: center;
 }
 
 .pills-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 7px;
   flex: 1;
 }
 
 .pill-btn {
-  background: var(--bg-subtle);
-  border: none;
-  color: var(--text-secondary);
-  padding: 0.35rem 0.84rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.16s var(--ease-spring);
+  border: 1.5px solid var(--ink);
+  background: #FFFFFF;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 0 var(--shadow-color);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .pill-btn:hover {
-  background: var(--primary-light);
-  color: var(--primary);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--shadow-hover);
 }
 
 .pill-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.22);
+  background: var(--soft-pink);
+  color: var(--pink-ink);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--shadow-color);
+}
+
+.score-filter-row .pill-btn.active {
+  background: var(--soft-lavender);
+  color: var(--lavender-ink);
 }
 
 .filter-bar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid #f1f5f9;
+  align-items: center;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1.5px dashed rgba(30, 41, 59, 0.16);
+  flex-wrap: wrap;
 }
 
 .search-box {
@@ -388,729 +401,789 @@ body {
 
 .search-input {
   width: 100%;
-  padding: 0.5rem 0.95rem;
-  border: none;
-  border-radius: var(--radius-sm);
-  background: var(--bg-subtle);
-  color: var(--text-main);
-  font-size: 0.82rem;
+  border: 2px solid var(--ink);
+  background: var(--bg-canvas);
+  color: var(--ink);
+  padding: 8px 13px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
   outline: none;
-  transition: all 0.15s;
 }
 
 .search-input:focus {
-  background: var(--primary-light);
-  box-shadow: inset 0 0 0 1.5px var(--primary);
+  background: #FFFFFF;
+  border-color: var(--indigo-clash);
 }
 
 .checkbox-label {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.38rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  cursor: pointer;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  background: var(--soft-mint);
+  color: var(--mint-ink);
+  border: 1.5px solid var(--ink);
+  padding: 6px 12px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 var(--shadow-color);
   user-select: none;
 }
 
 .checkbox-label input {
-  accent-color: var(--primary);
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
+  accent-color: var(--indigo-clash);
 }
 
+/* ==========================================
+   状态摘要与柔和多巴胺学校卡片网格
+========================================== */
 .status-summary-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.85rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 800;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .active-track-indicator {
-  background: var(--primary-light);
-  color: var(--primary);
-  padding: 0.15rem 0.6rem;
-  border-radius: 6px;
-  font-weight: 700;
+  background: var(--soft-pink);
+  color: var(--pink-ink);
+  padding: 2px 9px;
+  border-radius: 7px;
+  border: 1.5px solid var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.active-score-indicator {
+  background: var(--soft-lavender);
+  color: var(--lavender-ink);
+  padding: 2px 9px;
+  border-radius: 7px;
+  border: 1.5px solid var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  margin-left: 4px;
 }
 
 .summary-hint {
-  font-size: 0.76rem;
-  color: var(--text-muted);
+  font-size: 12px;
+  color: var(--ink-secondary);
 }
 
-/* ============================================================================
-   3. LARGER THREE-SECTION BENTO UNIVERSITY CARDS
-   ============================================================================ */
 .uni-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-  gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 18px;
 }
 
-@media (max-width: 500px) {
-  .uni-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* 学校卡片：核心船票造型（顶部主票头 + 两侧半圆打孔缺口 + 撕裂虚线 + 保留悬浮抬升效果） */
 .uni-card {
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 1.4rem 1.5rem;
+  position: relative;
+  background: #FFFFFF;
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
-  box-shadow: var(--shadow-float);
-  transition: transform 0.24s var(--ease-spring), box-shadow 0.24s var(--ease-spring);
-  animation: bentoFloatIn 0.26s var(--ease-spring) backwards;
   cursor: pointer;
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.16s ease;
 }
 
 .uni-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-float-hover);
+  transform: translate(-3.5px, -3.5px);
+  box-shadow: 8px 8px 0 var(--shadow-hover);
 }
 
 .uni-card.in-shortlist {
-  box-shadow: inset 0 0 0 1.5px var(--primary), var(--shadow-float);
+  border-color: #059669;
+  box-shadow: 4px 4px 0 rgba(5, 150, 105, 0.22);
 }
 
+/* 1. 柔和奶酪黄船票顶栏 + 齿孔虚线分割 + 两侧船票半圆缺口 */
 .card-top-row {
+  position: relative;
+  background: linear-gradient(135deg, var(--soft-yellow) 0%, var(--soft-yellow-warm) 100%);
+  border-bottom: 2px dashed var(--ink);
+  padding: 12px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
+}
+
+.card-top-row::before,
+.card-top-row::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: var(--bg-canvas);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card-top-row::before {
+  left: -9px;
+}
+
+.card-top-row::after {
+  right: -9px;
+}
+
+.uni-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .uni-name-zh {
-  font-family: var(--font-serif);
-  font-size: 1.22rem;
-  font-weight: 800;
-  color: var(--text-main);
-  display: flex;
+  font-size: 17.5px;
+  font-weight: 900;
+  color: var(--indigo-clash);
+  letter-spacing: -0.01em;
+  display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
-  letter-spacing: 0.01em;
+  gap: 5px;
+  line-height: 1.25;
 }
 
-.uni-card:hover .uni-name-zh {
-  color: var(--primary);
+.uni-rank-sticker {
+  font-size: 11px;
+  font-weight: 800;
+  background: #FFF1F2;
+  color: var(--pink-ink);
+  border: 1.5px solid var(--ink);
+  padding: 1px 7px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .btn-shortlist-mini {
-  background: var(--bg-subtle);
-  border: none;
-  color: var(--text-secondary);
-  padding: 0.34rem 0.82rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-  font-weight: 700;
   cursor: pointer;
-  transition: all 0.15s;
+  border: 1.5px solid var(--ink);
+  background: #FFFFFF;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 9px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 var(--shadow-color);
+  white-space: nowrap;
   flex-shrink: 0;
+  transition: transform 0.12s;
 }
 
 .btn-shortlist-mini:hover {
-  background: var(--primary-light);
-  color: var(--primary);
+  transform: translate(-1px, -1px);
 }
 
 .btn-shortlist-mini.added {
-  background: var(--primary);
-  color: #ffffff;
+  background: var(--soft-mint);
+  color: var(--mint-ink);
+}
+
+/* 2. 卡片内容区 */
+.card-body-inner {
+  padding: 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
 
 .card-req-line {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  background: var(--bg-subtle);
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-sm);
-  border-left: 3.5px solid var(--primary);
-  line-height: 1.52;
+  background: #F0F9FF;
+  border: 1.5px solid rgba(30, 41, 59, 0.25);
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 13.5px;
 }
 
 .card-req-line.not-accepted {
-  background: var(--danger-bg);
-  border-left-color: var(--danger-text);
-  color: #991b1b;
+  background: #FFF1F2;
 }
 
 .card-bottom-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   margin-top: auto;
-  padding-top: 0.25rem;
+  padding-top: 4px;
+  flex-wrap: wrap;
 }
 
 .card-lang-text {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 600;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  background: var(--bg-canvas);
+  border: 1.5px solid rgba(30, 41, 59, 0.2);
+  padding: 3px 8px;
+  border-radius: 7px;
 }
 
 .card-links-group {
   display: flex;
-  gap: 0.45rem;
+  gap: 6px;
 }
 
 .card-direct-link {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 0.32rem 0.72rem;
-  border-radius: 6px;
   text-decoration: none;
-  transition: all 0.15s;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 9px;
+  border-radius: 7px;
+  border: 1.5px solid var(--ink);
+  background: var(--soft-mint);
+  color: var(--mint-ink);
+  transition: transform 0.12s, background 0.12s;
 }
 
 .card-direct-link:hover {
-  background: var(--primary);
-  color: #ffffff;
+  transform: translate(-1px, -1px);
+  background: var(--soft-yellow);
+  color: var(--indigo-clash);
 }
 
-/* ============================================================================
-   4. SECONDARY DETAIL PAGE (Independent Rounded Rectangle Cards)
-   ============================================================================ */
-.detail-view-workspace {
-  animation: bentoFloatIn 0.25s var(--ease-spring);
+.card-direct-link.sec {
+  background: #FFFFFF;
+  color: var(--ink);
 }
 
-.detail-unified-sheet {
-  display: flex;
-  flex-direction: column;
-  gap: var(--grid-gap);
-}
-
-.detail-top-bar {
-  padding: 0.95rem 1.4rem;
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-float);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-back {
-  background: var(--bg-subtle);
-  border: none;
-  color: var(--text-main);
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.42rem 0.95rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.btn-back:hover {
-  background: var(--primary-light);
-  color: var(--primary);
-}
-
-.detail-hero-section {
-  padding: 1.85rem 2.05rem;
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 60%, #0ea5e9 100%);
-  color: #ffffff;
-  border-radius: var(--radius-md);
-  box-shadow: 0 10px 26px -4px rgba(2, 132, 199, 0.25);
-}
-
-.detail-title-zh {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  letter-spacing: 0.02em;
-}
-
-.detail-title-en {
-  font-size: 0.86rem;
-  color: #e0f2fe;
-  margin-top: 0.2rem;
-}
-
-.detail-intro-text {
-  margin-top: 1rem;
-  font-size: 0.93rem;
-  color: #f0f9ff;
-  line-height: 1.75;
-}
-
-.detail-meta-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.15rem;
-  padding-top: 0.95rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.81rem;
-  color: #e0f2fe;
-}
-
-.detail-block {
-  padding: 1.4rem 1.6rem;
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-float);
-}
-
-.detail-block-title {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 0.95rem;
-  letter-spacing: 0.01em;
-}
-
-.detail-links-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
-}
-
-.detail-link-box {
-  background: var(--primary-light);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 0.78rem 1.05rem;
-  color: var(--primary);
-  font-weight: 700;
-  font-size: 0.83rem;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.15s;
-}
-
-.detail-link-box:hover {
-  background: var(--primary);
-  color: #ffffff;
-}
-
-.detail-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--grid-gap);
-  margin-top: 0.85rem;
-}
-
-.detail-info-item {
-  background: var(--bg-subtle);
-  border: none;
-  padding: 0.95rem 1.1rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-}
-
-.detail-info-item strong {
-  display: block;
-  color: var(--text-main);
-  margin-bottom: 0.25rem;
-  font-size: 0.82rem;
-}
-
-/* ============================================================================
-   5. 4×3 INDEPENDENT MONTH CARD WALL
-   ============================================================================ */
-.timeline-workspace {
-  animation: bentoFloatIn 0.25s var(--ease-spring);
-}
-
+/* ==========================================
+   原版 12 个月完整选校日历（柔和多巴胺版）
+========================================== */
 .calendar-sheet-container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--grid-gap);
+  background: #FFFFFF;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  padding: 20px;
 }
 
 .calendar-header-banner {
-  padding: 1.4rem 1.6rem;
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-float);
-  display: flex;
-  flex-direction: column;
-  gap: 0.95rem;
+  position: relative;
+  background: var(--soft-yellow-tint);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.calendar-header-banner::before,
+.calendar-header-banner::after {
+  content: "";
+  position: absolute;
+  top: 58%;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.calendar-header-banner::before {
+  left: -10px;
+}
+
+.calendar-header-banner::after {
+  right: -10px;
 }
 
 .calendar-banner-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 14px;
   flex-wrap: wrap;
-  gap: 1rem;
+  margin-bottom: 12px;
 }
 
 .calendar-title-row {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .calendar-main-title {
-  font-family: var(--font-serif);
-  font-size: 1.32rem;
-  font-weight: 800;
-  color: var(--text-main);
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--indigo-clash);
 }
 
 .calendar-track-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  background: var(--primary-light);
-  color: var(--primary);
-  padding: 0.18rem 0.65rem;
-  border-radius: 6px;
+  background: var(--soft-pink);
+  color: var(--pink-ink);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
 }
 
 .calendar-sub-desc {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-top: 0.2rem;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  margin-top: 4px;
 }
 
 .calendar-actions-group {
   display: flex;
+  gap: 8px;
   flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 .shortlist-pills-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.48rem;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1.5px dashed rgba(30, 41, 59, 0.2);
 }
 
 .shortlist-chip {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.32rem 0.8rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  border: none;
-  transition: transform 0.15s;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  transition: transform 0.12s;
 }
 
 .shortlist-chip:hover {
-  transform: translateY(-1px);
+  transform: translate(-1px, -1px);
 }
 
 .chip-remove {
-  background: none;
-  border: none;
-  color: inherit;
-  opacity: 0.65;
   cursor: pointer;
-  font-weight: 800;
-  font-size: 0.92rem;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 900;
+  color: inherit;
   line-height: 1;
 }
 
-.chip-remove:hover {
-  opacity: 1;
-}
-
+/* 12个月完整网格（模仿原版，4列×3行，全月保留） */
 .calendar-months-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--grid-gap);
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .calendar-months-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
   .calendar-months-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 540px) {
   .calendar-months-grid {
     grid-template-columns: 1fr;
   }
 }
 
 .cal-month-cell {
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-float);
+  background: var(--bg-canvas);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  min-height: 175px;
   display: flex;
   flex-direction: column;
-  min-height: 185px;
   overflow: hidden;
-  transition: transform 0.22s var(--ease-spring), box-shadow 0.22s var(--ease-spring);
 }
 
-.cal-month-cell:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-float-hover);
+.cal-month-cell.has-events {
+  background: #FFFFFF;
 }
 
 .cal-month-top {
-  padding: 0.72rem 1.05rem;
+  background: #F1F5F9;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 8px 12px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  background: var(--bg-subtle);
+  align-items: center;
 }
 
 .cal-month-cell.has-events .cal-month-top {
-  background: var(--primary-light);
+  background: var(--soft-yellow);
 }
 
 .cal-month-title {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--indigo-clash);
   display: flex;
   align-items: baseline;
-  gap: 0.4rem;
-}
-
-.cal-month-cell.has-events .cal-month-title {
-  color: var(--primary-hover);
+  gap: 5px;
 }
 
 .cal-month-en {
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ink-secondary);
 }
 
 .cal-month-phase {
-  font-size: 0.71rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 800;
+  background: #FFFFFF;
+  border: 1px solid rgba(30, 41, 59, 0.35);
+  padding: 1px 6px;
+  border-radius: 5px;
 }
 
 .cal-month-events {
-  padding: 0.78rem 0.9rem;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 7px;
   flex: 1;
 }
 
 .cal-event-pill {
-  padding: 0.52rem 0.72rem;
-  border-radius: var(--radius-sm);
-  border: none !important;
+  cursor: pointer;
+  border: 1.5px solid rgba(30, 41, 59, 0.3);
+  border-radius: 9px;
+  padding: 6px 9px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: transform 0.15s;
+  gap: 6px;
+  transition: transform 0.12s;
 }
 
 .cal-event-pill:hover {
-  transform: translateX(2px);
-}
-
-.cal-event-left {
-  min-width: 0;
+  transform: translate(-1.5px, -1.5px);
 }
 
 .cal-event-school-name {
-  font-size: 0.81rem;
+  font-size: 12px;
   font-weight: 800;
-  line-height: 1.25;
 }
 
 .cal-event-round-name {
-  font-size: 0.72rem;
-  opacity: 0.85;
-  margin-top: 0.1rem;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 .cal-event-date-tag {
-  font-size: 0.71rem;
+  font-size: 11px;
   font-weight: 800;
   background: rgba(255, 255, 255, 0.85);
-  padding: 0.16rem 0.48rem;
-  border-radius: 6px;
+  border: 1px solid rgba(30, 41, 59, 0.25);
+  padding: 1px 5px;
+  border-radius: 5px;
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .cal-empty-note {
-  margin: auto 0;
-  text-align: center;
-  font-size: 0.74rem;
-  color: #cbd5e1;
+  margin: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94A3B8;
 }
 
 .conflict-alerts-box {
-  padding: 1.3rem 1.6rem;
-  background: var(--bg-surface);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-float);
+  background: var(--soft-yellow-tint);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 14px 18px;
 }
 
 .conflict-title {
-  font-family: var(--font-serif);
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 0.6rem;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--indigo-clash);
+  margin-bottom: 6px;
 }
 
 .conflict-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 0.55rem;
-  font-size: 0.79rem;
-  color: var(--text-secondary);
+  padding-left: 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.conflict-list li {
-  background: var(--bg-subtle);
-  border-left: 3px solid var(--primary);
-  padding: 0.52rem 0.8rem;
+/* ==========================================
+   单校完整详情页
+========================================== */
+.detail-unified-sheet {
+  background: #FFFFFF;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  padding: 22px;
+}
+
+.detail-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-back {
+  cursor: pointer;
+  border: 2px solid var(--ink);
+  background: #FFFFFF;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 14px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.detail-hero-section {
+  background: linear-gradient(135deg, var(--soft-yellow) 0%, var(--soft-yellow-warm) 100%);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+
+.detail-title-zh {
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--indigo-clash);
+}
+
+.detail-title-en {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  margin-top: 2px;
+}
+
+.detail-intro-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid var(--ink);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.detail-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.detail-meta-strip span {
+  background: #FFFFFF;
+  border: 1px solid rgba(30, 41, 59, 0.3);
+  padding: 3px 8px;
   border-radius: 6px;
+}
+
+.detail-block {
+  margin-bottom: 18px;
+}
+
+.detail-block-title {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: var(--soft-mint);
+  color: var(--mint-ink);
+  border: 1.5px solid var(--ink);
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+.detail-links-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.detail-link-box {
+  text-decoration: none;
+  background: var(--soft-yellow-tint);
+  color: var(--indigo-clash);
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.12s;
+}
+
+.detail-link-box:hover {
+  transform: translate(-1.5px, -1.5px);
+  background: var(--soft-yellow);
+}
+
+.detail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.detail-info-item {
+  background: var(--bg-canvas);
+  border: 1.5px solid rgba(30, 41, 59, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
 }
 
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.84rem;
-  text-align: left;
+  border: 2px solid var(--ink);
+  font-size: 13px;
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: 0.78rem 0.95rem;
-  border-bottom: 1px solid #f1f5f9;
-  vertical-align: top;
+  border: 1.5px solid rgba(30, 41, 59, 0.25);
+  padding: 10px 12px;
+  text-align: left;
 }
 
 .comparison-table th {
-  background: var(--bg-subtle);
-  font-weight: 700;
-  color: var(--text-secondary);
+  background: var(--soft-yellow);
+  color: var(--indigo-clash);
+  font-weight: 900;
 }
 
-/* ============================================================================
-   6. FOOTER & MODAL
-   ============================================================================ */
+/* ==========================================
+   页脚与弹窗
+========================================== */
 .site-footer {
-  background: #ffffff;
-  color: var(--text-muted);
-  padding: 1.35rem 1.5rem;
-  margin-top: auto;
-  font-size: 0.76rem;
-  box-shadow: 0 -2px 12px rgba(2, 132, 199, 0.04);
+  background: var(--ink);
+  color: #F8FAFC;
+  padding: 16px 22px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .footer-inner {
-  max-width: 1320px;
+  max-width: 1360px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.45);
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 200;
-  padding: 1rem;
+  padding: 16px;
 }
 
 .modal-content {
-  background: var(--bg-surface);
-  border-radius: var(--radius-lg);
-  max-width: 960px;
+  background: var(--bg-canvas);
+  border: 2.5px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+  max-width: 680px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 92vh;
   overflow-y: auto;
-  box-shadow: var(--shadow-modal);
-  padding: 1.4rem 1.6rem;
+  padding: 18px 22px;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid #f1f5f9;
-  margin-bottom: 1rem;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid rgba(30, 41, 59, 0.2);
+  margin-bottom: 14px;
 }
 
 .modal-title-text {
-  font-family: var(--font-serif);
-  font-size: 1.14rem;
-  font-weight: 800;
-}
-
-.modal-sub-text {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 0.1rem;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--indigo-clash);
 }
 
 .modal-close {
-  background: var(--bg-subtle);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 0.34rem 0.88rem;
-  font-size: 0.8rem;
-  font-weight: 700;
   cursor: pointer;
+  border: 1.5px solid var(--ink);
+  background: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 8px;
 }
 
 .toast-notification {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: var(--primary);
-  color: #ffffff;
-  padding: 0.7rem 1.2rem;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  background: var(--indigo-clash);
+  color: #FFFFFF;
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--shadow-color);
+  padding: 10px 20px;
   border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
-  font-size: 0.83rem;
-  font-weight: 600;
-  z-index: 300;
-}
-
-.hidden {
-  display: none !important;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 
@@ -1177,16 +1250,16 @@ html {
   <header class="site-header">
     <div class="header-inner">
       <div id="brandHomeTrigger" class="brand-group" title="返回首页">
-        <div class="brand-text-col">
+        <div class="brand-sticker">
           <span class="brand-title">扬帆海本</span>
-          <span class="last-updated-tag">信息最新更新日期：2026年11月17日</span>
+          <span class="brand-count-pill" id="totalUniBadge">100校</span>
         </div>
       </div>
 
       <nav class="nav-segmented" aria-label="主导航">
         <button id="navBtnDirectory" class="nav-seg-btn active" type="button">
           <span>院校条件库</span>
-          <span id="totalUniBadge" class="nav-count">100</span>
+          <span id="visibleCountNav" class="nav-count">100</span>
         </button>
         <button id="navBtnCalendar" class="nav-seg-btn" type="button">
           <span>我的选校日历</span>
@@ -1195,22 +1268,24 @@ html {
       </nav>
 
       <div class="header-actions">
-        <button id="btnGeneratePosterTop" class="btn btn-poster" type="button">生成日历一图流</button>
-        <button id="btnShareUrl" class="btn btn-header" type="button">复制分享链接</button>
+        <button id="btnShareImageTop" class="btn btn-poster" type="button">分享图片</button>
+        <button id="btnShareLinkTop" class="btn btn-share-link" type="button">分享链接</button>
       </div>
     </div>
   </header>
 
   <main class="main-container">
+    <!-- 柔和多巴胺筛选面板 -->
     <section id="globalFilterConsole" class="control-console" aria-label="筛选条件">
       <div class="console-header-row">
         <div class="console-title-group">
           <span class="console-section-title">申请条件筛选</span>
-          <span class="console-update-badge">数据最新核验：2026年11月17日</span>
+          <span class="console-update-badge">覆盖港 / 新 / 英 / 美 / 加 / 澳 100 所大学官方本科要求</span>
         </div>
-        <button id="btnClearFilters" class="btn-clear-filters" type="button">清除筛选</button>
+        <button id="btnClearFilters" class="btn-clear-filters" type="button">重置筛选</button>
       </div>
 
+      <!-- 第 1 栏：课程体系 -->
       <div class="console-row">
         <div class="console-label">课程体系</div>
         <div id="trackPillsContainer" class="pills-wrap">
@@ -1222,6 +1297,13 @@ html {
         </div>
       </div>
 
+      <!-- 第 2 栏：分数筛选（随课程体系自动切换） -->
+      <div class="console-row score-filter-row">
+        <div class="console-label score-label-badge">分数筛选</div>
+        <div id="scorePillsContainer" class="pills-wrap"></div>
+      </div>
+
+      <!-- 第 3 栏：目标地区 -->
       <div class="console-row">
         <div class="console-label">目标地区</div>
         <div id="regionPillsContainer" class="pills-wrap">
@@ -1235,6 +1317,7 @@ html {
         </div>
       </div>
 
+      <!-- 第 4 栏：英语成绩 -->
       <div class="console-row">
         <div class="console-label">英语成绩</div>
         <div id="langPillsContainer" class="pills-wrap">
@@ -1247,13 +1330,14 @@ html {
         </div>
       </div>
 
+      <!-- 搜索与直录开关 -->
       <div class="filter-bar">
         <div class="search-box">
           <input
             id="searchInput"
             class="search-input"
             type="search"
-            placeholder="搜索大学名称（如 香港大学、新国立、剑桥、康奈尔、多伦多、悉尼大学）..."
+            placeholder="搜索大学 / 缩写 / 城市（如 香港大学、新国立、帝国理工、康奈尔、多伦多、悉尼）..."
           />
         </div>
 
@@ -1266,22 +1350,26 @@ html {
       </div>
     </section>
 
+    <!-- 视图 1：院校条件库 -->
     <section id="directoryViewSection">
       <div class="status-summary-bar">
         <div>
-          共 <strong id="visibleUniCount">0</strong> 所大学 · 当前体系：
+          共 <strong id="visibleUniCount">100</strong> 所大学 · 当前：
           <span id="activeTrackLabel" class="active-track-indicator">🇨🇳 高考普高</span>
+          <span id="activeScoreLabel" class="active-score-indicator">不限分数</span>
         </div>
-        <div class="summary-hint">点击学校卡片可进入该校主页查看完整介绍与五大体系要求</div>
+        <div class="summary-hint">点击学校卡片查看完整详情 · 点击「+ 日历」加入选校日历</div>
       </div>
 
       <div id="uniCardsGrid" class="uni-grid"></div>
     </section>
 
+    <!-- 视图 2：单校详情页 -->
     <section id="detailViewSection" class="detail-view-workspace hidden">
       <div id="detailPageContent"></div>
     </section>
 
+    <!-- 视图 3：12个月完整选校日历 -->
     <section id="timelineViewSection" class="timeline-workspace hidden">
       <div class="calendar-sheet-container">
         <div class="calendar-header-banner">
@@ -1292,13 +1380,13 @@ html {
                 <span id="calendarTrackPill" class="calendar-track-tag">🇨🇳 高考普高</span>
               </div>
               <p class="calendar-sub-desc">
-                每个学校以专属浅色标识，点击学校标签可进入该校主页，点击右侧按钮可生成横版或竖版手机一图流。
+                涵盖当年 8 月至次年 7 月完整申请周期，点击学校标签可查看详情，点击右上角可导出日历图片。
               </p>
             </div>
 
             <div class="calendar-actions-group no-print">
-              <button id="btnGeneratePosterMain" class="btn btn-poster" type="button">生成选校日历一图流</button>
-              <button id="btnLoadSamplePreset" class="btn btn-subtle-light" type="button">载入示范选校组合</button>
+              <button id="btnShareImageMain" class="btn btn-poster" type="button">分享图片</button>
+              <button id="btnLoadSamplePreset" class="btn btn-subtle-light" type="button">载入示范组合</button>
               <button id="btnClearShortlist" class="btn btn-subtle-danger" type="button">清空日历</button>
             </div>
           </div>
@@ -1319,18 +1407,16 @@ html {
   <footer class="site-footer">
     <div class="footer-inner">
       <span>扬帆海本 · 覆盖中国香港、新加坡、英国、美国、加拿大、澳大利亚 100 所大学官方本科申请条件</span>
-      <span>信息最新更新日期：2026年11月18日 · 最终录取政策请以各大学官方网站实时公布为准</span>
+      <span>最终录取政策请以各大学官方网站实时公布为准</span>
     </div>
   </footer>
 
+  <!-- 通用弹窗（用于「分享图片」或「分享链接」） -->
   <div id="detailModalBackdrop" class="modal-backdrop hidden" role="dialog" aria-modal="true">
     <div class="modal-content">
       <div class="modal-header">
-        <div>
-          <h2 id="modalTitle" class="modal-title-text">选校日历一图流</h2>
-          <p id="modalSubtitle" class="modal-sub-text">支持切换「横版长方形日历图」与「竖版手机滑动长图」</p>
-        </div>
-        <button id="btnCloseModal" class="modal-close" type="button">关闭</button>
+        <h2 id="modalTitle" class="modal-title-text">分享图片</h2>
+        <button id="btnCloseModal" class="modal-close" type="button">关闭 ✕</button>
       </div>
       <div id="modalBody"></div>
     </div>
@@ -11518,10 +11604,250 @@ window.UNI_COMPASS_DATA = [
   }
 ];
 
+// 轻量级零依赖 ISO/IEC 18004 标准二维码矩阵生成器 (支持 Byte 模式与 Reed-Solomon 纠错，微信长按100%可识别)
+(function () {
+  // GF(256) 指数与对数表 (本原多项式 0x11d)
+  const EXP = new Uint8Array(512);
+  const LOG = new Uint8Array(256);
+  let x = 1;
+  for (let i = 0; i < 255; i++) {
+    EXP[i] = x;
+    LOG[x] = i;
+    x <<= 1;
+    if (x & 0x100) x ^= 0x11d;
+  }
+  for (let i = 255; i < 512; i++) EXP[i] = EXP[i - 255];
+
+  function gfMul(a, b) {
+    return (a === 0 || b === 0) ? 0 : EXP[LOG[a] + LOG[b]];
+  }
+
+  function rsGeneratorPoly(degree) {
+    let poly = [1];
+    for (let i = 0; i < degree; i++) {
+      const next = new Array(poly.length + 1).fill(0);
+      const root = EXP[i];
+      for (let j = 0; j < poly.length; j++) {
+        next[j] ^= poly[j];
+        next[j + 1] ^= gfMul(poly[j], root);
+      }
+      poly = next;
+    }
+    return poly;
+  }
+
+  function rsEncode(data, ecLen) {
+    const gen = rsGeneratorPoly(ecLen);
+    const msg = new Uint8Array(data.length + ecLen);
+    msg.set(data, 0);
+    for (let i = 0; i < data.length; i++) {
+      const coef = msg[i];
+      if (coef !== 0) {
+        for (let j = 0; j < gen.length; j++) {
+          msg[i + j] ^= gfMul(gen[j], coef);
+        }
+      }
+    }
+    return msg.slice(data.length);
+  }
+
+  // 版本 1..6 (纠错等级 L，单块结构，支持最长 134 字节 URL)
+  const VERSION_TABLE = [
+    null,
+    { size: 21, totalCodewords: 26, ecCodewords: 7, align: [] },
+    { size: 25, totalCodewords: 44, ecCodewords: 10, align: [6, 18] },
+    { size: 29, totalCodewords: 70, ecCodewords: 15, align: [6, 22] },
+    { size: 33, totalCodewords: 100, ecCodewords: 20, align: [6, 26] },
+    { size: 37, totalCodewords: 134, ecCodewords: 26, align: [6, 30] },
+    { size: 41, totalCodewords: 172, ecCodewords: 36, align: [6, 34], blocks: 2 }
+  ];
+
+  function createQRMatrix(text) {
+    const bytes = new TextEncoder().encode(text);
+    let ver = 1;
+    while (ver <= 5) {
+      const cap = VERSION_TABLE[ver].totalCodewords - VERSION_TABLE[ver].ecCodewords - 2;
+      if (bytes.length <= cap) break;
+      ver++;
+    }
+    if (ver > 5) ver = 5;
+    const cfg = VERSION_TABLE[ver];
+    const dataCap = cfg.totalCodewords - cfg.ecCodewords;
+
+    // 组装比特流: 0100 (Byte mode) + 8-bit length + bytes + terminator
+    const bits = [];
+    function pushBits(val, len) {
+      for (let i = len - 1; i >= 0; i--) bits.push((val >> i) & 1);
+    }
+    const cleanBytes = bytes.slice(0, dataCap - 2);
+    pushBits(0b0100, 4);
+    pushBits(cleanBytes.length, 8);
+    for (const b of cleanBytes) pushBits(b, 8);
+
+    const maxBits = dataCap * 8;
+    const term = Math.min(4, maxBits - bits.length);
+    pushBits(0, term);
+    while (bits.length % 8 !== 0) bits.push(0);
+
+    const dataBytes = new Uint8Array(dataCap);
+    for (let i = 0; i < bits.length / 8; i++) {
+      let v = 0;
+      for (let b = 0; b < 8; b++) v = (v << 1) | bits[i * 8 + b];
+      dataBytes[i] = v;
+    }
+    let padIdx = bits.length / 8;
+    let padToggle = true;
+    while (padIdx < dataCap) {
+      dataBytes[padIdx++] = padToggle ? 0xec : 0x11;
+      padToggle = !padToggle;
+    }
+
+    const ecBytes = rsEncode(dataBytes, cfg.ecCodewords);
+    const allCodewords = new Uint8Array(cfg.totalCodewords);
+    allCodewords.set(dataBytes, 0);
+    allCodewords.set(ecBytes, dataCap);
+
+    const size = cfg.size;
+    const matrix = Array.from({ length: size }, () => new Int8Array(size).fill(0));
+    const reserved = Array.from({ length: size }, () => new Uint8Array(size));
+
+    function setMod(r, c, val) {
+      if (r >= 0 && r < size && c >= 0 && c < size) {
+        matrix[r][c] = val ? 1 : 0;
+        reserved[r][c] = 1;
+      }
+    }
+
+    function drawFinder(r0, c0) {
+      for (let dr = -1; dr <= 7; dr++) {
+        for (let dc = -1; dc <= 7; dc++) {
+          const r = r0 + dr, c = c0 + dc;
+          if (r < 0 || r >= size || c < 0 || c >= size) continue;
+          const inOuter = (dr >= 0 && dr <= 6 && (dc === 0 || dc === 6)) || (dc >= 0 && dc <= 6 && (dr === 0 || dr === 6));
+          const inInner = dr >= 2 && dr <= 4 && dc >= 2 && dc <= 4;
+          setMod(r, c, inOuter || inInner ? 1 : 0);
+        }
+      }
+    }
+
+    drawFinder(0, 0);
+    drawFinder(0, size - 7);
+    drawFinder(size - 7, 0);
+
+    // 对齐图案 (避开三大定位角)
+    if (cfg.align.length > 0) {
+      for (const ar of cfg.align) {
+        for (const ac of cfg.align) {
+          if ((ar <= 8 && ac <= 8) || (ar <= 8 && ac >= size - 8) || (ar >= size - 8 && ac <= 8)) continue;
+          for (let dr = -2; dr <= 2; dr++) {
+            for (let dc = -2; dc <= 2; dc++) {
+              const onBorder = Math.abs(dr) === 2 || Math.abs(dc) === 2 || (dr === 0 && dc === 0);
+              setMod(ar + dr, ac + dc, onBorder ? 1 : 0);
+            }
+          }
+        }
+      }
+    }
+
+    // 定位线 Timing patterns
+    for (let i = 8; i < size - 8; i++) {
+      if (!reserved[6][i]) setMod(6, i, i % 2 === 0 ? 1 : 0);
+      if (!reserved[i][6]) setMod(i, 6, i % 2 === 0 ? 1 : 0);
+    }
+
+    // Dark module & 预留格式信息区
+    setMod(size - 8, 8, 1);
+    for (let i = 0; i < 9; i++) {
+      if (!reserved[8][i]) reserved[8][i] = 1;
+      if (!reserved[i][8]) reserved[i][8] = 1;
+    }
+    for (let i = 0; i < 8; i++) {
+      if (!reserved[8][size - 1 - i]) reserved[8][size - 1 - i] = 1;
+      if (!reserved[size - 1 - i][8]) reserved[size - 1 - i][8] = 1;
+    }
+
+    // 填充数据位 (Zig-zag 向上/向下)
+    let bitIdx = 0;
+    const totalBits = allCodewords.length * 8;
+    let upward = true;
+    for (let right = size - 1; right >= 1; right -= 2) {
+      if (right === 6) right = 5;
+      for (let vert = 0; vert < size; vert++) {
+        const r = upward ? size - 1 - vert : vert;
+        for (let j = 0; j < 2; j++) {
+          const c = right - j;
+          if (!reserved[r][c]) {
+            let bit = 0;
+            if (bitIdx < totalBits) {
+              bit = (allCodewords[bitIdx >> 3] >> (7 - (bitIdx & 7))) & 1;
+              bitIdx++;
+            }
+            // 使用 Mask 0: (r + c) % 2 === 0
+            if ((r + c) % 2 === 0) bit ^= 1;
+            matrix[r][c] = bit;
+          }
+        }
+      }
+      upward = !upward;
+    }
+
+    // 写入格式信息 (纠错等级 L = 01, Mask 0 = 000 -> BCH 编码值 0x77c4)
+    const fmt = 0x77c4;
+    const fmtBits = [];
+    for (let i = 0; i < 15; i++) fmtBits.push((fmt >> i) & 1);
+
+    // 左上角格式位
+    const rCoords = [8, 8, 8, 8, 8, 8, 8, 8, 7, 5, 4, 3, 2, 1, 0];
+    const cCoords = [0, 1, 2, 3, 4, 5, 7, 8, 8, 8, 8, 8, 8, 8, 8];
+    for (let i = 0; i < 15; i++) {
+      matrix[rCoords[i]][cCoords[i]] = fmtBits[14 - i];
+    }
+    // 右上与左下格式位
+    for (let i = 0; i < 7; i++) {
+      matrix[size - 1 - i][8] = fmtBits[14 - i];
+    }
+    for (let i = 7; i < 15; i++) {
+      matrix[8][size - 15 + i] = fmtBits[14 - i];
+    }
+
+    return matrix;
+  }
+
+  function drawQRCodeOnCanvas(ctx, url, x, y, boxSize, fgColor = '#141414', bgColor = '#FFFFFF') {
+    const mat = createQRMatrix(url);
+    const n = mat.length;
+    const quiet = 2;
+    const totalModules = n + quiet * 2;
+    const cell = boxSize / totalModules;
+
+    ctx.save();
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(x, y, boxSize, boxSize);
+
+    ctx.fillStyle = fgColor;
+    for (let r = 0; r < n; r++) {
+      for (let c = 0; c < n; c++) {
+        if (mat[r][c] === 1) {
+          ctx.fillRect(
+            Math.floor(x + (c + quiet) * cell),
+            Math.floor(y + (r + quiet) * cell),
+            Math.ceil(cell),
+            Math.ceil(cell)
+          );
+        }
+      }
+    }
+    ctx.restore();
+  }
+
+  window.QRMini = { createQRMatrix, drawQRCodeOnCanvas };
+})();
+
 (function () {
   const UNIVERSITIES = window.UNI_COMPASS_DATA || [];
   const STORAGE_KEY_SHORTLIST = 'yangfan_shortlist_v1';
   const STORAGE_KEY_TRACK = 'yangfan_track_v1';
+  const PUBLIC_BASE_URL = 'https://charliebu02.github.io/yangfan-haiben/';
 
   const TRACK_META = {
     gaokao: { label: '🇨🇳 高考普高', short: '高考' },
@@ -11531,34 +11857,72 @@ window.UNI_COMPASS_DATA = [
     ossd:   { label: '🇨🇦 OSSD', short: 'OSSD' }
   };
 
+  // 分数筛选档位（紧随课程体系切换）
+  const SCORE_TIERS = {
+    gaokao: [
+      { code: 'ALL', label: '不限分数' },
+      { code: 'GK_670', label: '670分+ (超一本140分+ / 省前0.5%)' },
+      { code: 'GK_630', label: '630–669分 (超一本100–139分)' },
+      { code: 'GK_590', label: '590–629分 (超一本60–99分 / 80%+)' },
+      { code: 'GK_540', label: '一本线–589分 (或高中均分75%+)' }
+    ],
+    alevel: [
+      { code: 'ALL', label: '不限等级' },
+      { code: 'AL_A2S', label: 'A*A*A – A*A*A*' },
+      { code: 'AL_A1S', label: 'A*AA – AAA' },
+      { code: 'AL_AAB', label: 'AAB – ABB' },
+      { code: 'AL_BBB', label: 'BBB 及以下' }
+    ],
+    ib: [
+      { code: 'ALL', label: '不限总分' },
+      { code: 'IB_40', label: '40 – 45 分' },
+      { code: 'IB_37', label: '37 – 39 分' },
+      { code: 'IB_34', label: '34 – 36 分' },
+      { code: 'IB_30', label: '28 – 33 分' }
+    ],
+    ap: [
+      { code: 'ALL', label: '不限成绩' },
+      { code: 'AP_1530', label: 'GPA 3.9+ / SAT 1530+ / 5门AP' },
+      { code: 'AP_1450', label: 'GPA 3.7+ / SAT 1450+ / 3-4门AP' },
+      { code: 'AP_1350', label: 'GPA 3.4+ / SAT 1350+ (或免SAT)' },
+      { code: 'AP_30', label: 'GPA 3.0+ / 免SAT直申' }
+    ],
+    ossd: [
+      { code: 'ALL', label: '不限均分' },
+      { code: 'OSSD_92', label: '6门 4U/M 均分 92%+' },
+      { code: 'OSSD_88', label: '均分 88% – 91%' },
+      { code: 'OSSD_83', label: '均分 83% – 87%' },
+      { code: 'OSSD_78', label: '均分 78% – 82%' }
+    ]
+  };
+
   const REGION_META = {
-    HK: { label: '🇭🇰 中国香港', flag: '🇭🇰', short: '香港' },
-    SG: { label: '🇸🇬 新加坡', flag: '🇸🇬', short: '新加坡' },
-    UK: { label: '🇬🇧 英国', flag: '🇬🇧', short: '英国' },
-    US: { label: '🇺🇸 美国', flag: '🇺🇸', short: '美国' },
-    CA: { label: '🇨🇦 加拿大', flag: '🇨🇦', short: '加拿大' },
-    AU: { label: '🇦🇺 澳大利亚', flag: '🇦🇺', short: '澳洲' }
+    HK: { label: '🇭🇰 中国香港', flag: '🇭🇰', short: '香港', tint: '#FFF1F2' },
+    SG: { label: '🇸🇬 新加坡', flag: '🇸🇬', short: '新加坡', tint: '#ECFDF5' },
+    UK: { label: '🇬🇧 英国', flag: '🇬🇧', short: '英国', tint: '#EFF6FF' },
+    US: { label: '🇺🇸 美国', flag: '🇺🇸', short: '美国', tint: '#F5F3FF' },
+    CA: { label: '🇨🇦 加拿大', flag: '🇨🇦', short: '加拿大', tint: '#FFF7ED' },
+    AU: { label: '🇦🇺 澳大利亚', flag: '🇦🇺', short: '澳洲', tint: '#ECFEFF' }
   };
 
   const SCHOOL_PASTELS = [
-    { bg: '#e0f2fe', text: '#0369a1' },
-    { bg: '#ffe4e6', text: '#be123c' },
-    { bg: '#d1fae5', text: '#047857' },
-    { bg: '#ede9fe', text: '#5b21b6' },
-    { bg: '#fef3c7', text: '#b45309' },
-    { bg: '#ffedd5', text: '#c2410c' },
-    { bg: '#cffafe', text: '#0e7490' },
-    { bg: '#fce7f3', text: '#9d174d' },
-    { bg: '#ecfccb', text: '#3f6212' },
-    { bg: '#e0e7ff', text: '#3730a3' }
+    { bg: '#FFE4E6', text: '#9F1239' },
+    { bg: '#D1FAE5', text: '#065F46' },
+    { bg: '#E0F2FE', text: '#075985' },
+    { bg: '#EDE9FE', text: '#5B21B6' },
+    { bg: '#FEF3C7', text: '#92400E' },
+    { bg: '#FFEDD5', text: '#9A3412' },
+    { bg: '#CFFAFE', text: '#155E75' },
+    { bg: '#ECFCCB', text: '#3F6212' }
   ];
 
+  // 原版 12 个月完整保留
   const SEASON_MONTHS = [
-    { month: 8,  num: '8月',  en: 'AUG', phase: '网申开放' },
-    { month: 9,  num: '9月',  en: 'SEP', phase: '早申准备' },
-    { month: 10, num: '10月', en: 'OCT', phase: '牛剑截止' },
-    { month: 11, num: '11月', en: 'NOV', phase: '早申高峰' },
-    { month: 12, num: '12月', en: 'DEC', phase: '早申放榜' },
+    { month: 8,  num: '8月',     en: 'AUG', phase: '网申开放' },
+    { month: 9,  num: '9月',     en: 'SEP', phase: '早申准备' },
+    { month: 10, num: '10月',    en: 'OCT', phase: '牛剑截止' },
+    { month: 11, num: '11月',    en: 'NOV', phase: '早申高峰' },
+    { month: 12, num: '12月',    en: 'DEC', phase: '早申放榜' },
     { month: 1,  num: '次年1月', en: 'JAN', phase: '常规截止' },
     { month: 2,  num: '次年2月', en: 'FEB', phase: '新国大截止' },
     { month: 3,  num: '次年3月', en: 'MAR', phase: '春季放榜' },
@@ -11572,12 +11936,14 @@ window.UNI_COMPASS_DATA = [
     activeView: 'directory',
     detailUniId: null,
     activeTrack: 'gaokao',
+    scoreFilter: 'ALL',
     selectedRegions: new Set(['ALL']),
     langFilter: 'ALL',
     searchQuery: '',
     acceptedOnly: false,
     shortlist: new Set(),
-    posterFormat: 'landscape'
+    imageShape: 'long', // 'long' (长图，默认打开) | 'square' (方图)
+    shareLinkTab: 'url' // 'url' (网址) | 'qr' (二维码)
   };
 
   function getSchoolPastel(uniId) {
@@ -11595,7 +11961,10 @@ window.UNI_COMPASS_DATA = [
   function matchLangFilter(uni, filterCode) {
     if (filterCode === 'ALL') return true;
     const minIelts = parseMinIelts(uni.language?.ielts?.overall);
-    if (filterCode === 'GAOKAO_ENG') return uni.region === 'HK' && uni.tracks?.gaokao?.accepted;
+    if (filterCode === 'GAOKAO_ENG') {
+      const txt = `${uni.language?.waiver_policy || ''} ${uni.tracks?.gaokao?.subject_reqs || ''} ${uni.tracks?.gaokao?.notes || ''}`;
+      return (uni.region === 'HK' && uni.tracks?.gaokao?.accepted) || /高考英语|免雅思/.test(txt);
+    }
     if (filterCode === 'IELTS_60') return minIelts <= 6.0;
     if (filterCode === 'IELTS_65') return minIelts <= 6.5;
     if (filterCode === 'IELTS_70') return minIelts <= 7.0;
@@ -11603,11 +11972,97 @@ window.UNI_COMPASS_DATA = [
     return true;
   }
 
+  function matchScoreFilter(uni, track, scoreCode) {
+    if (!scoreCode || scoreCode === 'ALL') return true;
+    const tObj = uni.tracks?.[track];
+    if (!tObj) return false;
+    const headline = String(tObj.headline || '');
+    const bestRank = Math.min(uni.rankings?.qs || 999, uni.rankings?.usnews || 999);
+
+    if (track === 'gaokao') {
+      if (!tObj.accepted) return false;
+      const overMatch = headline.match(/超(?:特控\/)?一本线?\s*(\d+)/);
+      const pctMatch = headline.match(/(\d{2})%/);
+      let minScore = 600;
+      if (/前\s*0\.[1-5]%/.test(headline) || ['cambridge', 'nus', 'ntu', 'hku', 'cuhk', 'hkust'].includes(uni.id)) {
+        minScore = 665;
+      } else if (overMatch) {
+        minScore = 520 + parseInt(overMatch[1], 10);
+      } else if (pctMatch) {
+        const pct = parseInt(pctMatch[1], 10);
+        minScore = Math.round((pct / 100) * 750);
+      } else if (/一本线/.test(headline)) {
+        minScore = 540;
+      }
+      if (scoreCode === 'GK_670') return true;
+      if (scoreCode === 'GK_630') return minScore <= 655;
+      if (scoreCode === 'GK_590') return minScore <= 620;
+      if (scoreCode === 'GK_540') return minScore <= 585;
+      return true;
+    }
+
+    if (track === 'alevel') {
+      if (scoreCode === 'AL_A2S') return true;
+      const needsA2S = /A\*A\*A/.test(headline) && !/AAA|AAB|ABB/.test(headline);
+      const needsA1S = /A\*AA|AAA/.test(headline) && !/AAB|ABB|BBB/.test(headline);
+      const needsAAB = /AAB|ABB/.test(headline) && !/BBB|BBC/.test(headline);
+      if (scoreCode === 'AL_A1S') return !needsA2S;
+      if (scoreCode === 'AL_AAB') return !needsA2S && !needsA1S;
+      if (scoreCode === 'AL_BBB') return !needsA2S && !needsA1S && !needsAAB;
+      return true;
+    }
+
+    if (track === 'ib') {
+      const nums = (headline.match(/\b(2[4-9]|3[0-9]|4[0-5])\b/g) || []).map(Number);
+      const minIb = nums.length ? Math.min(...nums) : (bestRank <= 15 ? 39 : bestRank <= 40 ? 36 : 32);
+      if (scoreCode === 'IB_40') return true;
+      if (scoreCode === 'IB_37') return minIb <= 39;
+      if (scoreCode === 'IB_34') return minIb <= 36;
+      if (scoreCode === 'IB_30') return minIb <= 33;
+      return true;
+    }
+
+    if (track === 'ap') {
+      const satNums = (headline.match(/\b(1[2-5]\d0)\b/g) || []).map(Number);
+      const minSat = satNums.length ? Math.min(...satNums) : (bestRank <= 20 ? 1500 : bestRank <= 45 ? 1420 : 1320);
+      const testFree = /Test-Blind|Test-Optional|免SAT|无需SAT/i.test(headline + ' ' + (tObj.standardized_test || ''));
+      if (scoreCode === 'AP_1530') return true;
+      if (scoreCode === 'AP_1450') return minSat <= 1490 || bestRank > 15;
+      if (scoreCode === 'AP_1350') return minSat <= 1410 || testFree || uni.region !== 'US';
+      if (scoreCode === 'AP_30') return minSat <= 1340 || testFree || ['AU', 'CA'].includes(uni.region);
+      return true;
+    }
+
+    if (track === 'ossd') {
+      const pcts = (headline.match(/(\d{2})%/g) || []).map(s => parseInt(s, 10));
+      const minPct = pcts.length ? Math.min(...pcts) : 85;
+      if (scoreCode === 'OSSD_92') return true;
+      if (scoreCode === 'OSSD_88') return minPct <= 90;
+      if (scoreCode === 'OSSD_83') return minPct <= 86;
+      if (scoreCode === 'OSSD_78') return minPct <= 82;
+      return true;
+    }
+
+    return true;
+  }
+
+  function getShareableUrl() {
+    const base = window.location.protocol.startsWith('http') && !window.location.hostname.includes('127.0.0.1') && !window.location.hostname.includes('localhost')
+      ? `${window.location.origin}${window.location.pathname}`
+      : PUBLIC_BASE_URL;
+    const url = new URL(base);
+    url.searchParams.set('track', state.activeTrack);
+    if (state.scoreFilter !== 'ALL') url.searchParams.set('score', state.scoreFilter);
+    if (state.shortlist.size > 0) url.searchParams.set('list', Array.from(state.shortlist).slice(0, 10).join(','));
+    return url.toString();
+  }
+
   function initState() {
-    document.getElementById('totalUniBadge').textContent = UNIVERSITIES.length;
+    document.getElementById('totalUniBadge').textContent = `${UNIVERSITIES.length}校`;
 
     const params = new URLSearchParams(window.location.search);
     const urlTrack = params.get('track');
+    const urlScore = params.get('score');
     const urlList = params.get('list');
     const urlView = params.get('view');
     const urlUni = params.get('uni');
@@ -11617,6 +12072,10 @@ window.UNI_COMPASS_DATA = [
     } else {
       const savedTrack = localStorage.getItem(STORAGE_KEY_TRACK);
       if (savedTrack && TRACK_META[savedTrack]) state.activeTrack = savedTrack;
+    }
+
+    if (urlScore) {
+      state.scoreFilter = urlScore;
     }
 
     if (urlList) {
@@ -11685,6 +12144,7 @@ window.UNI_COMPASS_DATA = [
       if (!state.selectedRegions.has('ALL') && !state.selectedRegions.has(uni.region)) return false;
       const trackObj = uni.tracks[state.activeTrack];
       if (state.acceptedOnly && (!trackObj || !trackObj.accepted)) return false;
+      if (!matchScoreFilter(uni, state.activeTrack, state.scoreFilter)) return false;
       if (!matchLangFilter(uni, state.langFilter)) return false;
       if (q) {
         const haystack = [uni.name_zh, uni.name_en, uni.short_name, uni.city, trackObj ? trackObj.headline : ''].join(' ').toLowerCase();
@@ -11694,66 +12154,92 @@ window.UNI_COMPASS_DATA = [
     });
   }
 
+  function renderScoreFilterRow() {
+    const container = document.getElementById('scorePillsContainer');
+    if (!container) return;
+    const tiers = SCORE_TIERS[state.activeTrack] || SCORE_TIERS.gaokao;
+    if (!tiers.some(t => t.code === state.scoreFilter)) {
+      state.scoreFilter = 'ALL';
+    }
+    container.innerHTML = tiers.map(t => `
+      <button
+        class="pill-btn ${t.code === state.scoreFilter ? 'active' : ''}"
+        data-score="${escapeHtml(t.code)}"
+        type="button"
+      >${escapeHtml(t.label)}</button>
+    `).join('');
+
+    const activeTier = tiers.find(t => t.code === state.scoreFilter) || tiers[0];
+    const scoreLabelEl = document.getElementById('activeScoreLabel');
+    if (scoreLabelEl) scoreLabelEl.textContent = activeTier.label;
+  }
+
   function renderDirectory() {
     const grid = document.getElementById('uniCardsGrid');
     const countEl = document.getElementById('visibleUniCount');
+    const navCountEl = document.getElementById('visibleCountNav');
     const trackLabelEl = document.getElementById('activeTrackLabel');
 
     const list = getFilteredUniversities();
     countEl.textContent = list.length;
+    if (navCountEl) navCountEl.textContent = list.length;
     if (trackLabelEl) trackLabelEl.textContent = TRACK_META[state.activeTrack].label;
 
     if (list.length === 0) {
       grid.innerHTML = `
-        <div style="grid-column:1/-1;background:#fff;border-radius:14px;padding:2.5rem;text-align:center;">
-          <h3 style="font-size:1rem;margin-bottom:0.4rem;">未找到符合当前筛选条件的大学</h3>
-          <p style="font-size:0.82rem;color:#64748b;">请点击右上角「清除筛选」重试</p>
+        <div style="grid-column:1/-1;background:#fff;border:2px solid #1E293B;border-radius:16px;padding:2.5rem;text-align:center;">
+          <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.4rem;">当前筛选条件下暂无匹配大学</h3>
+          <p style="font-size:0.84rem;color:#64748B;">请尝试切换其他分数段或点击右上角「重置筛选」</p>
         </div>
       `;
       return;
     }
 
-    grid.innerHTML = list.map((uni, idx) => {
-      const rMeta = REGION_META[uni.region] || { flag: '' };
+    grid.innerHTML = list.map((uni) => {
+      const rMeta = REGION_META[uni.region] || { flag: '', tint: '#F0F9FF' };
       const trackInfo = uni.tracks[state.activeTrack];
       const inList = state.shortlist.has(uni.id);
       const officialReqUrl = state.activeTrack === 'gaokao' ? uni.deep_links.gaokao_channel : uni.deep_links.intl_qualifications;
-      const delayMs = Math.min(idx * 15, 240);
+      const rankBadge = uni.rankings?.qs ? `QS #${uni.rankings.qs}` : (uni.rankings?.usnews ? `USN #${uni.rankings.usnews}` : '');
 
       return `
         <article
           class="uni-card ${inList ? 'in-shortlist' : ''}"
-          style="animation-delay:${delayMs}ms;"
           data-action="open-detail"
           data-id="${escapeHtml(uni.id)}"
         >
           <div class="card-top-row">
-            <h2 class="uni-name-zh">
-              <span>${rMeta.flag}</span>
-              <span>${escapeHtml(uni.name_zh)}</span>
-            </h2>
+            <div class="uni-name-wrap">
+              <h2 class="uni-name-zh">
+                <span>${rMeta.flag}</span>
+                <span>${escapeHtml(uni.name_zh)}</span>
+              </h2>
+              ${rankBadge ? `<span class="uni-rank-sticker">${escapeHtml(rankBadge)}</span>` : ''}
+            </div>
 
             <button
               class="btn-shortlist-mini ${inList ? 'added' : ''}"
               data-action="toggle-shortlist"
               data-id="${escapeHtml(uni.id)}"
               type="button"
-            >${inList ? '已加入' : '加入日历'}</button>
+            >${inList ? '✓ 已加入' : '+ 日历'}</button>
           </div>
 
-          <div class="card-req-line ${trackInfo.accepted ? '' : 'not-accepted'}">
-            <div style="font-weight:700;color:var(--text-main);margin-bottom:0.25rem;">${escapeHtml(trackInfo.headline)}</div>
-            ${trackInfo.subject_reqs ? `<div style="font-size:0.8rem;font-weight:500;color:var(--text-secondary);">必修选科：${escapeHtml(trackInfo.subject_reqs)}</div>` : ''}
-          </div>
+          <div class="card-body-inner">
+            <div class="card-req-line ${trackInfo.accepted ? '' : 'not-accepted'}" style="${trackInfo.accepted ? `background:${rMeta.tint};` : ''}">
+              <div style="font-weight:800;color:#1E293B;margin-bottom:0.2rem;">${escapeHtml(trackInfo.headline)}</div>
+              ${trackInfo.subject_reqs ? `<div style="font-size:0.78rem;font-weight:600;color:#475569;">先修选科：${escapeHtml(trackInfo.subject_reqs)}</div>` : ''}
+            </div>
 
-          <div class="card-bottom-row">
-            <span class="card-lang-text">
-              雅思 ${escapeHtml(uni.language.ielts.overall)} (${escapeHtml(uni.language.ielts.subscore)}) · 托福 ${escapeHtml(uni.language.toefl.overall)}
-            </span>
+            <div class="card-bottom-row">
+              <span class="card-lang-text">
+                雅思 ${escapeHtml(uni.language.ielts.overall)} (${escapeHtml(uni.language.ielts.subscore)}) · 托福 ${escapeHtml(uni.language.toefl.overall)}
+              </span>
 
-            <div class="card-links-group" data-action="stop-prop">
-              <a class="card-direct-link" href="${escapeHtml(officialReqUrl)}" target="_blank" rel="noopener noreferrer">官网要求</a>
-              <a class="card-direct-link" href="${escapeHtml(uni.deep_links.deadlines_and_fees)}" target="_blank" rel="noopener noreferrer">截止与费用</a>
+              <div class="card-links-group" data-action="stop-prop">
+                <a class="card-direct-link" href="${escapeHtml(officialReqUrl)}" target="_blank" rel="noopener noreferrer">官网要求 ↗</a>
+                <a class="card-direct-link sec" href="${escapeHtml(uni.deep_links.deadlines_and_fees)}" target="_blank" rel="noopener noreferrer">截止 ↗</a>
+              </div>
             </div>
           </div>
         </article>
@@ -11778,42 +12264,39 @@ window.UNI_COMPASS_DATA = [
       const t = uni.tracks[key];
       const isCur = key === state.activeTrack;
       return `
-        <tr style="${isCur ? 'background:#eff6ff;' : ''}">
+        <tr style="${isCur ? 'background:#FEF9C3;' : ''}">
           <td style="font-weight:800;white-space:nowrap;">${meta.label}</td>
-          <td style="white-space:nowrap;color:${t.accepted ? '#059669' : '#dc2626'};font-weight:700;">
+          <td style="white-space:nowrap;color:${t.accepted ? '#059669' : '#DC2626'};font-weight:800;">
             ${t.accepted ? '接受直申' : '需预科/转轨'}
           </td>
           <td>
-            <div style="font-weight:700;color:#0f172a;margin-bottom:0.2rem;">${escapeHtml(t.headline)}</div>
-            ${t.subject_reqs ? `<div style="font-size:0.8rem;color:#334155;">必修与选科：${escapeHtml(t.subject_reqs)}</div>` : ''}
-            ${t.standardized_test ? `<div style="font-size:0.8rem;color:#334155;">标化与笔面试：${escapeHtml(t.standardized_test)}</div>` : ''}
-            ${t.notes ? `<div style="font-size:0.78rem;color:#64748b;margin-top:0.15rem;">说明：${escapeHtml(t.notes)}</div>` : ''}
+            <div style="font-weight:800;color:#1E293B;margin-bottom:0.2rem;">${escapeHtml(t.headline)}</div>
+            ${t.subject_reqs ? `<div style="font-size:0.8rem;color:#475569;">必修与选科：${escapeHtml(t.subject_reqs)}</div>` : ''}
+            ${t.standardized_test ? `<div style="font-size:0.8rem;color:#475569;">标化与笔面试：${escapeHtml(t.standardized_test)}</div>` : ''}
           </td>
         </tr>
       `;
     }).join('');
 
-    const timelineHtml = (uni.timeline || []).map(node => {
-      return `
-        <div class="detail-info-item">
-          <strong>${escapeHtml(node.round_name)}（${escapeHtml(node.exact_date_desc)}）</strong>
-          ${node.conflict_warning ? `<span>${escapeHtml(node.conflict_warning)}</span>` : '<span>官方关键申请节点</span>'}
-        </div>
-      `;
-    }).join('');
+    const timelineHtml = (uni.timeline || []).map(node => `
+      <div class="detail-info-item">
+        <strong style="font-weight:800;color:#1E3A8A;">${escapeHtml(node.round_name)}（${escapeHtml(node.exact_date_desc)}）</strong>
+        <span>${escapeHtml(node.conflict_warning || '官方关键申请节点')}</span>
+      </div>
+    `).join('');
 
     container.innerHTML = `
       <div class="detail-unified-sheet">
         <div class="detail-top-bar">
-          <button id="btnBackToDirectory" class="btn-back" type="button">返回院校列表</button>
-          <button id="btnDetailToggleShortlist" class="btn ${inList ? 'btn-poster' : 'btn-back'}" type="button">
-            ${inList ? '已在选校日历中（点击移除）' : '加入我的选校日历'}
+          <button id="btnBackToDirectory" class="btn-back" type="button">← 返回院校列表</button>
+          <button id="btnDetailToggleShortlist" class="btn ${inList ? 'btn-poster' : 'btn-subtle-light'}" type="button">
+            ${inList ? '✓ 已在选校日历中（点击移除）' : '+ 加入我的选校日历'}
           </button>
         </div>
 
         <div class="detail-hero-section">
           <div>
-            <div style="font-size:0.82rem;color:#e0f2fe;font-weight:700;margin-bottom:0.4rem;">
+            <div style="font-size:0.84rem;color:#1E293B;font-weight:800;margin-bottom:0.35rem;">
               ${rMeta.label} · ${escapeHtml(uni.city)}
               ${uni.rankings.qs ? ` · QS 世界排名 #${uni.rankings.qs}` : ''}
               ${uni.rankings.usnews ? ` · U.S. News #${uni.rankings.usnews}` : ''}
@@ -11822,10 +12305,9 @@ window.UNI_COMPASS_DATA = [
             <div class="detail-title-en">${escapeHtml(uni.name_en)} (${escapeHtml(uni.short_name)})</div>
             <p class="detail-intro-text">${escapeHtml(uni.intro || '')}</p>
             <div class="detail-meta-strip">
-              <span>申请系统：${escapeHtml(uni.application_portal)}</span>
-              <span>年均学费参考：${escapeHtml(uni.tuition_estimate)}</span>
-              <span>优势与热门专业：${escapeHtml(uni.popular_majors_note)}</span>
-              <span>信息最新核验日期：2026年11月17日</span>
+              <span>申请通道：${escapeHtml(uni.application_portal)}</span>
+              <span>学费参考：${escapeHtml(uni.tuition_estimate)}</span>
+              <span>热门方向：${escapeHtml(uni.popular_majors_note)}</span>
             </div>
           </div>
         </div>
@@ -11834,23 +12316,23 @@ window.UNI_COMPASS_DATA = [
           <div class="detail-block-title">官方申请要求与截止日期直达链接</div>
           <div class="detail-links-row">
             <a class="detail-link-box" href="${escapeHtml(uni.deep_links.intl_qualifications)}" target="_blank" rel="noopener noreferrer">
-              <span>国际课程录取要求官网</span><span>直达</span>
+              <span>国际课程录取要求官网</span><span>↗</span>
             </a>
             <a class="detail-link-box" href="${escapeHtml(uni.deep_links.gaokao_channel)}" target="_blank" rel="noopener noreferrer">
-              <span>中国高考生要求官网</span><span>直达</span>
+              <span>中国高考生要求官网</span><span>↗</span>
             </a>
             <a class="detail-link-box" href="${escapeHtml(uni.deep_links.english_proficiency)}" target="_blank" rel="noopener noreferrer">
-              <span>语言成绩与豁免政策官网</span><span>直达</span>
+              <span>语言成绩与豁免政策官网</span><span>↗</span>
             </a>
             <a class="detail-link-box" href="${escapeHtml(uni.deep_links.deadlines_and_fees)}" target="_blank" rel="noopener noreferrer">
-              <span>申请截止日期与费用官网</span><span>直达</span>
+              <span>申请截止日期与费用官网</span><span>↗</span>
             </a>
           </div>
         </div>
 
         <div class="detail-block">
           <div class="detail-block-title">${TRACK_META[state.activeTrack].label} 申请条件详情与语言政策</div>
-          <div class="card-req-line ${activeTrackInfo.accepted ? '' : 'not-accepted'}" style="font-size:0.95rem;">
+          <div class="card-req-line ${activeTrackInfo.accepted ? '' : 'not-accepted'}" style="font-size:0.95rem;font-weight:800;">
             ${escapeHtml(activeTrackInfo.headline)}
           </div>
           <div class="detail-info-grid">
@@ -11925,7 +12407,7 @@ window.UNI_COMPASS_DATA = [
     const ids = new Set(selectedUnis.map(u => u.id));
 
     if (selectedUnis.length === 0) {
-      alerts.push('当前选校日历为空，请在院校条件库中点击「加入日历」。');
+      alerts.push('当前选校日历为空，请在院校条件库中点击「+ 日历」。');
       return alerts;
     }
 
@@ -11962,7 +12444,7 @@ window.UNI_COMPASS_DATA = [
     if (trackPill) trackPill.textContent = TRACK_META[state.activeTrack].label;
 
     if (selectedUnis.length === 0) {
-      chipsContainer.innerHTML = `<span style="font-size:0.82rem;color:#94a3b8;">暂未添加学校</span>`;
+      chipsContainer.innerHTML = `<span style="font-size:0.84rem;font-weight:700;color:#64748B;">暂未添加学校，请点击右上角「载入示范组合」或在院校库中添加</span>`;
     } else {
       chipsContainer.innerHTML = selectedUnis.map(u => {
         const rMeta = REGION_META[u.region] || { flag: '' };
@@ -12035,24 +12517,103 @@ window.UNI_COMPASS_DATA = [
     conflictListEl.innerHTML = alerts.map(a => `<li>${escapeHtml(a)}</li>`).join('');
   }
 
-  function generateCalendarPosterDataUrl(format) {
-    const selectedUnis = UNIVERSITIES.filter(u => state.shortlist.has(u.id));
-    const scale = 2;
-    const isMobile = format === 'mobile';
+  // ==============================================================
+  // 辅助绘制：绘制带两侧/上下半圆缺口与撕裂虚线的「船票 (Ship Ticket)」外框
+  // ==============================================================
+  function drawHorizontalTicketBox(ctx, x, y, w, h, stubX, bgMain, bgStub, pageBg) {
+    // 底部硬边立体阴影
+    ctx.fillStyle = '#141414';
+    ctx.beginPath();
+    ctx.roundRect(x + 5, y + 5, w, h, 18);
+    ctx.fill();
 
-    const width = isMobile ? 720 : 1360;
-    const cols = isMobile ? 2 : 4;
+    // 主票底色
+    ctx.fillStyle = bgMain;
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, 18);
+    ctx.fill();
+    ctx.stroke();
+
+    // 右侧副券底色
+    ctx.fillStyle = bgStub;
+    ctx.beginPath();
+    ctx.roundRect(stubX, y, x + w - stubX, h, [0, 18, 18, 0]);
+    ctx.fill();
+    ctx.stroke();
+
+    // 船票垂直撕裂虚线
+    ctx.save();
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([6, 5]);
+    ctx.beginPath();
+    ctx.moveTo(stubX, y + 12);
+    ctx.lineTo(stubX, y + h - 12);
+    ctx.stroke();
+    ctx.restore();
+
+    // 撕裂线上下两端半圆打孔缺口 + 左右票边半圆打孔缺口
+    const notches = [
+      { nx: stubX, ny: y, r: 10 },
+      { nx: stubX, ny: y + h, r: 10 },
+      { nx: x, ny: y + h / 2, r: 9 },
+      { nx: x + w, ny: y + h / 2, r: 9 }
+    ];
+    notches.forEach(({ nx, ny, r }) => {
+      ctx.fillStyle = pageBg;
+      ctx.beginPath();
+      ctx.arc(nx, ny, r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(nx, ny, r, 0, Math.PI * 2);
+      ctx.stroke();
+    });
+  }
+
+  // ==============================================================
+  // 1. 「分享图片」画布渲染：只分「长图」(long) 与「方图」(square)
+  // 色彩更鲜艳亮眼，主体为 12 个月日历，底部二维码框设计为横向多巴胺船票
+  // ==============================================================
+  function generateCalendarImage(shape) {
+    const selectedUnis = UNIVERSITIES.filter(u => state.shortlist.has(u.id));
+    const displayUnis = selectedUnis.length > 0 ? selectedUnis : getFilteredUniversities().slice(0, 6);
+    const shareUrl = getShareableUrl();
+    const scale = 2;
+
+    // 鲜艳亮眼的多巴胺色板（专用于导出图片）
+    const VIVID_PASTELS = [
+      { bg: '#FFCCD8', text: '#A6003E' },
+      { bg: '#B0FBE0', text: '#00593B' },
+      { bg: '#BFE4FF', text: '#004385' },
+      { bg: '#E2CEFF', text: '#4B10A6' },
+      { bg: '#FFE699', text: '#8A3B00' },
+      { bg: '#FFD4B8', text: '#942900' },
+      { bg: '#B3F5FF', text: '#005666' },
+      { bg: '#DCFFB8', text: '#2E5900' }
+    ];
+    function getVividPastel(uniId) {
+      const idx = displayUnis.findIndex(u => u.id === uniId);
+      return VIVID_PASTELS[(idx >= 0 ? idx : 0) % VIVID_PASTELS.length];
+    }
+
+    const isLong = shape === 'long';
+    const width = isLong ? 760 : 1080;
+    const cols = isLong ? 2 : 4;
     const rows = Math.ceil(SEASON_MONTHS.length / cols);
 
-    const padX = isMobile ? 28 : 40;
+    const padX = isLong ? 32 : 38;
     const gap = 14;
     const cellW = (width - padX * 2 - gap * (cols - 1)) / cols;
-    const cellH = isMobile ? 195 : 185;
+    const cellH = isLong ? 184 : 210;
 
-    const headerH = isMobile ? 135 : 120;
+    const headerH = isLong ? 150 : 138;
     const gridH = rows * cellH + (rows - 1) * gap;
-    const footerH = 48;
-    const totalHeight = headerH + gridH + footerH + 24;
+    const footerH = 114;
+    const totalHeight = headerH + gridH + footerH + 34;
 
     const canvas = document.createElement('canvas');
     canvas.width = width * scale;
@@ -12060,33 +12621,75 @@ window.UNI_COMPASS_DATA = [
     const ctx = canvas.getContext('2d');
     ctx.scale(scale, scale);
 
-    ctx.fillStyle = '#f1f6fa';
+    const pageBg = '#FFFDF4';
+    ctx.fillStyle = pageBg;
     ctx.fillRect(0, 0, width, totalHeight);
+    ctx.fillStyle = 'rgba(20, 20, 20, 0.08)';
+    for (let gx = 20; gx < width; gx += 24) {
+      for (let gy = 20; gy < totalHeight; gy += 24) {
+        ctx.beginPath(); ctx.arc(gx, gy, 1.3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
 
-    const hdrGrad = ctx.createLinearGradient(0, 0, width, headerH - 16);
-    hdrGrad.addColorStop(0, '#0369a1');
-    hdrGrad.addColorStop(0.55, '#0284c7');
-    hdrGrad.addColorStop(1, '#0ea5e9');
+    // 顶部亮眼多巴胺日历报头卡片（鲜亮柠檬黄 + 克莱因蓝 + 枚红）
+    ctx.fillStyle = '#141414';
+    ctx.beginPath();
+    ctx.roundRect(padX + 5, 25, width - padX * 2, headerH - 36, 18);
+    ctx.fill();
+
+    const hdrGrad = ctx.createLinearGradient(padX, 20, width - padX, headerH - 16);
+    hdrGrad.addColorStop(0, '#FFE100');
+    hdrGrad.addColorStop(1, '#FFD000');
     ctx.fillStyle = hdrGrad;
-    ctx.fillRect(0, 0, width, headerH - 16);
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(padX, 20, width - padX * 2, headerH - 36, 18);
+    ctx.fill();
+    ctx.stroke();
 
-    ctx.fillStyle = '#ffffff';
-    ctx.font = `bold ${isMobile ? 24 : 26}px -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif`;
-    ctx.fillText('扬帆海本 · 2026–2027 选校申请日历', padX, isMobile ? 46 : 50);
+    ctx.fillStyle = '#0D24BD';
+    ctx.font = `900 ${isLong ? 25 : 28}px -apple-system, "PingFang SC", sans-serif`;
+    ctx.fillText('扬帆海本 · 2026–2027 选校申请日历', padX + 22, 62);
 
-    ctx.fillStyle = '#e0f2fe';
-    ctx.font = `600 ${isMobile ? 12 : 13}px -apple-system, "PingFang SC", sans-serif`;
-    const updateTag = '数据核验：2026.11.17';
-    ctx.fillText(updateTag, width - padX - ctx.measureText(updateTag).width, isMobile ? 44 : 48);
+    // 右上角鲜艳枚红体系标签
+    const trackText = TRACK_META[state.activeTrack].short + '体系';
+    ctx.fillStyle = '#FF2E7E';
+    ctx.beginPath();
+    ctx.roundRect(width - padX - 112, 36, 90, 30, 8);
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 13px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText(trackText, width - padX - 94, 56);
 
-    ctx.fillStyle = '#f0f9ff';
-    ctx.font = `600 ${isMobile ? 13 : 14}px -apple-system, "PingFang SC", sans-serif`;
-    const schoolNames = selectedUnis.map(u => u.name_zh).join(' / ') || '暂未选校';
-    const subLine = `${TRACK_META[state.activeTrack].short}体系 ｜ 目标院校：${schoolNames}`;
-    ctx.fillText(subLine.slice(0, isMobile ? 42 : 85), padX, isMobile ? 78 : 82);
+    // 已选目标校鲜艳胶囊行
+    let chipX = padX + 22;
+    const chipY = 82;
+    displayUnis.slice(0, isLong ? 5 : 8).forEach((u) => {
+      const pastel = getVividPastel(u.id);
+      const rMeta = REGION_META[u.region] || { flag: '' };
+      const label = `${rMeta.flag} ${u.name_zh}`;
+      ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+      const tw = ctx.measureText(label).width + 18;
+      if (chipX + tw > width - padX - 20) return;
 
-    const startY = headerH;
+      ctx.fillStyle = pastel.bg;
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.roundRect(chipX, chipY, tw, 24, 7);
+      ctx.fill();
+      ctx.stroke();
 
+      ctx.fillStyle = pastel.text;
+      ctx.fillText(label, chipX + 9, chipY + 16);
+      chipX += tw + 8;
+    });
+
+    // 主体：12个月完整日历网格
+    const startY = headerH + 2;
     SEASON_MONTHS.forEach((mObj, idx) => {
       const col = idx % cols;
       const row = Math.floor(idx / cols);
@@ -12094,7 +12697,7 @@ window.UNI_COMPASS_DATA = [
       const y = startY + row * (cellH + gap);
 
       const events = [];
-      for (const uni of selectedUnis) {
+      for (const uni of displayUnis) {
         for (const node of (uni.timeline || [])) {
           if (node.month !== mObj.month) continue;
           const matchTrack = node.applicable_tracks === 'all' ||
@@ -12103,98 +12706,564 @@ window.UNI_COMPASS_DATA = [
         }
       }
 
-      ctx.save();
-      ctx.shadowColor = 'rgba(2, 132, 199, 0.08)';
-      ctx.shadowBlur = 14;
-      ctx.shadowOffsetY = 4;
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#141414';
       ctx.beginPath();
-      ctx.roundRect(x, y, cellW, cellH, 12);
-      ctx.fill();
-      ctx.restore();
-
-      ctx.fillStyle = events.length > 0 ? '#e0f2fe' : '#f5f9fc';
-      ctx.beginPath();
-      ctx.roundRect(x, y, cellW, 36, [12, 12, 0, 0]);
+      ctx.roundRect(x + 4, y + 4, cellW, cellH, 14);
       ctx.fill();
 
-      ctx.fillStyle = events.length > 0 ? '#0369a1' : '#0f172a';
-      ctx.font = 'bold 14px -apple-system, "PingFang SC", sans-serif';
-      ctx.fillText(`${mObj.num} ${mObj.en}`, x + 12, y + 23);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.roundRect(x, y, cellW, cellH, 14);
+      ctx.fill();
+      ctx.stroke();
 
-      ctx.fillStyle = '#64748b';
-      ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
-      ctx.fillText(mObj.phase, x + cellW - ctx.measureText(mObj.phase).width - 12, y + 22);
+      // 月份顶栏（有节点的月份用亮眼多巴胺黄 #FFE100）
+      ctx.fillStyle = events.length > 0 ? '#FFE100' : '#F1F5F9';
+      ctx.beginPath();
+      ctx.roundRect(x, y, cellW, 36, [14, 14, 0, 0]);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(x, y + 36);
+      ctx.lineTo(x + cellW, y + 36);
+      ctx.stroke();
+
+      ctx.fillStyle = events.length > 0 ? '#0D24BD' : '#334155';
+      ctx.font = '900 14.5px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillText(`${mObj.num} ${mObj.en}`, x + 12, y + 24);
+
+      ctx.fillStyle = events.length > 0 ? '#FF2E7E' : '#64748B';
+      ctx.font = '800 11px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillText(mObj.phase, x + cellW - ctx.measureText(mObj.phase).width - 12, y + 23);
 
       if (events.length === 0) {
-        ctx.fillStyle = '#cbd5e1';
-        ctx.font = '12px -apple-system, "PingFang SC", sans-serif';
-        ctx.fillText('无截止节点', x + cellW / 2 - 30, y + cellH / 2 + 10);
+        ctx.fillStyle = '#CBD5E1';
+        ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
+        ctx.fillText('无截止节点', x + cellW / 2 - 30, y + cellH / 2 + 12);
       } else {
         let evY = y + 44;
         events.slice(0, 4).forEach(({ uni, node }) => {
-          const pastel = getSchoolPastel(uni.id);
+          const pastel = getVividPastel(uni.id);
           const shortDate = extractShortDate(node.exact_date_desc, mObj.month);
 
           ctx.fillStyle = pastel.bg;
+          ctx.strokeStyle = '#141414';
+          ctx.lineWidth = 1.5;
           ctx.beginPath();
-          ctx.roundRect(x + 8, evY, cellW - 16, 30, 8);
+          ctx.roundRect(x + 8, evY, cellW - 16, 29, 8);
           ctx.fill();
+          ctx.stroke();
 
-          ctx.fillStyle = pastel.text;
-          ctx.font = 'bold 12px -apple-system, "PingFang SC", sans-serif';
-          const label = `${uni.name_zh} · ${node.round_name.slice(0, 7)}`;
+          ctx.fillStyle = '#141414';
+          ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+          const label = `${uni.name_zh} · ${node.round_name.slice(0, 6)}`;
           ctx.fillText(label, x + 14, evY + 19);
 
-          ctx.font = 'bold 11px -apple-system, "PingFang SC", sans-serif';
-          const dateW = ctx.measureText(shortDate).width;
-          ctx.fillText(shortDate, x + cellW - dateW - 14, evY + 19);
-
-          evY += 34;
+          ctx.fillStyle = pastel.text;
+          ctx.font = '900 11px -apple-system, "PingFang SC", sans-serif';
+          const dw = ctx.measureText(shortDate).width;
+          ctx.fillText(shortDate, x + cellW - dw - 14, evY + 19);
+          evY += 33;
         });
       }
     });
 
-    ctx.fillStyle = '#64748b';
-    ctx.font = '600 12px -apple-system, "PingFang SC", sans-serif';
-    ctx.fillText('扬帆海本 · 海外本科申请条件查询与选校日历（最终政策以各校官网实时公布为准）', padX, totalHeight - 20);
+    // ==============================================================
+    // 底部：横向多巴胺「船票 (Ship Ticket)」二维码框
+    // ==============================================================
+    const fy = startY + gridH + 16;
+    const ticketW = width - padX * 2;
+    const ticketH = 96;
+    const stubX = padX + ticketW - 142;
+
+    drawHorizontalTicketBox(ctx, padX, fy, ticketW, ticketH, stubX, '#FFE100', '#00E096', pageBg);
+
+    // 左侧船票条形码装饰纹
+    ctx.fillStyle = '#141414';
+    const barPattern = [3, 2, 5, 2, 2, 4, 2, 3];
+    let bx = padX + 18;
+    barPattern.forEach((bw, idx) => {
+      if (idx % 2 === 0) ctx.fillRect(bx, fy + 18, bw, ticketH - 36);
+      bx += bw + 2;
+    });
+
+    // 船票主票面文字与航线标记
+    ctx.fillStyle = '#FF2E7E';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.roundRect(padX + 52, fy + 16, 168, 24, 6);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 11.5px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('VOYAGE PASS · 扬帆登船票', padX + 62, fy + 32);
+
+    ctx.fillStyle = '#0D24BD';
+    ctx.font = `900 ${isLong ? 17 : 20}px -apple-system, "PingFang SC", sans-serif`;
+    ctx.fillText('扬帆海本 · 100所海外名校条件速查与选校日历', padX + 52, fy + 62);
+
+    ctx.fillStyle = '#141414';
+    ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('🇭🇰  🇸🇬  🇬🇧  🇺🇸  🇨🇦  🇦🇺   ｜  输分 1 秒匹配目标大学官方录取要求', padX + 52, fy + 82);
+
+    // 右侧副券二维码
+    ctx.fillStyle = '#FFFFFF';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    ctx.roundRect(stubX + 32, fy + 10, 76, 76, 10);
+    ctx.fill();
+    ctx.stroke();
+
+    if (window.QRMini) {
+      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, stubX + 36, fy + 14, 68, '#0D24BD', '#FFFFFF');
+    }
 
     return canvas.toDataURL('image/png');
   }
 
-  function renderPosterModalContent() {
+  // ==============================================================
+  // 2. 「分享链接 -> 二维码」竖版多巴胺「船票 (Boarding Pass / Ship Ticket)」
+  // 亮眼鲜艳多巴胺撞色 + 真实船票打孔撕裂线 + 三段式微缩图像 + 一句网站功能文字介绍
+  // ==============================================================
+  function generateVisualQrCardDataUrl() {
+    const shareUrl = getShareableUrl();
+    const w = 740, h = 960, scale = 2;
+    const canvas = document.createElement('canvas');
+    canvas.width = w * scale;
+    canvas.height = h * scale;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(scale, scale);
+
+    // 亮眼皇家深蓝背景衬托鲜艳船票
+    const pageBg = '#101935';
+    ctx.fillStyle = pageBg;
+    ctx.fillRect(0, 0, w, h);
+
+    // 背景多巴胺装饰光斑圆点
+    const bgDots = [
+      { x: 75, y: 90, r: 44, c: '#FF2E7E' },
+      { x: 670, y: 120, r: 52, c: '#00E096' },
+      { x: 65, y: 860, r: 48, c: '#38BDF8' },
+      { x: 665, y: 840, r: 56, c: '#FFE100' }
+    ];
+    bgDots.forEach(d => {
+      ctx.fillStyle = d.c;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // 船票主体几何参数
+    const tx = 54, ty = 42, tw = w - 108, th = h - 84;
+    const tearY = 448; // 船票上下分券撕裂线位置
+
+    // 船票硬边投影
+    ctx.fillStyle = '#00E096';
+    ctx.beginPath();
+    ctx.roundRect(tx + 8, ty + 8, tw, th, 28);
+    ctx.fill();
+
+    // 船票外框底板
+    ctx.fillStyle = '#FFFDF5';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.roundRect(tx, ty, tw, th, 28);
+    ctx.fill();
+    ctx.stroke();
+
+    // 船票顶部亮黄登船头栏 (Top Boarding Header)
+    ctx.fillStyle = '#FFE100';
+    ctx.beginPath();
+    ctx.roundRect(tx, ty, tw, 92, [28, 28, 0, 0]);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(tx, ty + 92);
+    ctx.lineTo(tx + tw, ty + 92);
+    ctx.stroke();
+
+    // 船票左上角登船牌号与标题
+    ctx.fillStyle = '#FF2E7E';
+    ctx.beginPath();
+    ctx.roundRect(tx + 24, ty + 18, 152, 26, 7);
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('BOARDING TICKET · 船票', tx + 34, ty + 35);
+
+    ctx.fillStyle = '#0D24BD';
+    ctx.font = '900 30px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('扬帆海本', tx + 24, ty + 74);
+
+    // 船票右上角条形码与舱位标
+    ctx.fillStyle = '#141414';
+    const topBars = [4, 2, 6, 2, 3, 5, 2, 4, 2, 3, 5, 2];
+    let tbx = tx + tw - 126;
+    topBars.forEach((bw, idx) => {
+      if (idx % 2 === 0) ctx.fillRect(tbx, ty + 20, bw, 36);
+      tbx += bw + 2;
+    });
+    ctx.font = '900 11px ui-monospace, monospace';
+    ctx.fillText('GATE // 100-UNIS', tx + tw - 126, ty + 73);
+
+    // ==========================================
+    // 上半券（主票面）：三段式鲜艳微缩图形插画 + 一句核心功能介绍
+    // ==========================================
+    const vizY = ty + 116;
+
+    // 图形1：左侧「条件胶囊拨盘」微缩插画
+    ctx.fillStyle = '#FFFFFF';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(tx + 24, vizY, 168, 174, 18);
+    ctx.fill();
+    ctx.stroke();
+
+    const miniPills = [
+      { y: vizY + 20, bg: '#FFE100', fg: '#0D24BD', text: '高考 / A-Level / IB' },
+      { y: vizY + 70, bg: '#FF2E7E', fg: '#FFFFFF', text: '650+ · A*AA · 38+' },
+      { y: vizY + 120, bg: '#00E096', fg: '#141414', text: 'IELTS 6.5 / 7.0' }
+    ];
+    miniPills.forEach(mp => {
+      ctx.fillStyle = mp.bg;
+      ctx.beginPath();
+      ctx.roundRect(tx + 40, mp.y, 136, 34, 9);
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.fillStyle = mp.fg;
+      ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillText(mp.text, tx + 52, mp.y + 22);
+    });
+
+    // 鲜艳箭头 1
+    ctx.strokeStyle = '#FF2E7E';
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo(tx + 200, vizY + 87);
+    ctx.lineTo(tx + 224, vizY + 87);
+    ctx.lineTo(tx + 216, vizY + 79);
+    ctx.moveTo(tx + 224, vizY + 87);
+    ctx.lineTo(tx + 216, vizY + 95);
+    ctx.stroke();
+
+    // 图形2：中间「名校微缩船票叠层」插画
+    const miniCards = [
+      { dx: tx + 240, dy: vizY + 16, rot: -0.06, flag: '🇬🇧', rk: 'QS #2', hdr: '#38BDF8' },
+      { dx: tx + 250, dy: vizY + 8,  rot: 0.05,  flag: '🇺🇸', rk: 'USN #3', hdr: '#C084FC' },
+      { dx: tx + 234, dy: vizY + 4,  rot: 0,     flag: '🇭🇰', rk: 'QS #17', hdr: '#FFE100' }
+    ];
+    miniCards.forEach(mc => {
+      ctx.save();
+      ctx.translate(mc.dx + 75, mc.dy + 75);
+      ctx.rotate(mc.rot);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.roundRect(-72, -72, 144, 144, 14);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = mc.hdr;
+      ctx.beginPath();
+      ctx.roundRect(-72, -72, 144, 40, [14, 14, 0, 0]);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.font = '21px sans-serif';
+      ctx.fillText(mc.flag, -58, -45);
+
+      ctx.fillStyle = '#FF2E7E';
+      ctx.beginPath();
+      ctx.roundRect(6, -62, 54, 21, 6);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '900 10.5px -apple-system, sans-serif';
+      ctx.fillText(mc.rk, 14, -48);
+
+      ctx.fillStyle = '#E0F2FE';
+      ctx.beginPath();
+      ctx.roundRect(-56, -18, 112, 26, 6);
+      ctx.fill();
+      ctx.fillStyle = '#0D24BD';
+      ctx.beginPath();
+      ctx.roundRect(-48, -10, 76, 10, 4);
+      ctx.fill();
+
+      ctx.fillStyle = '#00E096';
+      ctx.beginPath();
+      ctx.arc(42, 40, 17, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#141414';
+      ctx.font = '900 16px sans-serif';
+      ctx.fillText('✓', 35, 46);
+
+      ctx.font = '14px sans-serif';
+      ctx.fillText('🇸🇬 🇨🇦 🇦🇺', -56, 46);
+      ctx.restore();
+    });
+
+    // 鲜艳箭头 2
+    ctx.strokeStyle = '#FF2E7E';
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo(tx + 406, vizY + 87);
+    ctx.lineTo(tx + 430, vizY + 87);
+    ctx.lineTo(tx + 422, vizY + 79);
+    ctx.moveTo(tx + 430, vizY + 87);
+    ctx.lineTo(tx + 422, vizY + 95);
+    ctx.stroke();
+
+    // 图形3：右侧「微缩多巴胺日历网格」插画
+    const calX = tx + 438;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(calX, vizY, 166, 174, 18);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#FF2E7E';
+    ctx.beginPath();
+    ctx.roundRect(calX, vizY, 166, 36, [18, 18, 0, 0]);
+    ctx.fill();
+    ctx.stroke();
+    [calX + 38, calX + 83, calX + 128].forEach(rx => {
+      ctx.fillStyle = '#FFE100';
+      ctx.beginPath();
+      ctx.roundRect(rx - 5, vizY - 6, 10, 16, 4);
+      ctx.fill();
+      ctx.stroke();
+    });
+
+    const miniColors = ['#FFE100', '#38BDF8', '#00E096', '#FF8FA3', '#C084FC', '#FFE100', '#E2E8F0', '#00E096', '#FF8FA3'];
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 3; c++) {
+        const idx = r * 3 + c;
+        const bx = calX + 13 + c * 49;
+        const by = vizY + 48 + r * 39;
+        ctx.fillStyle = miniColors[idx];
+        ctx.beginPath();
+        ctx.roundRect(bx, by, 42, 31, 6);
+        ctx.fill();
+        ctx.lineWidth = 1.6;
+        ctx.stroke();
+      }
+    }
+
+    // 保留的一句网站功能文字信息（高饱和薄荷绿胶囊条）
+    ctx.fillStyle = '#00E096';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.roundRect(tx + 24, vizY + 196, tw - 48, 46, 12);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#141414';
+    ctx.font = '900 17.5px -apple-system, "PingFang SC", sans-serif';
+    const funcLine = '输分 1 秒匹配 100 所海外名校官方录取条件与选校日历';
+    const flw = ctx.measureText(funcLine).width;
+    ctx.fillText(funcLine, tx + (tw - flw) / 2, vizY + 225);
+
+    // ==========================================
+    // 船票中部撕裂虚线 + 左右两侧半圆打孔凹槽
+    // ==========================================
+    ctx.save();
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([10, 8]);
+    ctx.beginPath();
+    ctx.moveTo(tx + 26, tearY);
+    ctx.lineTo(tx + tw - 26, tearY);
+    ctx.stroke();
+    ctx.restore();
+
+    // 左右两侧深蓝背景打孔半圆缺口
+    [tx, tx + tw].forEach(nx => {
+      ctx.fillStyle = pageBg;
+      ctx.beginPath();
+      ctx.arc(nx, tearY, 22, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 3.5;
+      ctx.beginPath();
+      ctx.arc(nx, tearY, 22, 0, Math.PI * 2);
+      ctx.stroke();
+    });
+
+    // ==========================================
+    // 下半券（副券）：亮黄撞色登船二维码画框 + 6国港口徽章
+    // ==========================================
+    const qrBoxW = 340, qrBoxH = 340;
+    const qrBoxX = (w - qrBoxW) / 2;
+    const qrBoxY = tearY + 30;
+
+    ctx.fillStyle = '#141414';
+    ctx.beginPath();
+    ctx.roundRect(qrBoxX + 6, qrBoxY + 6, qrBoxW, qrBoxH, 24);
+    ctx.fill();
+
+    ctx.fillStyle = '#FFE100';
+    ctx.strokeStyle = '#141414';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.roundRect(qrBoxX, qrBoxY, qrBoxW, qrBoxH, 24);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.beginPath();
+    ctx.roundRect(qrBoxX + 24, qrBoxY + 24, qrBoxW - 48, qrBoxH - 48, 16);
+    ctx.fill();
+    ctx.stroke();
+
+    if (window.QRMini) {
+      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, qrBoxX + 38, qrBoxY + 38, qrBoxW - 76, '#0D24BD', '#FFFFFF');
+    }
+
+    // 底部 6 大目的地国旗鲜艳徽章列
+    const flags = ['🇭🇰', '🇸🇬', '🇬🇧', '🇺🇸', '🇨🇦', '🇦🇺'];
+    const flagColors = ['#FF2E7E', '#00E096', '#38BDF8', '#C084FC', '#FF8E53', '#FFE100'];
+    flags.forEach((fl, i) => {
+      const fx = 148 + i * 88;
+      const fy = tearY + 412;
+      ctx.fillStyle = flagColors[i];
+      ctx.strokeStyle = '#141414';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(fx, fy, 25, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.font = '23px sans-serif';
+      ctx.fillText(fl, fx - 12, fy + 8);
+    });
+
+    return canvas.toDataURL('image/png');
+  }
+
+  // ==============================================================
+  // 弹窗 1：「分享图片」（只提供「长图」与「方图」两个选项，默认打开长图）
+  // ==============================================================
+  function renderShareImageModal() {
+    document.getElementById('modalTitle').textContent = '分享图片';
     const bodyEl = document.getElementById('modalBody');
-    const dataUrl = generateCalendarPosterDataUrl(state.posterFormat);
-    const isMobile = state.posterFormat === 'mobile';
+    const dataUrl = generateCalendarImage(state.imageShape);
+    const isLong = state.imageShape === 'long';
 
     bodyEl.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.6rem;">
-        <div style="display:flex;gap:0.45rem;">
-          <button id="btnFormatLandscape" class="pill-btn ${!isMobile ? 'active' : ''}" type="button">横版长方形日历图（适合电脑/平板）</button>
-          <button id="btnFormatMobile" class="pill-btn ${isMobile ? 'active' : ''}" type="button">竖版手机滑动长图（适合手机保存分享）</button>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap;">
+        <div style="display:inline-flex;gap:8px;">
+          <button id="btnShapeLong" class="pill-btn ${isLong ? 'active' : ''}" type="button">长图</button>
+          <button id="btnShapeSquare" class="pill-btn ${!isLong ? 'active' : ''}" type="button">方图</button>
         </div>
 
-        <a href="${dataUrl}" download="扬帆海本-选校日历-${isMobile ? '手机竖版' : '横版'}.png" class="btn btn-poster">下载图片</a><span style="font-size:0.76rem;color:#0284c7;font-weight:600;">微信/手机端可直接「长按下方图片」保存或转发</span>
+        <a href="${dataUrl}" download="扬帆海本-选校日历-${isLong ? '长图' : '方图'}.png" class="btn btn-poster">
+          下载图片
+        </a>
       </div>
 
-      <div style="border-radius:12px;background:#f1f5f9;max-height:66vh;overflow-y:auto;text-align:center;padding:1rem;">
-        <img src="${dataUrl}" alt="选校日历一图流" style="max-width:${isMobile ? '420px' : '100%'};width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.08);" />
+      <div style="border:2px solid #1E293B;border-radius:14px;background:#F1F5F9;max-height:72vh;overflow-y:auto;text-align:center;padding:14px;">
+        <img src="${dataUrl}" alt="选校日历图片" style="max-width:${isLong ? '420px' : '540px'};width:100%;height:auto;border-radius:10px;box-shadow:0 6px 20px rgba(15,23,42,0.12);" />
       </div>
     `;
 
-    document.getElementById('btnFormatLandscape').addEventListener('click', () => {
-      state.posterFormat = 'landscape';
-      renderPosterModalContent();
+    document.getElementById('btnShapeLong').addEventListener('click', () => {
+      state.imageShape = 'long';
+      renderShareImageModal();
     });
-
-    document.getElementById('btnFormatMobile').addEventListener('click', () => {
-      state.posterFormat = 'mobile';
-      renderPosterModalContent();
+    document.getElementById('btnShapeSquare').addEventListener('click', () => {
+      state.imageShape = 'square';
+      renderShareImageModal();
     });
   }
 
-  function openPosterModal() {
-    renderPosterModalContent();
+  function openShareImageModal() {
+    state.imageShape = 'long';
+    renderShareImageModal();
+    document.getElementById('detailModalBackdrop').classList.remove('hidden');
+  }
+
+  // ==============================================================
+  // 弹窗 2：「分享链接」（只提供「网址」与「二维码」两个选项，网址最前面带一句文字介绍）
+  // ==============================================================
+  function renderShareLinkModal() {
+    document.getElementById('modalTitle').textContent = '分享链接';
+    const bodyEl = document.getElementById('modalBody');
+    const shareUrl = getShareableUrl();
+    const introAndUrl = `扬帆海本｜输入高考/A-Level/IB/AP/OSSD分数，1秒匹配100所海外名校官方录取条件与选校日历：${shareUrl}`;
+    const isUrl = state.shareLinkTab === 'url';
+
+    if (isUrl) {
+      bodyEl.innerHTML = `
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <button id="btnTabUrl" class="pill-btn active" type="button">网址</button>
+          <button id="btnTabQr" class="pill-btn" type="button">二维码</button>
+        </div>
+
+        <div style="background:#FFFFFF;border:2px solid #1E293B;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;">
+          <textarea
+            id="shareUrlInputBox"
+            readonly
+            rows="3"
+            style="width:100%;border:1.5px solid #CBD5E1;border-radius:8px;padding:10px 12px;font-size:13px;font-weight:700;color:#1E293B;background:#F8FAFC;outline:none;resize:none;line-height:1.5;"
+          >${escapeHtml(introAndUrl)}</textarea>
+          <div style="display:flex;justify-content:flex-end;">
+            <button id="btnDoCopyUrl" class="btn btn-share-link" type="button">复制链接</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('btnDoCopyUrl').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(introAndUrl);
+          showToast('已复制介绍与链接');
+        } catch (_) {
+          document.getElementById('shareUrlInputBox').select();
+          showToast('请长按或按 Ctrl+C 复制');
+        }
+      });
+    } else {
+      const qrCardUrl = generateVisualQrCardDataUrl();
+      bodyEl.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;">
+          <div style="display:inline-flex;gap:8px;">
+            <button id="btnTabUrl" class="pill-btn" type="button">网址</button>
+            <button id="btnTabQr" class="pill-btn active" type="button">二维码</button>
+          </div>
+
+          <a href="${qrCardUrl}" download="扬帆海本-船票二维码.png" class="btn btn-share-link">下载船票二维码</a>
+        </div>
+
+        <div style="border:2px solid #1E293B;border-radius:14px;background:#F1F5F9;max-height:70vh;overflow-y:auto;text-align:center;padding:14px;">
+          <img src="${qrCardUrl}" alt="扬帆海本船票二维码" style="max-width:400px;width:100%;height:auto;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.12);" />
+        </div>
+      `;
+    }
+
+    document.getElementById('btnTabUrl').addEventListener('click', () => {
+      state.shareLinkTab = 'url';
+      renderShareLinkModal();
+    });
+    document.getElementById('btnTabQr').addEventListener('click', () => {
+      state.shareLinkTab = 'qr';
+      renderShareLinkModal();
+    });
+  }
+
+  function openShareLinkModal() {
+    state.shareLinkTab = 'qr'; // 默认展示精美的图形化二维码卡，也可一键切到网址
+    renderShareLinkModal();
     document.getElementById('detailModalBackdrop').classList.remove('hidden');
   }
 
@@ -12202,6 +13271,7 @@ window.UNI_COMPASS_DATA = [
     document.querySelectorAll('#trackPillsContainer .pill-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.track === state.activeTrack);
     });
+    renderScoreFilterRow();
     document.querySelectorAll('#regionPillsContainer .pill-btn').forEach(btn => {
       btn.classList.toggle('active', state.selectedRegions.has(btn.dataset.region));
     });
@@ -12248,6 +13318,7 @@ window.UNI_COMPASS_DATA = [
 
     document.getElementById('btnClearFilters').addEventListener('click', () => {
       state.activeTrack = 'gaokao';
+      state.scoreFilter = 'ALL';
       state.selectedRegions = new Set(['ALL']);
       state.langFilter = 'ALL';
       state.searchQuery = '';
@@ -12256,14 +13327,23 @@ window.UNI_COMPASS_DATA = [
       document.getElementById('chkAcceptedOnly').checked = false;
       saveTrack();
       renderAll();
-      showToast('已重置全部筛选条件');
+      showToast('已重置筛选条件');
     });
 
     document.getElementById('trackPillsContainer').addEventListener('click', e => {
       const btn = e.target.closest('.pill-btn');
       if (!btn) return;
       state.activeTrack = btn.dataset.track;
+      state.scoreFilter = 'ALL';
       saveTrack();
+      renderAll();
+    });
+
+    document.getElementById('scorePillsContainer').addEventListener('click', e => {
+      const btn = e.target.closest('.pill-btn');
+      if (!btn) return;
+      state.scoreFilter = btn.dataset.score;
+      if (state.activeView !== 'directory') state.activeView = 'directory';
       renderAll();
     });
 
@@ -12354,7 +13434,7 @@ window.UNI_COMPASS_DATA = [
       state.shortlist = new Set(['hku', 'nus', 'ucl', 'cornell', 'uoft', 'usyd']);
       saveShortlist();
       renderAll();
-      showToast('已载入六国/地区代表名校组合');
+      showToast('已载入示范组合');
     });
 
     document.getElementById('btnClearShortlist').addEventListener('click', () => {
@@ -12364,23 +13444,9 @@ window.UNI_COMPASS_DATA = [
       showToast('已清空选校日历');
     });
 
-    document.getElementById('btnGeneratePosterTop').addEventListener('click', openPosterModal);
-    document.getElementById('btnGeneratePosterMain').addEventListener('click', openPosterModal);
-
-    document.getElementById('btnShareUrl').addEventListener('click', async () => {
-      const url = new URL(window.location.href);
-      url.searchParams.set('track', state.activeTrack);
-      url.searchParams.set('list', Array.from(state.shortlist).join(','));
-      url.searchParams.set('view', state.activeView);
-      const shareStr = url.toString();
-      window.history.replaceState({}, '', shareStr);
-      try {
-        await navigator.clipboard.writeText(shareStr);
-        showToast('分享链接已复制到剪贴板');
-      } catch (e) {
-        showToast('地址栏已更新专属分享链接');
-      }
-    });
+    document.getElementById('btnShareImageTop').addEventListener('click', openShareImageModal);
+    document.getElementById('btnShareImageMain').addEventListener('click', openShareImageModal);
+    document.getElementById('btnShareLinkTop').addEventListener('click', openShareLinkModal);
 
     document.getElementById('btnCloseModal').addEventListener('click', () => {
       document.getElementById('detailModalBackdrop').classList.add('hidden');
