@@ -7,7 +7,7 @@
   const TRACK_META = {
     gaokao: { label: '🇨🇳 高考普高', short: '高考' },
     alevel: { label: '🇬🇧 A-Level', short: 'A-Level' },
-    ib:     { label: 'IB 体系', short: 'IB' },
+    ib:     { label: '🌍 IB 体系', short: 'IB' },
     ap:     { label: '🇺🇸 AP 体系', short: 'AP' },
     ossd:   { label: '🇨🇦 OSSD', short: 'OSSD' }
   };
