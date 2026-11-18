@@ -386,6 +386,8 @@
               ${trackInfo.subject_reqs ? `<div style="font-size:0.78rem;font-weight:600;color:#475569;">先修选科：${escapeHtml(trackInfo.subject_reqs)}</div>` : ''}
             </div>
 
+            ${uni.special_channels ? `<div class="card-special-channel"><strong>专项/补充通道：</strong>${escapeHtml(uni.special_channels)}</div>` : ''}
+
             <div class="card-bottom-row">
               <span class="card-lang-text">
                 雅思 ${escapeHtml(uni.language.ielts.overall)} (${escapeHtml(uni.language.ielts.subscore)}) · 托福 ${escapeHtml(uni.language.toefl.overall)}
@@ -490,6 +492,7 @@
           <div class="card-req-line ${activeTrackInfo.accepted ? '' : 'not-accepted'}" style="font-size:0.95rem;font-weight:800;">
             ${escapeHtml(activeTrackInfo.headline)}
           </div>
+          ${uni.special_channels ? `<div class="detail-special-channel-box"><strong>专项计划 / 补充通道：</strong>${escapeHtml(uni.special_channels)}</div>` : ''}
           <div class="detail-info-grid">
             <div class="detail-info-item">
               <strong>必修与选科要求</strong>

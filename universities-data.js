@@ -96,6 +96,17 @@ window.UNI_COMPASS_DATA = [
         "month": 11,
         "exact_date_desc": "11月30日",
         "node_type": "deadline"
+      },
+      {
+        "id": "melb-trinity",
+        "round_name": "圣三一预科申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 4,
+        "exact_date_desc": "全年滚动 (建议提前4-6个月)",
+        "node_type": "rolling",
+        "conflict_warning": "墨大唯一认可本校直属预科通道"
       }
     ],
     "deep_links": {
@@ -105,7 +116,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/application-dates"
     },
     "popular_majors_note": "商学学士、理学学士(计算机/数据科学/工程系统)、生物医学及设计学士。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "圣三一学院官方预科 Trinity College（高二/高三均分80%+即可直申，2月/7月/8月多轮入学）"
   },
   {
     "id": "usyd",
@@ -1044,7 +1056,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://future.utoronto.ca/apply/important-application-dates/"
     },
     "popular_majors_note": "圣乔治主校区计算机、罗特曼商学院、工程科学及生命科学。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "高考普高通道需同步提交：高中三年成绩单 + 会考/学业水平考试合格证明"
   },
   {
     "id": "mcgill",
@@ -1240,7 +1253,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://you.ubc.ca/applying-ubc/dates-deadlines/"
     },
     "popular_majors_note": "尚德商学院、计算机科学、应用科学工程及林学。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "高考普高通道需同步提交：高中三年成绩单 + 会考/学业水平考试合格证明"
   },
   {
     "id": "waterloo",
@@ -1329,6 +1343,15 @@ window.UNI_COMPASS_DATA = [
         "month": 2,
         "exact_date_desc": "2月中旬",
         "node_type": "deadline"
+      },
+      {
+        "id": "uw-euclid",
+        "round_name": "欧几里得数学竞赛",
+        "applicable_tracks": "all",
+        "month": 4,
+        "exact_date_desc": "4月上旬",
+        "node_type": "exam",
+        "conflict_warning": "申请滑铁卢数学/CS/工程强烈建议参加 Euclid 竞赛"
       }
     ],
     "deep_links": {
@@ -1338,7 +1361,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://uwaterloo.ca/future-students/applicants/important-dates"
     },
     "popular_majors_note": "计算机科学(CS Co-op)、软件工程(SE)、数学与商业、精算学及电子计算机工程。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "Euclid 欧几里得数学竞赛（4月）+ CCC 计算机竞赛（2月）· 数学院/CS 强烈建议参加"
   },
   {
     "id": "mcmaster",
@@ -2013,6 +2037,17 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月28日",
         "node_type": "deadline"
+      },
+      {
+        "id": "hku-multi",
+        "round_name": "多元卓越入学计划",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 12,
+        "exact_date_desc": "12月-次年3月 (提前面试)",
+        "node_type": "early_deadline",
+        "conflict_warning": "高考生提前报名面试可获降分优惠，不影响后续6月常规报名及内地统招"
       }
     ],
     "deep_links": {
@@ -2022,7 +2057,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://admissions.hku.hk/apply/important-dates-and-fees"
     },
     "popular_majors_note": "IBGM/计量金融(QFin)/法学通常要求 4A* 或 IB 41+；普通理学/工学/文学入围线约为 A*AA 或 IB 36-38。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "多元卓越入学计划（12月–次年3月报名面试，可获5–30分加分优惠，不影响高考统招）"
   },
   {
     "id": "cuhk",
@@ -2140,7 +2176,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://admission.cuhk.edu.hk/international/application-details.html"
     },
     "popular_majors_note": "环球商业学(GBS)、计量金融及AI要求极高（4A* / IB 40+）；工程及理学大类招生名额充裕。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "高考统招提前批（6月下旬随各省填报，无需单独网申与面试，未录不影响一本投档）"
   },
   {
     "id": "hkust",
@@ -2258,7 +2295,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://join.ust.hk/apply/timeline/"
     },
     "popular_majors_note": "量化金融(QFin)、计算机科学(COMP)、人工智能及环球中国研究门槛最高。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "独立招生（6月10日网申截止）+ 科创/竞赛特长优先面试评估"
   },
   {
     "id": "polyu",
@@ -2366,6 +2404,17 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "6月13日",
         "node_type": "deadline"
+      },
+      {
+        "id": "polyu-stars",
+        "round_name": "德艺计划 (STARS)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "11月-次年3月",
+        "node_type": "early_deadline",
+        "conflict_warning": "有科创/艺体特长的高考生可提前申请面试加分"
       }
     ],
     "deep_links": {
@@ -2375,7 +2424,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.polyu.edu.hk/study/ug/international/important-dates"
     },
     "popular_majors_note": "酒店管理(全球第1)、艺术设计、物理治疗/放射学及数据科学最热门。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "德艺计划 STARS（11月–次年3月报名，体育/艺术/STEM科创特长高考生可获降分或直录）"
   },
   {
     "id": "cityu",
@@ -2492,7 +2542,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.cityu.edu.hk/admo/application/important-dates"
     },
     "popular_majors_note": "数据科学、商学院、创意媒体(SCM)、计算机、法律及兽医学(BVM)最具特色。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "高考统招提前批（6月下旬随各省填报，未录不影响后续一本批次投档）"
   },
   {
     "id": "hkbu",
@@ -2596,7 +2647,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://admissions.hkbu.edu.hk/en/fees-and-financial-aid.html"
     },
     "popular_majors_note": "新闻与传播学(传理学院)、电影电视、中医药学、工商管理及创意产业最受欢迎。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "独立招生 + 传理/创意媒体/才艺特长面试加分考量"
   },
   {
     "id": "lingnan",
@@ -3089,7 +3141,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.nus.edu.sg/oam/Admissions/International-Qualifications/application-calendar"
     },
     "popular_majors_note": "计算机学院(SoC)、商业分析、人文社科与理学大类(CHS)及电子工程最热门。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "奥赛/顶尖人才通道（国际/全国奥赛金牌或集训队可申请免高考预录，11月–2月递交）"
   },
   {
     "id": "ntu",
@@ -3186,6 +3239,17 @@ window.UNI_COMPASS_DATA = [
         "month": 6,
         "exact_date_desc": "5月-7月中旬",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ntu-ast",
+        "round_name": "AST 考试提前通道",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 1,
+        "exact_date_desc": "1月-2月下旬 (高二/高三可考)",
+        "node_type": "early_deadline",
+        "conflict_warning": "可用 AST 成绩提前申请南洋理工，无需等待6月高考放榜"
       }
     ],
     "deep_links": {
@@ -3195,7 +3259,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications/application-schedule"
     },
     "popular_majors_note": "数据科学与人工智能(DSAI)、电子电气工程(EEE)、材料工程及黄金辉传播学院。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "AST 考试通道（高二/高三可考 AST 英语+数学+理化提前申 NTU，无需等高考出分）"
   },
   {
     "id": "smu",
@@ -3955,6 +4020,17 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "12月-4月",
         "node_type": "offer_release"
+      },
+      {
+        "id": "ucl-upc",
+        "round_name": "UCL 官方预科 (UPC)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 2,
+        "exact_date_desc": "10月-次年2月 (滚动截止)",
+        "node_type": "deadline",
+        "conflict_warning": "普高生无法直申 UCL 大一，须通过 UPC 预科或国内大一转申"
       }
     ],
     "deep_links": {
@@ -3964,7 +4040,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.ucl.ac.uk/prospective-students/undergraduate/how-apply"
     },
     "popular_majors_note": "巴特莱特建筑(全球第1)、教育学(全球第1)、经济学、计算机、心理学及管理科学。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "UCL 官方本科预科 UPC（高三均分80%+且雅思5.5–6.0可申，10月–次年2月滚动笔面试）"
   },
   {
     "id": "kcl",
@@ -4062,6 +4139,16 @@ window.UNI_COMPASS_DATA = [
         "month": 3,
         "exact_date_desc": "11月-4月",
         "node_type": "offer_release"
+      },
+      {
+        "id": "kcl-ifp",
+        "round_name": "KCL 官方预科截止",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 3,
+        "exact_date_desc": "3月下旬",
+        "node_type": "deadline"
       }
     ],
     "deep_links": {
@@ -4071,7 +4158,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply"
     },
     "popular_majors_note": "法学、国际关系、数字文化与传媒、商学院(经管)、心理学及计算机。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "KCL 官方国际预科（高三均分80%+，需雅思6.0，10月–次年3月截止）"
   },
   {
     "id": "edinburgh",
@@ -4266,6 +4354,17 @@ window.UNI_COMPASS_DATA = [
         "month": 12,
         "exact_date_desc": "10月-3月 (早申早得)",
         "node_type": "offer_release"
+      },
+      {
+        "id": "manc-found",
+        "round_name": "曼大官方预科申请",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 3,
+        "exact_date_desc": "10月-次年5月 (滚动)",
+        "node_type": "rolling",
+        "conflict_warning": "普高生可凭高二/高三均分申请曼大直属预科"
       }
     ],
     "deep_links": {
@@ -4275,7 +4374,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.manchester.ac.uk/study/undergraduate/applications/"
     },
     "popular_majors_note": "曼大商学院(AMBS)、化学工程、材料科学、计算机及环境发展学院(SEED)。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "曼大本校本科预科 / NCUK 预科通道（高二/高三均分80%+，10月–次年5月滚动申请）"
   },
   {
     "id": "warwick",
@@ -4372,6 +4472,16 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "warw-ifp",
+        "round_name": "华威官方预科 (WIFP)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 3,
+        "exact_date_desc": "10月-次年5月 (滚动)",
+        "node_type": "rolling"
       }
     ],
     "deep_links": {
@@ -4381,7 +4491,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://warwick.ac.uk/study/undergraduate/apply/"
     },
     "popular_majors_note": "MORSE(数学运筹统计经济)、华威商学院(会计与金融/管理)、经济学、数学及计算机。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "华威官方国际预科 WIFP（高三均分80%+，商科/社科/理工分流，10月–次年5月滚动）"
   },
   {
     "id": "bristol",
@@ -4466,6 +4577,16 @@ window.UNI_COMPASS_DATA = [
         "month": 1,
         "exact_date_desc": "1月29日",
         "node_type": "deadline"
+      },
+      {
+        "id": "bris-ifp",
+        "round_name": "布大官方预科 (IFP)",
+        "applicable_tracks": [
+          "gaokao"
+        ],
+        "month": 4,
+        "exact_date_desc": "10月-次年6月 (滚动)",
+        "node_type": "rolling"
       }
     ],
     "deep_links": {
@@ -4475,7 +4596,8 @@ window.UNI_COMPASS_DATA = [
       "deadlines_and_fees": "https://www.bristol.ac.uk/study/undergraduate/apply/"
     },
     "popular_majors_note": "航空航天工程、机械工程、计算机科学、工程数学及法学。",
-    "last_verified": "2026-11"
+    "last_verified": "2026-11",
+    "special_channels": "布里斯托官方国际预科 IFP（高三均分80%+，10月–次年6月滚动申请，升学率高）"
   },
   {
     "id": "glasgow",
