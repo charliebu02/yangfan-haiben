@@ -12521,16 +12521,16 @@ window.UNI_COMPASS_DATA = [
   // 辅助绘制：绘制带两侧/上下半圆缺口与撕裂虚线的「船票 (Ship Ticket)」外框
   // ==============================================================
   function drawHorizontalTicketBox(ctx, x, y, w, h, stubX, bgMain, bgStub, pageBg) {
-    // 底部硬边立体阴影
-    ctx.fillStyle = '#141414';
+    // 底部柔和立体阴影
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.14)';
     ctx.beginPath();
-    ctx.roundRect(x + 5, y + 5, w, h, 18);
+    ctx.roundRect(x + 4, y + 4, w, h, 18);
     ctx.fill();
 
     // 主票底色
     ctx.fillStyle = bgMain;
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.roundRect(x, y, w, h, 18);
     ctx.fill();
@@ -12545,8 +12545,8 @@ window.UNI_COMPASS_DATA = [
 
     // 船票垂直撕裂虚线
     ctx.save();
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 1.8;
     ctx.setLineDash([6, 5]);
     ctx.beginPath();
     ctx.moveTo(stubX, y + 12);
@@ -12556,18 +12556,18 @@ window.UNI_COMPASS_DATA = [
 
     // 撕裂线上下两端半圆打孔缺口 + 左右票边半圆打孔缺口
     const notches = [
-      { nx: stubX, ny: y, r: 10 },
-      { nx: stubX, ny: y + h, r: 10 },
-      { nx: x, ny: y + h / 2, r: 9 },
-      { nx: x + w, ny: y + h / 2, r: 9 }
+      { nx: stubX, ny: y, r: 9 },
+      { nx: stubX, ny: y + h, r: 9 },
+      { nx: x, ny: y + h / 2, r: 8 },
+      { nx: x + w, ny: y + h / 2, r: 8 }
     ];
     notches.forEach(({ nx, ny, r }) => {
       ctx.fillStyle = pageBg;
       ctx.beginPath();
       ctx.arc(nx, ny, r, 0, Math.PI * 2);
       ctx.fill();
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#1E293B';
+      ctx.lineWidth = 1.8;
       ctx.beginPath();
       ctx.arc(nx, ny, r, 0, Math.PI * 2);
       ctx.stroke();
@@ -12576,29 +12576,13 @@ window.UNI_COMPASS_DATA = [
 
   // ==============================================================
   // 1. 「分享图片」画布渲染：只分「长图」(long) 与「方图」(square)
-  // 色彩更鲜艳亮眼，主体为 12 个月日历，底部二维码框设计为横向多巴胺船票
+  // 采用与网站一致的柔和淡黄色 (#FEF08A) 多巴胺色系，底部为横向船票二维码框
   // ==============================================================
   function generateCalendarImage(shape) {
     const selectedUnis = UNIVERSITIES.filter(u => state.shortlist.has(u.id));
     const displayUnis = selectedUnis.length > 0 ? selectedUnis : getFilteredUniversities().slice(0, 6);
     const shareUrl = getShareableUrl();
     const scale = 2;
-
-    // 鲜艳亮眼的多巴胺色板（专用于导出图片）
-    const VIVID_PASTELS = [
-      { bg: '#FFCCD8', text: '#A6003E' },
-      { bg: '#B0FBE0', text: '#00593B' },
-      { bg: '#BFE4FF', text: '#004385' },
-      { bg: '#E2CEFF', text: '#4B10A6' },
-      { bg: '#FFE699', text: '#8A3B00' },
-      { bg: '#FFD4B8', text: '#942900' },
-      { bg: '#B3F5FF', text: '#005666' },
-      { bg: '#DCFFB8', text: '#2E5900' }
-    ];
-    function getVividPastel(uniId) {
-      const idx = displayUnis.findIndex(u => u.id === uniId);
-      return VIVID_PASTELS[(idx >= 0 ? idx : 0) % VIVID_PASTELS.length];
-    }
 
     const isLong = shape === 'long';
     const width = isLong ? 760 : 1080;
@@ -12612,7 +12596,7 @@ window.UNI_COMPASS_DATA = [
 
     const headerH = isLong ? 150 : 138;
     const gridH = rows * cellH + (rows - 1) * gap;
-    const footerH = 114;
+    const footerH = 112;
     const totalHeight = headerH + gridH + footerH + 34;
 
     const canvas = document.createElement('canvas');
@@ -12621,63 +12605,63 @@ window.UNI_COMPASS_DATA = [
     const ctx = canvas.getContext('2d');
     ctx.scale(scale, scale);
 
-    const pageBg = '#FFFDF4';
+    const pageBg = '#FAF8F5';
     ctx.fillStyle = pageBg;
     ctx.fillRect(0, 0, width, totalHeight);
-    ctx.fillStyle = 'rgba(20, 20, 20, 0.08)';
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.05)';
     for (let gx = 20; gx < width; gx += 24) {
       for (let gy = 20; gy < totalHeight; gy += 24) {
-        ctx.beginPath(); ctx.arc(gx, gy, 1.3, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(gx, gy, 1.1, 0, Math.PI * 2); ctx.fill();
       }
     }
 
-    // 顶部亮眼多巴胺日历报头卡片（鲜亮柠檬黄 + 克莱因蓝 + 枚红）
-    ctx.fillStyle = '#141414';
+    // 顶部柔和淡黄色日历报头卡片（与网站一致的 #FEF08A -> #FDE68A）
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.14)';
     ctx.beginPath();
-    ctx.roundRect(padX + 5, 25, width - padX * 2, headerH - 36, 18);
+    ctx.roundRect(padX + 4, 24, width - padX * 2, headerH - 36, 18);
     ctx.fill();
 
     const hdrGrad = ctx.createLinearGradient(padX, 20, width - padX, headerH - 16);
-    hdrGrad.addColorStop(0, '#FFE100');
-    hdrGrad.addColorStop(1, '#FFD000');
+    hdrGrad.addColorStop(0, '#FEF08A');
+    hdrGrad.addColorStop(1, '#FDE68A');
     ctx.fillStyle = hdrGrad;
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.roundRect(padX, 20, width - padX * 2, headerH - 36, 18);
     ctx.fill();
     ctx.stroke();
 
-    ctx.fillStyle = '#0D24BD';
-    ctx.font = `900 ${isLong ? 25 : 28}px -apple-system, "PingFang SC", sans-serif`;
+    ctx.fillStyle = '#1E3A8A';
+    ctx.font = `900 ${isLong ? 25 : 27}px -apple-system, "PingFang SC", sans-serif`;
     ctx.fillText('扬帆海本 · 2026–2027 选校申请日历', padX + 22, 62);
 
-    // 右上角鲜艳枚红体系标签
+    // 右上角柔粉体系标签
     const trackText = TRACK_META[state.activeTrack].short + '体系';
-    ctx.fillStyle = '#FF2E7E';
+    ctx.fillStyle = '#FECDD3';
     ctx.beginPath();
     ctx.roundRect(width - padX - 112, 36, 90, 30, 8);
     ctx.fill();
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 1.6;
     ctx.stroke();
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = '900 13px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillStyle = '#9F1239';
+    ctx.font = '800 13px -apple-system, "PingFang SC", sans-serif';
     ctx.fillText(trackText, width - padX - 94, 56);
 
-    // 已选目标校鲜艳胶囊行
+    // 已选目标校彩色小胶囊行
     let chipX = padX + 22;
     const chipY = 82;
     displayUnis.slice(0, isLong ? 5 : 8).forEach((u) => {
-      const pastel = getVividPastel(u.id);
+      const pastel = getSchoolPastel(u.id);
       const rMeta = REGION_META[u.region] || { flag: '' };
       const label = `${rMeta.flag} ${u.name_zh}`;
-      ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+      ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
       const tw = ctx.measureText(label).width + 18;
       if (chipX + tw > width - padX - 20) return;
 
       ctx.fillStyle = pastel.bg;
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 1.6;
+      ctx.strokeStyle = '#1E293B';
+      ctx.lineWidth = 1.3;
       ctx.beginPath();
       ctx.roundRect(chipX, chipY, tw, 24, 7);
       ctx.fill();
@@ -12706,21 +12690,21 @@ window.UNI_COMPASS_DATA = [
         }
       }
 
-      ctx.fillStyle = '#141414';
+      ctx.fillStyle = 'rgba(30, 41, 59, 0.1)';
       ctx.beginPath();
-      ctx.roundRect(x + 4, y + 4, cellW, cellH, 14);
+      ctx.roundRect(x + 3, y + 3, cellW, cellH, 14);
       ctx.fill();
 
       ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 2.2;
+      ctx.strokeStyle = '#1E293B';
+      ctx.lineWidth = 1.8;
       ctx.beginPath();
       ctx.roundRect(x, y, cellW, cellH, 14);
       ctx.fill();
       ctx.stroke();
 
-      // 月份顶栏（有节点的月份用亮眼多巴胺黄 #FFE100）
-      ctx.fillStyle = events.length > 0 ? '#FFE100' : '#F1F5F9';
+      // 月份顶栏（有节点的月份用与网站一致的淡黄色 #FEF08A）
+      ctx.fillStyle = events.length > 0 ? '#FEF08A' : '#F1F5F9';
       ctx.beginPath();
       ctx.roundRect(x, y, cellW, 36, [14, 14, 0, 0]);
       ctx.fill();
@@ -12729,39 +12713,38 @@ window.UNI_COMPASS_DATA = [
       ctx.lineTo(x + cellW, y + 36);
       ctx.stroke();
 
-      ctx.fillStyle = events.length > 0 ? '#0D24BD' : '#334155';
+      ctx.fillStyle = '#1E3A8A';
       ctx.font = '900 14.5px -apple-system, "PingFang SC", sans-serif';
       ctx.fillText(`${mObj.num} ${mObj.en}`, x + 12, y + 24);
 
-      ctx.fillStyle = events.length > 0 ? '#FF2E7E' : '#64748B';
-      ctx.font = '800 11px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillStyle = '#475569';
+      ctx.font = '700 11px -apple-system, "PingFang SC", sans-serif';
       ctx.fillText(mObj.phase, x + cellW - ctx.measureText(mObj.phase).width - 12, y + 23);
 
       if (events.length === 0) {
         ctx.fillStyle = '#CBD5E1';
-        ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
+        ctx.font = '700 12px -apple-system, "PingFang SC", sans-serif';
         ctx.fillText('无截止节点', x + cellW / 2 - 30, y + cellH / 2 + 12);
       } else {
         let evY = y + 44;
         events.slice(0, 4).forEach(({ uni, node }) => {
-          const pastel = getVividPastel(uni.id);
+          const pastel = getSchoolPastel(uni.id);
           const shortDate = extractShortDate(node.exact_date_desc, mObj.month);
 
           ctx.fillStyle = pastel.bg;
-          ctx.strokeStyle = '#141414';
-          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = 'rgba(30, 41, 59, 0.25)';
+          ctx.lineWidth = 1.2;
           ctx.beginPath();
           ctx.roundRect(x + 8, evY, cellW - 16, 29, 8);
           ctx.fill();
           ctx.stroke();
 
-          ctx.fillStyle = '#141414';
-          ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
+          ctx.fillStyle = pastel.text;
+          ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
           const label = `${uni.name_zh} · ${node.round_name.slice(0, 6)}`;
           ctx.fillText(label, x + 14, evY + 19);
 
-          ctx.fillStyle = pastel.text;
-          ctx.font = '900 11px -apple-system, "PingFang SC", sans-serif';
+          ctx.font = '800 11px -apple-system, "PingFang SC", sans-serif';
           const dw = ctx.measureText(shortDate).width;
           ctx.fillText(shortDate, x + cellW - dw - 14, evY + 19);
           evY += 33;
@@ -12770,17 +12753,17 @@ window.UNI_COMPASS_DATA = [
     });
 
     // ==============================================================
-    // 底部：横向多巴胺「船票 (Ship Ticket)」二维码框
+    // 底部：横向柔和淡黄「船票 (Ship Ticket)」二维码框
     // ==============================================================
     const fy = startY + gridH + 16;
     const ticketW = width - padX * 2;
     const ticketH = 96;
     const stubX = padX + ticketW - 142;
 
-    drawHorizontalTicketBox(ctx, padX, fy, ticketW, ticketH, stubX, '#FFE100', '#00E096', pageBg);
+    drawHorizontalTicketBox(ctx, padX, fy, ticketW, ticketH, stubX, '#FEF08A', '#A7F3D0', pageBg);
 
     // 左侧船票条形码装饰纹
-    ctx.fillStyle = '#141414';
+    ctx.fillStyle = '#1E293B';
     const barPattern = [3, 2, 5, 2, 2, 4, 2, 3];
     let bx = padX + 18;
     barPattern.forEach((bw, idx) => {
@@ -12788,66 +12771,65 @@ window.UNI_COMPASS_DATA = [
       bx += bw + 2;
     });
 
-    // 船票主票面文字与航线标记
-    ctx.fillStyle = '#FF2E7E';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 1.5;
+    // 船票主票面文字
+    ctx.fillStyle = '#FECDD3';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 1.4;
     ctx.beginPath();
-    ctx.roundRect(padX + 52, fy + 16, 168, 24, 6);
+    ctx.roundRect(padX + 52, fy + 16, 162, 24, 6);
     ctx.fill();
     ctx.stroke();
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = '900 11.5px -apple-system, "PingFang SC", sans-serif';
-    ctx.fillText('VOYAGE PASS · 扬帆登船票', padX + 62, fy + 32);
+    ctx.fillStyle = '#9F1239';
+    ctx.font = '800 11.5px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('VOYAGE PASS · 扬帆船票', padX + 62, fy + 32);
 
-    ctx.fillStyle = '#0D24BD';
+    ctx.fillStyle = '#1E3A8A';
     ctx.font = `900 ${isLong ? 17 : 20}px -apple-system, "PingFang SC", sans-serif`;
     ctx.fillText('扬帆海本 · 100所海外名校条件速查与选校日历', padX + 52, fy + 62);
 
-    ctx.fillStyle = '#141414';
-    ctx.font = '800 12px -apple-system, "PingFang SC", sans-serif';
-    ctx.fillText('🇭🇰  🇸🇬  🇬🇧  🇺🇸  🇨🇦  🇦🇺   ｜  输分 1 秒匹配目标大学官方录取要求', padX + 52, fy + 82);
+    ctx.fillStyle = '#334155';
+    ctx.font = '700 12.5px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('输分 1 秒匹配目标大学官方录取要求与申请时间轴', padX + 52, fy + 82);
 
     // 右侧副券二维码
     ctx.fillStyle = '#FFFFFF';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 1.8;
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 1.6;
     ctx.beginPath();
     ctx.roundRect(stubX + 32, fy + 10, 76, 76, 10);
     ctx.fill();
     ctx.stroke();
 
     if (window.QRMini) {
-      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, stubX + 36, fy + 14, 68, '#0D24BD', '#FFFFFF');
+      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, stubX + 36, fy + 14, 68, '#1E3A8A', '#FFFFFF');
     }
 
     return canvas.toDataURL('image/png');
   }
 
   // ==============================================================
-  // 2. 「分享链接 -> 二维码」竖版多巴胺「船票 (Boarding Pass / Ship Ticket)」
-  // 亮眼鲜艳多巴胺撞色 + 真实船票打孔撕裂线 + 三段式微缩图像 + 一句网站功能文字介绍
+  // 2. 「分享链接 -> 二维码」竖版柔和淡黄「船票 (Boarding Pass / Ship Ticket)」
+  // 网站同款淡黄色 (#FEF08A) + 去掉底部一排 emoji + 放大文字 + 简约美观排版
   // ==============================================================
   function generateVisualQrCardDataUrl() {
     const shareUrl = getShareableUrl();
-    const w = 740, h = 960, scale = 2;
+    const w = 740, h = 920, scale = 2;
     const canvas = document.createElement('canvas');
     canvas.width = w * scale;
     canvas.height = h * scale;
     const ctx = canvas.getContext('2d');
     ctx.scale(scale, scale);
 
-    // 亮眼皇家深蓝背景衬托鲜艳船票
-    const pageBg = '#101935';
+    // 与网站一致的柔和奶油背景 + 柔和几何光斑
+    const pageBg = '#FAF8F5';
     ctx.fillStyle = pageBg;
     ctx.fillRect(0, 0, w, h);
 
-    // 背景多巴胺装饰光斑圆点
     const bgDots = [
-      { x: 75, y: 90, r: 44, c: '#FF2E7E' },
-      { x: 670, y: 120, r: 52, c: '#00E096' },
-      { x: 65, y: 860, r: 48, c: '#38BDF8' },
-      { x: 665, y: 840, r: 56, c: '#FFE100' }
+      { x: 78, y: 92, r: 54, c: '#FEF08A' },
+      { x: 662, y: 118, r: 48, c: '#A7F3D0' },
+      { x: 74, y: 828, r: 46, c: '#FECDD3' },
+      { x: 660, y: 816, r: 54, c: '#BAE6FD' }
     ];
     bgDots.forEach(d => {
       ctx.fillStyle = d.c;
@@ -12857,231 +12839,226 @@ window.UNI_COMPASS_DATA = [
     });
 
     // 船票主体几何参数
-    const tx = 54, ty = 42, tw = w - 108, th = h - 84;
-    const tearY = 448; // 船票上下分券撕裂线位置
+    const tx = 52, ty = 40, tw = w - 104, th = h - 80;
+    const tearY = 456; // 船票上下分券撕裂线位置
 
-    // 船票硬边投影
-    ctx.fillStyle = '#00E096';
+    // 船票柔和立体投影
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.14)';
     ctx.beginPath();
-    ctx.roundRect(tx + 8, ty + 8, tw, th, 28);
+    ctx.roundRect(tx + 6, ty + 6, tw, th, 28);
     ctx.fill();
 
-    // 船票外框底板
-    ctx.fillStyle = '#FFFDF5';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 3.5;
+    // 船票外框纯白底板
+    ctx.fillStyle = '#FFFFFF';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2.5;
     ctx.beginPath();
     ctx.roundRect(tx, ty, tw, th, 28);
     ctx.fill();
     ctx.stroke();
 
-    // 船票顶部亮黄登船头栏 (Top Boarding Header)
-    ctx.fillStyle = '#FFE100';
+    // 船票顶部柔和淡黄色登船头栏 (与网站一致的 #FEF08A -> #FDE68A)
+    const topGrad = ctx.createLinearGradient(tx, ty, tx + tw, ty + 88);
+    topGrad.addColorStop(0, '#FEF08A');
+    topGrad.addColorStop(1, '#FDE68A');
+    ctx.fillStyle = topGrad;
     ctx.beginPath();
-    ctx.roundRect(tx, ty, tw, 92, [28, 28, 0, 0]);
+    ctx.roundRect(tx, ty, tw, 88, [28, 28, 0, 0]);
     ctx.fill();
     ctx.beginPath();
-    ctx.moveTo(tx, ty + 92);
-    ctx.lineTo(tx + tw, ty + 92);
+    ctx.moveTo(tx, ty + 88);
+    ctx.lineTo(tx + tw, ty + 88);
     ctx.stroke();
 
-    // 船票左上角登船牌号与标题
-    ctx.fillStyle = '#FF2E7E';
-    ctx.beginPath();
-    ctx.roundRect(tx + 24, ty + 18, 152, 26, 7);
-    ctx.fill();
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
-    ctx.fillText('BOARDING TICKET · 船票', tx + 34, ty + 35);
+    // 左上角放大的品牌主标题（已去除最上端船票标签，简约居中）
+    ctx.fillStyle = '#1E3A8A';
+    ctx.font = '900 36px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('扬帆海本', tx + 30, ty + 58);
 
-    ctx.fillStyle = '#0D24BD';
-    ctx.font = '900 30px -apple-system, "PingFang SC", sans-serif';
-    ctx.fillText('扬帆海本', tx + 24, ty + 74);
-
-    // 船票右上角条形码与舱位标
-    ctx.fillStyle = '#141414';
+    // 右上角简约条形码与 100 校徽标
+    ctx.fillStyle = '#1E293B';
     const topBars = [4, 2, 6, 2, 3, 5, 2, 4, 2, 3, 5, 2];
-    let tbx = tx + tw - 126;
+    let tbx = tx + tw - 134;
     topBars.forEach((bw, idx) => {
-      if (idx % 2 === 0) ctx.fillRect(tbx, ty + 20, bw, 36);
+      if (idx % 2 === 0) ctx.fillRect(tbx, ty + 18, bw, 32);
       tbx += bw + 2;
     });
-    ctx.font = '900 11px ui-monospace, monospace';
-    ctx.fillText('GATE // 100-UNIS', tx + tw - 126, ty + 73);
+    ctx.fillStyle = '#475569';
+    ctx.font = '800 12px ui-monospace, monospace';
+    ctx.fillText('100 UNIVERSITIES', tx + tw - 134, ty + 68);
 
     // ==========================================
-    // 上半券（主票面）：三段式鲜艳微缩图形插画 + 一句核心功能介绍
+    // 上半券（主票面）：三段式简约微缩图形 + 放大版核心功能文字
     // ==========================================
-    const vizY = ty + 116;
+    const vizY = ty + 120;
 
-    // 图形1：左侧「条件胶囊拨盘」微缩插画
-    ctx.fillStyle = '#FFFFFF';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    // 图形1：左侧「条件胶囊」微缩插画（文字放大更清晰）
+    ctx.fillStyle = '#FAF8F5';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.roundRect(tx + 24, vizY, 168, 174, 18);
+    ctx.roundRect(tx + 26, vizY, 172, 176, 18);
     ctx.fill();
     ctx.stroke();
 
     const miniPills = [
-      { y: vizY + 20, bg: '#FFE100', fg: '#0D24BD', text: '高考 / A-Level / IB' },
-      { y: vizY + 70, bg: '#FF2E7E', fg: '#FFFFFF', text: '650+ · A*AA · 38+' },
-      { y: vizY + 120, bg: '#00E096', fg: '#141414', text: 'IELTS 6.5 / 7.0' }
+      { y: vizY + 20, bg: '#FEF08A', fg: '#1E3A8A', text: '高考 / A-Level / IB' },
+      { y: vizY + 70, bg: '#E9D5FF', fg: '#5B21B6', text: '650+ · A*AA · 38+' },
+      { y: vizY + 120, bg: '#A7F3D0', fg: '#065F46', text: 'IELTS 6.5 / 7.0' }
     ];
     miniPills.forEach(mp => {
       ctx.fillStyle = mp.bg;
       ctx.beginPath();
-      ctx.roundRect(tx + 40, mp.y, 136, 34, 9);
+      ctx.roundRect(tx + 40, mp.y, 144, 36, 10);
       ctx.fill();
-      ctx.lineWidth = 2;
+      ctx.lineWidth = 1.6;
       ctx.stroke();
       ctx.fillStyle = mp.fg;
-      ctx.font = '900 12px -apple-system, "PingFang SC", sans-serif';
-      ctx.fillText(mp.text, tx + 52, mp.y + 22);
+      ctx.font = '800 13.5px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillText(mp.text, tx + 52, mp.y + 23);
     });
 
-    // 鲜艳箭头 1
-    ctx.strokeStyle = '#FF2E7E';
-    ctx.lineWidth = 3.5;
+    // 引导箭头 1
+    ctx.strokeStyle = '#1E3A8A';
+    ctx.lineWidth = 2.8;
     ctx.beginPath();
-    ctx.moveTo(tx + 200, vizY + 87);
-    ctx.lineTo(tx + 224, vizY + 87);
-    ctx.lineTo(tx + 216, vizY + 79);
-    ctx.moveTo(tx + 224, vizY + 87);
-    ctx.lineTo(tx + 216, vizY + 95);
+    ctx.moveTo(tx + 206, vizY + 88);
+    ctx.lineTo(tx + 228, vizY + 88);
+    ctx.lineTo(tx + 220, vizY + 80);
+    ctx.moveTo(tx + 228, vizY + 88);
+    ctx.lineTo(tx + 220, vizY + 96);
     ctx.stroke();
 
-    // 图形2：中间「名校微缩船票叠层」插画
+    // 图形2：中间「名校微缩船票叠层」插画（去除杂乱小国旗，突出卡片结构与大号对勾）
     const miniCards = [
-      { dx: tx + 240, dy: vizY + 16, rot: -0.06, flag: '🇬🇧', rk: 'QS #2', hdr: '#38BDF8' },
-      { dx: tx + 250, dy: vizY + 8,  rot: 0.05,  flag: '🇺🇸', rk: 'USN #3', hdr: '#C084FC' },
-      { dx: tx + 234, dy: vizY + 4,  rot: 0,     flag: '🇭🇰', rk: 'QS #17', hdr: '#FFE100' }
+      { dx: tx + 242, dy: vizY + 16, rot: -0.05, title: 'G5 / 常春藤', rk: 'QS #2', hdr: '#BAE6FD' },
+      { dx: tx + 236, dy: vizY + 6,  rot: 0,     title: '百所世界名校', rk: 'TOP 100', hdr: '#FEF08A' }
     ];
     miniCards.forEach(mc => {
       ctx.save();
-      ctx.translate(mc.dx + 75, mc.dy + 75);
+      ctx.translate(mc.dx + 76, mc.dy + 76);
       ctx.rotate(mc.rot);
       ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 2.2;
+      ctx.strokeStyle = '#1E293B';
+      ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.roundRect(-72, -72, 144, 144, 14);
+      ctx.roundRect(-74, -72, 148, 148, 16);
       ctx.fill();
       ctx.stroke();
 
       ctx.fillStyle = mc.hdr;
       ctx.beginPath();
-      ctx.roundRect(-72, -72, 144, 40, [14, 14, 0, 0]);
+      ctx.roundRect(-74, -72, 148, 42, [16, 16, 0, 0]);
       ctx.fill();
       ctx.stroke();
 
-      ctx.font = '21px sans-serif';
-      ctx.fillText(mc.flag, -58, -45);
+      ctx.fillStyle = '#1E3A8A';
+      ctx.font = '900 13px -apple-system, "PingFang SC", sans-serif';
+      ctx.fillText(mc.title, -58, -46);
 
-      ctx.fillStyle = '#FF2E7E';
+      ctx.fillStyle = '#FECDD3';
       ctx.beginPath();
-      ctx.roundRect(6, -62, 54, 21, 6);
+      ctx.roundRect(12, -62, 50, 22, 6);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 10.5px -apple-system, sans-serif';
-      ctx.fillText(mc.rk, 14, -48);
+      ctx.fillStyle = '#9F1239';
+      ctx.font = '800 10.5px -apple-system, sans-serif';
+      ctx.fillText(mc.rk, 18, -47);
 
-      ctx.fillStyle = '#E0F2FE';
+      // 示意录取进度条
+      ctx.fillStyle = '#F1F5F9';
       ctx.beginPath();
-      ctx.roundRect(-56, -18, 112, 26, 6);
+      ctx.roundRect(-56, -14, 112, 24, 6);
       ctx.fill();
-      ctx.fillStyle = '#0D24BD';
+      ctx.fillStyle = '#93C5FD';
       ctx.beginPath();
-      ctx.roundRect(-48, -10, 76, 10, 4);
+      ctx.roundRect(-48, -7, 74, 10, 4);
       ctx.fill();
 
-      ctx.fillStyle = '#00E096';
+      ctx.fillStyle = '#F1F5F9';
       ctx.beginPath();
-      ctx.arc(42, 40, 17, 0, Math.PI * 2);
+      ctx.roundRect(-56, 20, 68, 20, 6);
+      ctx.fill();
+
+      // 柔和薄荷绿匹配圆章
+      ctx.fillStyle = '#A7F3D0';
+      ctx.beginPath();
+      ctx.arc(38, 36, 19, 0, Math.PI * 2);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = '#141414';
-      ctx.font = '900 16px sans-serif';
-      ctx.fillText('✓', 35, 46);
-
-      ctx.font = '14px sans-serif';
-      ctx.fillText('🇸🇬 🇨🇦 🇦🇺', -56, 46);
+      ctx.fillStyle = '#065F46';
+      ctx.font = '900 17px sans-serif';
+      ctx.fillText('✓', 31, 42);
       ctx.restore();
     });
 
-    // 鲜艳箭头 2
-    ctx.strokeStyle = '#FF2E7E';
-    ctx.lineWidth = 3.5;
+    // 引导箭头 2
+    ctx.strokeStyle = '#1E3A8A';
+    ctx.lineWidth = 2.8;
     ctx.beginPath();
-    ctx.moveTo(tx + 406, vizY + 87);
-    ctx.lineTo(tx + 430, vizY + 87);
-    ctx.lineTo(tx + 422, vizY + 79);
-    ctx.moveTo(tx + 430, vizY + 87);
-    ctx.lineTo(tx + 422, vizY + 95);
+    ctx.moveTo(tx + 404, vizY + 88);
+    ctx.lineTo(tx + 426, vizY + 88);
+    ctx.lineTo(tx + 418, vizY + 80);
+    ctx.moveTo(tx + 426, vizY + 88);
+    ctx.lineTo(tx + 418, vizY + 96);
     ctx.stroke();
 
-    // 图形3：右侧「微缩多巴胺日历网格」插画
+    // 图形3：右侧「微缩日历网格」插画
     const calX = tx + 438;
-    ctx.fillStyle = '#FFFFFF';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    ctx.fillStyle = '#FAF8F5';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.roundRect(calX, vizY, 166, 174, 18);
+    ctx.roundRect(calX, vizY, 172, 176, 18);
     ctx.fill();
     ctx.stroke();
 
-    ctx.fillStyle = '#FF2E7E';
+    ctx.fillStyle = '#FECDD3';
     ctx.beginPath();
-    ctx.roundRect(calX, vizY, 166, 36, [18, 18, 0, 0]);
+    ctx.roundRect(calX, vizY, 172, 38, [18, 18, 0, 0]);
     ctx.fill();
     ctx.stroke();
-    [calX + 38, calX + 83, calX + 128].forEach(rx => {
-      ctx.fillStyle = '#FFE100';
-      ctx.beginPath();
-      ctx.roundRect(rx - 5, vizY - 6, 10, 16, 4);
-      ctx.fill();
-      ctx.stroke();
-    });
 
-    const miniColors = ['#FFE100', '#38BDF8', '#00E096', '#FF8FA3', '#C084FC', '#FFE100', '#E2E8F0', '#00E096', '#FF8FA3'];
+    ctx.fillStyle = '#9F1239';
+    ctx.font = '900 13px -apple-system, "PingFang SC", sans-serif';
+    ctx.fillText('8月 — 次年7月日历', calX + 28, vizY + 24);
+
+    const miniColors = ['#FEF08A', '#BAE6FD', '#A7F3D0', '#FECDD3', '#E9D5FF', '#FEF08A', '#E2E8F0', '#A7F3D0', '#FECDD3'];
     for (let r = 0; r < 3; r++) {
       for (let c = 0; c < 3; c++) {
         const idx = r * 3 + c;
-        const bx = calX + 13 + c * 49;
-        const by = vizY + 48 + r * 39;
+        const bx = calX + 14 + c * 50;
+        const by = vizY + 50 + r * 38;
         ctx.fillStyle = miniColors[idx];
         ctx.beginPath();
-        ctx.roundRect(bx, by, 42, 31, 6);
+        ctx.roundRect(bx, by, 44, 30, 6);
         ctx.fill();
-        ctx.lineWidth = 1.6;
+        ctx.lineWidth = 1.4;
         ctx.stroke();
       }
     }
 
-    // 保留的一句网站功能文字信息（高饱和薄荷绿胶囊条）
-    ctx.fillStyle = '#00E096';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    // 放大后的核心功能文字信息（柔和薄荷绿通栏胶囊）
+    ctx.fillStyle = '#A7F3D0';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.roundRect(tx + 24, vizY + 196, tw - 48, 46, 12);
+    ctx.roundRect(tx + 26, vizY + 196, tw - 52, 52, 14);
     ctx.fill();
     ctx.stroke();
 
-    ctx.fillStyle = '#141414';
-    ctx.font = '900 17.5px -apple-system, "PingFang SC", sans-serif';
-    const funcLine = '输分 1 秒匹配 100 所海外名校官方录取条件与选校日历';
+    ctx.fillStyle = '#065F46';
+    ctx.font = '900 20px -apple-system, "PingFang SC", sans-serif';
+    const funcLine = '输分 1 秒匹配 100 所海外名校录取条件与选校日历';
     const flw = ctx.measureText(funcLine).width;
-    ctx.fillText(funcLine, tx + (tw - flw) / 2, vizY + 225);
+    ctx.fillText(funcLine, tx + (tw - flw) / 2, vizY + 229);
 
     // ==========================================
     // 船票中部撕裂虚线 + 左右两侧半圆打孔凹槽
     // ==========================================
     ctx.save();
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2;
     ctx.setLineDash([10, 8]);
     ctx.beginPath();
     ctx.moveTo(tx + 26, tearY);
@@ -13089,34 +13066,33 @@ window.UNI_COMPASS_DATA = [
     ctx.stroke();
     ctx.restore();
 
-    // 左右两侧深蓝背景打孔半圆缺口
     [tx, tx + tw].forEach(nx => {
       ctx.fillStyle = pageBg;
       ctx.beginPath();
-      ctx.arc(nx, tearY, 22, 0, Math.PI * 2);
+      ctx.arc(nx, tearY, 20, 0, Math.PI * 2);
       ctx.fill();
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 3.5;
+      ctx.strokeStyle = '#1E293B';
+      ctx.lineWidth = 2.5;
       ctx.beginPath();
-      ctx.arc(nx, tearY, 22, 0, Math.PI * 2);
+      ctx.arc(nx, tearY, 20, 0, Math.PI * 2);
       ctx.stroke();
     });
 
     // ==========================================
-    // 下半券（副券）：亮黄撞色登船二维码画框 + 6国港口徽章
+    // 下半券（副券）：简约柔和淡黄二维码画框（无底部 emoji，视觉干净大方）
     // ==========================================
-    const qrBoxW = 340, qrBoxH = 340;
+    const qrBoxW = 356, qrBoxH = 356;
     const qrBoxX = (w - qrBoxW) / 2;
-    const qrBoxY = tearY + 30;
+    const qrBoxY = tearY + 34;
 
-    ctx.fillStyle = '#141414';
+    ctx.fillStyle = 'rgba(30, 41, 59, 0.1)';
     ctx.beginPath();
-    ctx.roundRect(qrBoxX + 6, qrBoxY + 6, qrBoxW, qrBoxH, 24);
+    ctx.roundRect(qrBoxX + 5, qrBoxY + 5, qrBoxW, qrBoxH, 24);
     ctx.fill();
 
-    ctx.fillStyle = '#FFE100';
-    ctx.strokeStyle = '#141414';
-    ctx.lineWidth = 3;
+    ctx.fillStyle = '#FEF08A';
+    ctx.strokeStyle = '#1E293B';
+    ctx.lineWidth = 2.2;
     ctx.beginPath();
     ctx.roundRect(qrBoxX, qrBoxY, qrBoxW, qrBoxH, 24);
     ctx.fill();
@@ -13129,25 +13105,8 @@ window.UNI_COMPASS_DATA = [
     ctx.stroke();
 
     if (window.QRMini) {
-      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, qrBoxX + 38, qrBoxY + 38, qrBoxW - 76, '#0D24BD', '#FFFFFF');
+      window.QRMini.drawQRCodeOnCanvas(ctx, shareUrl, qrBoxX + 40, qrBoxY + 40, qrBoxW - 80, '#1E3A8A', '#FFFFFF');
     }
-
-    // 底部 6 大目的地国旗鲜艳徽章列
-    const flags = ['🇭🇰', '🇸🇬', '🇬🇧', '🇺🇸', '🇨🇦', '🇦🇺'];
-    const flagColors = ['#FF2E7E', '#00E096', '#38BDF8', '#C084FC', '#FF8E53', '#FFE100'];
-    flags.forEach((fl, i) => {
-      const fx = 148 + i * 88;
-      const fy = tearY + 412;
-      ctx.fillStyle = flagColors[i];
-      ctx.strokeStyle = '#141414';
-      ctx.lineWidth = 2.5;
-      ctx.beginPath();
-      ctx.arc(fx, fy, 25, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.stroke();
-      ctx.font = '23px sans-serif';
-      ctx.fillText(fl, fx - 12, fy + 8);
-    });
 
     return canvas.toDataURL('image/png');
   }
